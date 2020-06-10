@@ -1,0 +1,12 @@
+百度：
+targetSdkVersion = 26
+小七：
+一、修改：smsdk_6.0.1_20191231.aar
+res/layout/nim_message_fragment.xml
+1) app:layout_constraintBottom_toTopOf="@id/fragment_all_bottom_ll"--->
+app:layout_constraintBottom_toTopOf="@+id/fragment_all_bottom_ll"
+
+2) app:layout_constraintBottom_toTopOf="@id/fragment_bottom_currentChatFinish_tv"--->
+app:layout_constraintBottom_toTopOf="@+id/fragment_bottom_currentChatFinish_tv"
+
+二、添加： x7_recycleview.jar

@@ -1,0 +1,668 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xml>  
+    <!-- <global-plugins>
+        <plugin name="umengpush" desc="友盟推送插件"/>
+    </global-plugins> -->
+    <channels>
+        <channel>         
+            <param name="id" value="1703" />            
+            <param name="name" value="moyoi" />            
+            <param name="sdk" value="moyoi" />            
+            <param name="desc" value="墨游" />            
+            <param name="suffix" value="com.moyoi.zjtx" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />          
+            <sdk-params>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_CHANNEL" value="200000" desc="墨游在talkingdata分配的渠道号"  /> 
+                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
+                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
+                <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
+                <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
+                <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
+                <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
+                <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
+                <param name="cloud_channel" value="200000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
+                <param name="JPUSH_CHANNEL" value="taptap-market" desc="极推送的渠道标识"  />
+                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>1</versionCode>         
+                <versionName>2.0.1</versionName>      
+            </sdk-version>
+        </channel> 
+        <channel>         
+            <param name="id" value="170305" />            
+            <param name="name" value="moyoitest" />            
+            <param name="sdk" value="moyoitest" />            
+            <param name="desc" value="墨游测试" />            
+            <param name="suffix" value="com.moyoi.zjtx" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />          
+            <sdk-params>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_CHANNEL" value="200000" desc="墨游在talkingdata分配的渠道号"  /> 
+                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
+                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
+                <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
+                <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
+                <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
+                <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
+                <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
+                <param name="cloud_channel" value="200000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
+                <param name="JPUSH_CHANNEL" value="taptap-market" desc="极推送的渠道标识"  />
+                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>1</versionCode>         
+                <versionName>2.0.1</versionName>      
+            </sdk-version>
+        </channel>   
+        <channel>         
+            <param name="id" value="170302" />            
+            <param name="name" value="taptap" />            
+            <param name="sdk" value="taptap" />            
+            <param name="desc" value="墨游 taptap版本" />            
+            <param name="suffix" value="com.moyoi.zjtx" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />          
+            <sdk-params>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_CHANNEL" value="200029" desc="墨游在talkingdata分配的渠道号"  /> 
+                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
+                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
+                <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
+                <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
+                <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
+                <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
+                <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
+                <param name="cloud_channel" value="200029" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
+                <param name="JPUSH_CHANNEL" value="taptap-market" desc="极推送的渠道标识"  />
+                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>1</versionCode>         
+                <versionName>2.0.1</versionName>      
+            </sdk-version>
+        </channel>
+        <channel>         
+            <param name="id" value="170303" />            
+            <param name="name" value="haoyou" />            
+            <param name="sdk" value="haoyou" />            
+            <param name="desc" value="墨游 好游快爆版本" />            
+            <param name="suffix" value="com.moyoi.zjtx" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />          
+            <sdk-params>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_CHANNEL" value="200030" desc="墨游在talkingdata分配的渠道号"  /> 
+                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
+                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
+                <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
+                <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
+                <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
+                <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
+                <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
+                <param name="cloud_channel" value="200030" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
+                <param name="JPUSH_CHANNEL" value="haoyou-market" desc="极推送的渠道标识"  />
+                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>1</versionCode>         
+                <versionName>2.0.1</versionName>      
+            </sdk-version>
+        </channel>
+        <channel>         
+            <param name="id" value="170304" />            
+            <param name="name" value="yiyou" />            
+            <param name="sdk" value="yiyou" />            
+            <param name="desc" value="墨游 一游说版本" />            
+            <param name="suffix" value="com.moyoi.zjtx" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />          
+            <sdk-params>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_CHANNEL" value="200031" desc="墨游在talkingdata分配的渠道号"  /> 
+                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
+                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
+                <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
+                <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
+                <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
+                <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
+                <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
+                <param name="cloud_channel" value="200031" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
+                <param name="JPUSH_CHANNEL" value="yiyou-market" desc="极推送的渠道标识"  />
+                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>1</versionCode>         
+                <versionName>2.0.1</versionName>      
+            </sdk-version>
+        </channel>    
+        <channel>
+            <param name="id" value="1704" />
+            <param name="name" value="wufan" />
+            <param name="sdk" value="wufan" />
+            <param name="desc" value="悟饭(啪啪游戏)" />
+            <param name="suffix" value="com.moyoi.zjtx.papa" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <param name="extraR" value="com.papa91.pay" />      
+            <sdk-params>
+                <param name="PA_APP_KEY" value="16001606" desc="APP_KEY" />
+                <param name="PA_APP_PRIVATE_KEY" value="44191be3a75d9c3e" desc="PRIVATE_KEY" />
+                <param name="PA_AD_ID" value="34264" desc="渠道自身appid" />
+                <param name="PA_GAME_ID" value="1606" desc="渠道自身游戏id" />
+                <param name="gameName" value="战箭天下" desc="游戏名称" />
+                <param name="callBackUrl" value="http://myserver.moyoi.cn:8093/pay/papa/payCallback/1704" desc="充值回调地址" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200024" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>3</versionCode>
+                <versionName>3.3.0</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="1705" />
+            <param name="name" value="chongchong" />
+            <param name="sdk" value="chongchong" />
+            <param name="desc" value="虫虫游戏" />
+            <param name="suffix" value="com.moyoi.zjtx.cc" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param name="app_id" value="119199" desc="APP_KEY" />
+                <param name="developer_key" value="ea0569c6d5d246ba81b23da2b3cd9d2f" desc="PRIVATE_KEY" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200021" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>1</versionCode>
+                <versionName>1.7.7</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="170701" />
+            <param name="name" value="vivooffline2" />
+            <param name="sdk" value="vivooffline2" />
+            <param name="desc" value="ViVo SDK offline2" />
+            <param name="suffix" value="com.moyoi.zjtx3.vivo" />
+            <param name="splash" value="0" />
+            <param name="icon" value="rb" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="AppID" value="bdb35c6fab1d0eaf716910420f1ca151" />
+                <param name="com.vivo.push.app_id" value="10374" />
+                <param name="com.vivo.push.api_key" value="c5324f3f-86bf-40f5-b5f1-5f3b11b0009c" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200001" />
+            </sdk-params>                       
+            <sdk-version>
+                <versionCode>4</versionCode>
+                <versionName>4.2.4.0</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="1708" />
+            <param name="name" value="sanxing" />
+            <param name="sdk" value="sanxing" />
+            <param name="desc" value="三星" />
+            <param name="suffix" value="com.moyoi.zjtx.samsung" />
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param name="appID" value="5002175481" desc="应用编号" />
+                <param name="acid" value="200028" desc="我方自己的标识" /> 
+                <param name="clientID" value="m8z2os31a0" desc="三星账号的clientID" />
+                <param name="clientSecret" value="333594A4DFB47A7BAE3EC94EC2890F04" desc="三星账号clientSecret" />
+                <param name="screenType" value="0" desc="游戏的横竖屏设置; 横屏为0; 竖屏为1; 横屏自动切换为6" />
+                <param name="privateKey" value="MIICXAIBAAKBgQCJnxNpvhFIqximebpzQX+/V/dPmIsOkeX4tJPULm2NSsBux8W/Qg+Cv48OzNP11J/osOjJiwXiXKBc8jk/Y5AFCciHHmsQeCh1m5a+4CVaf6f7XCZt7aBUAwEqtdDgM82ywZQY2hwpgwyF4QY+k1cH/ezAbLsQx7sSbnXavQRt/QIDAQABAoGAO9fShz7BIUpVM77nFss6k6fawN/iR/mleNp9Fd0CglgpCYMRODOvrvlBafwjh1hoGLUk5M7xRhdlHEWwIyJWM1MH0dnCVk4LM1y0rs4AcY0UU76ieKs9KREvDFZkRH+NB/14yWTDQOC8Ki+tnbCbwUfjBhj7BHPAsg+LqHEg6cECQQDsiQP4OHX/nMQx4vCPNvP/ra/fhFMxrj8RLdjfjV4al3uSR28XRv46qAlnT7hp1iF6941L9RzymNK4LstXmbPlAkEAlPJJKH7jH2bnVImt/STOVKmQwXpHmSomyC3Incpj5iNfiELPVRbpGHMMa/0VOYjJ4G7d5X4qLF4BjAF1lKfgOQJAR8llrQXluggn+0P24mA5OVXLVLjiTuelOF+DvIU5FDT5SfHoI1ZmfgLVp8coHubgDmPnPDBN8sqy2TdKe3GoiQJAJ92VcS5NEgmT3w+erwOb6hMceHyHD1q12JxQdtNF28IZ/rmLDsY8C1w3teueM7EF/3kNETCsjwV2Ooflda1dGQJBAKtH5WR7kGZ+aw0Rt3Bc7sdSWsICIFND3NStV6JNGVp9U2I9M1BQnfXmzroTUPFcTTz1CtY2PKMcCSsT1SPEqKU=" desc="三星的私钥" />
+                <param name="publicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDusJCHPfFLX/rtKMUockMCkppP3YxxCMuM7pe/fDr9CF9gNWNFTzE8TRfy55tVgTVO93NICLeegVYLELzxgGaHTBZxyM0Idj/zc8YtSjeB8igwDdSoSsaVfAnTNCuCp7w5YbEuf2ywa5KebFn73GDoJulJKegQ+CmvmwF1Xw40wIDAQAB" desc="三星的公钥" />
+                <param name="Notifyurl" value="http://myserver.moyoi.cn:8093/pay/samsung/payCallback/1708" desc="三星的支付回调地址" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200028" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>4</versionCode>
+                <versionName>4.3.6_1.0</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="17101" />
+            <param name="name" value="hulian2" />
+            <param name="sdk" value="hulian2" />
+            <param name="desc" value="互联视通2" />
+            <param name="suffix" value="com.moyoi.zjtx.xb" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="HS_APPID" value="6415" />
+                <param name="HS_CLIENTID" value="424" />
+                <param name="HS_CLIENTKEY" value="a80b92d6d66f23b2a0190f95b031cfd0" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200034" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>7</versionCode>   
+                <versionName>7.2</versionName>
+            </sdk-version>          
+        </channel>
+        <channel>         
+            <param name="id" value="1711" />            
+            <param name="name" value="xiao7" />            
+            <param name="sdk" value="xiao7" />            
+            <param name="desc" value="小7手游" />            
+            <param name="suffix" value="com.zjtx.moyoi.x7sy" />             
+            <param name="splash" value="11" />
+            <param name="icon" value="rb" />          
+            <param name="splash_copy_to_unity" value="0" />  
+            <param name="extraR" value="com.smwl.smsdk" />
+            <sdk-params>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200034" />
+                <param name="appkey" value="c27824e293e88ce2a75ade6e8695b3f3"/>
+                <param name="rsaPublic" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDHOcfk8hrYtRkt2DljH+K+nr6uAzcERKpmkOSJtb59nbKVdBoIncTnZmrSzWVFj8kY8vgtyKO4w8eeCIMedDF0oE0bGdoqzL3xcHHOYNta3J1NVqNDhwnewd6G3nk9sE1xLfLyQ2iku2+jwRtxuwcIfGMPln6h0w2WQGG7qu9BmQIDAQAB"/>       
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>6</versionCode>         
+                <versionName>6.0.1</versionName>      
+            </sdk-version>
+        </channel>      
+        <channel>
+            <param name="id" value="10" />
+            <param name="name" value="uc" />
+            <param name="sdk" value="uc" />
+            <param name="desc" value="UC（九游）" />
+            <param name="suffix" value="com.ftt.hual2.global.aligames" />
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <param name="gameName" value="战箭天下" desc="游戏名称"/>
+            <sdk-params>
+                <param name="UCGameId" value="924767" desc="UCGameId"/>
+                <param name="UCCpId" value="0" desc="UCCpId"/>
+                <param name="UCApiKey" value="684b4fcbf63535541b3bc4ae4a6f36de" desc="UCApiKey"/>
+                <param name="ali_screen_orientation" value="landscape" desc="横竖屏"/>
+                <param name="UCDebugMode" value="false" desc="是否开启调试模式"/>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200012" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>9</versionCode>
+                <versionName>9.0.0.1</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="11" />
+            <param name="name" value="downjoy" />
+            <param name="sdk" value="downjoy" />
+            <param name="desc" value="当乐" />
+            <param name="suffix" value="com.moyou.downjoy.zjtx" />
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param name="APP_ID" value="8856" />                
+                <param name="APP_KEY" value="rr1rGd7H" />               
+                <param name="MERCHANT_ID" value="22049" />               
+                <param name="SERVER_SEQ_NUM" value="1" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200011" /> 
+            </sdk-params>
+            <sdk-version>
+                <versionCode>4</versionCode>
+                <versionName>4.6.2</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="12" />
+            <param name="name" value="baidu" />
+            <param name="sdk" value="baidu" />
+            <param name="desc" value="百度" />
+            <param name="suffix" value="com.moyoi.zjtx.bd" />
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <param name="gameName" value="战箭天下" desc="游戏名称"/>
+            <sdk-params>
+                <param name="AppID" value="11452574" />
+                <param name="AppKey" value="4xvNAWvsbjvtuv8dh6IIUZ2R" />
+                <param name="Domain" value="RELEASE" desc="是否为调试模式(RELEASE|DEBUG)" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200026" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>4</versionCode>
+                <versionName>4.3.1</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="16" />
+            <param name="name" value="qihoo360" />
+            <param name="sdk" value="qihoo360" />
+            <param name="desc" value="奇虎360" />
+            <param name="suffix" value="com.moyoi.zjtx1.qihoo" />
+            <param name="splash" value="0" />
+            <param name="icon" value="rb" />
+            <param name="gameName" value="战箭天下" desc="游戏名称"/>
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param desc="AppID" name="QHOPENSDK_APPID" value="204267021" />
+                <param desc="AppKey" name="QHOPENSDK_APPKEY" value="d929367dede1ca19bbbb438a5bef7d27" />
+                <param desc="PrivateKey,注意：要用md5(appSecret#appKey)算法生成的privatekey(32位小写)" name="QHOPENSDK_PRIVATEKEY" value="990296b438c8a83634f75f2a180ddbde"/>
+                <param desc="在微信开放平台申请的 APPID" name="QHOPENSDK_WEIXIN_APPID" value="wxbed3a0e52f2cac9c" />
+                <param desc="是否显示关闭按钮" name="QHIsShowCloseIcon" value="true" />
+                <param desc="是否登录时显示切换账户按钮" name="QHIsShowAutoLoginSwitch" value="true" />
+                <param desc="是否显示欢迎界面" name="QHIsHideWelcome" value="true" />
+                <param desc="游戏名称" name="QHAppName" value="战箭天下" />
+                <param desc="兑换比例" name="QHRatio" value="10" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200006" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>2</versionCode>
+                <versionName>2.2.2_710</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="17" />
+            <param name="name" value="xiaomi" />
+            <param name="sdk" value="xiaomi" />
+            <param name="desc" value="小米" />
+            <param name="suffix" value="com.moyoi.zjtx.mi" />
+            <param name="splash" value="0" />
+            <param name="icon" value="rb" />
+            <param name="gameName" value="战箭天下" desc="游戏名称"/>
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="MiAppID" value="2882303761517846518" />
+                <param name="MiAppKey" value="5831784693518" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200004" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>3</versionCode>
+                <versionName>3.2.1.1</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="18" />
+            <param name="name" value="m4399" />
+            <param name="sdk" value="m4399" />
+            <param name="desc" value="4399" />
+            <param name="suffix" value="com.moyoi.zjtx.m4399" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param name="M4399_AppKey" value="117918" />
+                <param desc="横屏或者竖屏(landscape|portrait)" name="M4399_Orientation" value="landscape" />
+                <param desc="悬浮窗样式(one|two|three|four)" name="M4399_PopLogoStyle" value="one" />
+                <param desc="悬浮窗位置(left|top|right|bottom)" name="M4399_Position" value="right" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200005" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>2</versionCode>
+                <versionName>2.32.0.12</versionName>
+            </sdk-version>
+        </channel>
+       <channel>         
+            <param name="id" value="19" />            
+            <param name="name" value="oppo" />            
+            <param name="sdk" value="oppo" />            
+            <param name="desc" value="Oppo" />            
+            <param name="suffix" value="oppo.golbal.nearme.gamecenter" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />       
+            <sdk-params>                
+                <param name="app_Id" value="3662129" />
+                <param name="appSecret" value="bad57b6d270F30bf3Ae29a37b448648C" />
+                <param name="app_key" value="3aCYwl9G9ywWkWWwo804G44Wc" />        
+                <param name="is_offline_game" value="false" />
+                <param name="PayNotifyUrl" value="http://myserver.moyoi.cn:8093/pay/oppo/payCallback/19" />
+                <param name="debug_mode" value="false" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200002" />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>2</versionCode>         
+                <versionName>2.0.2.306</versionName>      
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="21" />
+            <param name="name" value="muzhiwan" />
+            <param name="sdk" value="muzhiwan" />
+            <param name="desc" value="拇指玩" />
+            <param name="suffix" value="com.moyoi.zjtx.muzhiwan" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params> 
+                <param name="MZW_Orientation" value="landscape" desc="横屏或者竖屏(landscape|portrait)" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200020" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>3</versionCode>
+                <versionName>3.6.1.6</versionName>
+            </sdk-version>
+        </channel>
+        <!-- <channel>
+            <param name="id" value="24" />
+            <param name="name" value="huawei" />
+            <param name="sdk" value="huawei" />
+            <param name="desc" value="华为" />
+            <param name="suffix" value="com.appmarket.zjtx.huawei" />
+            <param name="gameName" value="战箭天下" desc="游戏名称"/>
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="com.huawei.hms.client.appid" value="100241993" />
+                <param name="com.huawei.hms.client.cpid" value="890086000102118442" />
+                <param name="com.huawei.hms.version" value="2.6.3" />
+                <param desc="华为商品类型" name="HuaWei_serviceCatalog" value="X6" />
+                <param desc="华为渠道信息" name="HuaWei_sdkChannel" value="3" />
+                <param desc="游戏公司名称" name="HuaWei_merchantName" value="上海墨游信息科技有限公司" />
+                <param desc="pushID传的网址" name="pushURL" value="http://118.184.169.88:8093/user/transPushID" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200003" /> 
+                <param name="HuaWei_PrivateKey" value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHcK8MY8KitYSj7HVp4g0teL296zQIhUYCOwGpww8XjqBJV49LGNrUiCUy0tKhkbDvatc69gZbtpASGw7OpeEfyga7Ni7VpHeIVSUMN/k/RVULO4kR92e7N9Ynvgy1NL6FH90UqzvSwqcf0gdU0xiWLX7lK3MFMjJdcQFoTSmXUkcne96wEl1WHSiN3amqVfmenvFrlU7sfCK6e7/B/0wWo12w5fxYUdT8Y8710K11HwN55hagMuSraZu8FM4OfFu1ccXjtxa13wcbbCjvMRgvNrAggolZqyC0i+k914/TzUG0icHjCVDCCOMZwTAcmy0WVR+5hKk0ovtVmpqQEc4bAgMBAAECggEAG+zVkHOLdi2FA/rWOdwn94eiHFc0Mu6OQz5bLkJHTlzEaWCJiidRxKkczu/2rslv2ntoOt47PQOOn/+1OWQVOyvreLJ5KPrdWHPWOyQUkd0LBQacsQJQ6PBEMSO1iHh5Jg9fF5zI70AdbHbZBfHaIx+oVpLt3lANU0jBEgdJMoxYJY8JX+MGyf82uFhymZo8ssJDa+sMuGb2p8qaFycPulFCxIdI+8MLXKr1Z1N1F1IVkyn6vhGuacTcBeovLwkQTW6rntT2F6LmEIAV+wBTu4fanayilhn2rxZzpgj8ICo70jYHFtYPAOWX1VMLsc+E5MKzP+3WgruUGkBMTCAxOQKBgQD4dezY41o8hMt8s7WZ69SN3kmcxBwoVMQAjjGdo4IKyLyCVxAHPNmwTNtCLt0xwYDK5f1KgJjwl1ivGtK4WtJrcZFyfuD6DkOM3TpTPaBCKy5R1NV9k0XuEVS2kUH/c8HP2Z4ut3mC147xdWIH73aXrWNM1DFY62iSqsJ8g199lwKBgQDNffYNITEq3De788V2dA9duALz3LeT3+GY7oQ9DoJFT59aLjFYiLBJ9xneKnUTYRA7r6SZWRZH3JaZGcookF27E/eU8JkCKbkhyUxocXUMQM5FiRTYvRJF1HE22GKBpBPaCCy8Y21+lcClBK2wWYqAs7G9/fdSdvpoDvCYrT6MHQKBgBFGueJW5LZikXepU05RnKUEuN+ir0aKplpXiNGqReeUD6+MeDvYmlZs8a4HbjAAgYEaPuOIT5ojG/KJDe/tuMXpzrBEbEZW6ZGI7H5PQa54LC9aekHSFMG6CMbtEMa/eNGIEzyyW0uiy3i0rc1ZdEiVsNrtwkSpkcro/r8Dr4cfAoGBAJxoos7Nk9n2sqlp28PUhRmlhQHO3yA8CT/ZVGgQ0hElkLoYbNDhgaVa4qKamHA+shdsEpHyICZkfXBdE+WaNO2/PfRsyVm/Hj3cNT9OFHRWI2sD8w0hpHXoRKAlRZ09oSqUjFB8MYxnObGhBP80uFpL7B8b3pMzIlfv/yuGuhP1AoGBAMuvYRI7I2vEQCTDjO52jtcsnndwfJ7kQdns3jWUngEyzolqniEihgoY5VSMgGjXQmPevimvmdnBiCmPmtgiJOLIz1ecmhL3sVnceTXAD0pjTQIh4jID+IggZrvCXmCKkESLH13sW5uXvE09ufOrdUSeSn6L13YjJbtYANVwjX9N" />
+                <param name="HuaWei_PublicKey" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx3CvDGPCorWEo+x1aeINLXi9ves0CIVGAjsBqcMPF46gSVePSxja1IglMtLSoZGw72rXOvYGW7aQEhsOzqXhH8oGuzYu1aR3iFUlDDf5P0VVCzuJEfdnuzfWJ74MtTS+hR/dFKs70sKnH9IHVNMYli1+5StzBTIyXXEBaE0pl1JHJ3vesBJdVh0ojd2pqlX5np7xa5VO7Hwiunu/wf9MFqNdsOX8WFHU/GPO9dCtdR8DeeYWoDLkq2mbvBTODnxbtXHF47cWtd8HG2wo7zEYLzawIIKJWasgtIvpPdeP081BtInB4wlQwgjjGcEwHJstFlUfuYSpNKL7VZqakBHOGwIDAQAB" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>2</versionCode>
+                <versionName>2.6.3.301</versionName>
+            </sdk-version>
+        </channel> -->
+
+        <channel>
+            <param name="id" value="24" />
+            <param name="name" value="huawei" />
+            <param name="sdk" value="huawei" />
+            <param name="desc" value="华为" />
+            <param name="suffix" value="com.appmarket.zjtx.huawei" />
+            <param name="gameName" value="战箭天下" desc="游戏名称"/>
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200003" />          
+            </sdk-params>
+            <sdk-version>
+                <versionCode>4</versionCode>
+                <versionName>4.0.3.302</versionName>
+            </sdk-version>
+        </channel>
+
+        <channel>
+            <param name="id" value="25" />
+            <param name="name" value="yyh" />
+            <param name="sdk" value="yyh" />
+            <param name="desc" value="应用汇" />
+            <param name="suffix" value="com.ftt.hwal2.global.yyh" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param desc="AppId" value="13947" name="AppChina_AppId" />
+                <param desc="AppKey" value="634398184172421120" name="AppChina_AppKey" />
+                <param desc="PrivateKey" name="AppChina_PrivateKey" value="MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAM5sMOyPYxVT9kMbVxavCj1nTUcZ1Z+WiU5qcS13J6TREzEQJo2029S/Tnt1gG0PZBYtOR9n/M3QPA7ZjsxElqv3W16PhtHuzLhWSjB8lac3SerhOZQFtjx8gUCtd3WKP+g5OLDNpYqbLPylnrBTQN0npARPBDqTcnfwtGx/tZXZAgMBAAECgYEArCwzlmx2oYh5pDl+p03yhYrPOxnCQ60k84H2yoxTRbaZglfNQG702PuEM5erOcwXmCO6PIbYprYkEeLGp3wiCuey5EsLcQNpQhrG8z6IWTzJHp2GStC8oWfLBKcIjFwArSJqE4rv+MHSv23HqAPxBoLEFcVv5AsZjGP58hzwrIECQQDuuDt8bsEzLh8HYGZWFUxdBwaKqRK5vYajjI0tKE/5x7VZvhmtaBibkDekhyVDdgNtnwdp3wgHup3hthEvusMpAkEA3V10gc/Or5KtdvpldV1Ifl/bHSOV2MCZijzrWnG4pMQ7AeBUSpVesfPYB6EeelrK31P8qJLnoMVwtOQhT57DMQJAQlKtNEURKEcIF+SQihogvTfWeW+/5Brj7Ux/bKxmi98QY36NY8AoFhBbZTqm/7cp/KrSRHfSo1MVyj/rRnd9AQJAcIIYPgX9eZTmHyuCt5TyzHAxsGyus1yobO8re2uDOhMWHo0CqmmimHVj3fTQxcUxiTJpntATc84Fy5qLJ6l8cQJBAL+M6m0285KO6a0JqSgUWFnaiYuwW89OfBCz7BWFooIsbWyk4BGFGe1wSDskkebFfRF73DlIPUEHHHPeNr+laOk=" />
+                <param desc="PublicKey" name="AppChina_PublicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWDXnClAgfgg3qIFW/1xnCWDgxADWmOMzW1gi6JVf0xgXJAbHra0Yq8WJffZePcw5k01WSEco1TQBlh45KG6evyD/S6NMXKVHou5rjNVn3tcO19eZV4bVyuVoMALGmVhoSxjVgJ1lyCzFbozsuZMszbBVcn+WH/6HpFAm8Mwf9twIDAQAB" />
+                <param desc="横屏竖屏设置(landscape|portrait)" name="AppChina_Orientation" value="landscape" />
+                <param name="AppChina_CallbackUrl" value="http://myserver.moyoi.cn:8093/pay/appchina/payCallback/25" desc="支付回调地址" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200017" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>9</versionCode>
+                <versionName>9.0.0</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="27" />
+            <param name="name" value="anzhi" />
+            <param name="sdk" value="anzhi" />
+            <param name="desc" value="安智" />
+            <param name="suffix" value="com.moyoi.zjtx.anzhi" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param name="AnZhi_AppKey" value="1529491237HtKd3MjO4v662oNiag6K" />
+                <param name="AnZhi_Secret" value="lO27jn7yIIdBe22FX153z9o5" />
+                <param name="AnZhi_GameName" value="战箭天下"  desc="游戏名称"/>
+                <param name="AnZhi_Orientation" value="landscape" desc="横屏或者竖屏(landscape|portrait)" />
+                <param name="ANZHIUSERCENTE_VERSIONS" value="5.0" desc="版本号"  />
+                <param name="ANZHI_DEBUG" value="false" desc="是否为debug模式"  />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200016" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>5</versionCode>
+                <versionName>5.2.0</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="28" />
+            <param name="name" value="mumayi" />
+            <param name="sdk" value="mumayi" />
+            <param name="desc" value="木蚂蚁" />
+            <param name="suffix" value="com.moyoi.zjtx.mumayi" />
+            <param name="splash" value="11" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param name="MuMaYi_AppKey" value="8ddc5d1f02df5d955AP6o46Y9fDhdMX5vinrOVkdYKEWL3MnD6HrneSK3LL8RDkqh6NRiQ" />
+                <param name="MuMaYi_GameName" value="战箭天下" desc="战箭天下"/>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200018" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>3</versionCode>
+                <versionName>3.4.9</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="29" />
+            <param name="name" value="guopan" />
+            <param name="sdk" value="guopan" />
+            <param name="desc" value="叉叉助手(果盘)" />
+            <param name="suffix" value="com.moyoi.zjtx.guopan" />
+            <param name="splash" value="0" />
+            <param name="icon" value="rb" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="GuoPan_AppID" value="117008" />
+                <param name="GuoPan_AppKey" value="E301X2J4HO775QEI" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200023" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>4</versionCode>
+                <versionName>4.2.0.1</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="31" />
+            <param name="name" value="meizu" />
+            <param name="sdk" value="meizu" />
+            <param name="desc" value="魅族" />
+            <param name="suffix" value="com.ftt.hual2.global.mz" />
+            <param name="splash" value="0" />
+            <param name="icon" value="rb" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="Flyme_AppID" value="3204828" />
+                <param name="Flyme_AppKey" value="84058f53161e4b5ea3e0df9e6c15d733" />
+                <param name="Flyme_AppSecret" value="b4Z7MRHnsJRvapoJsDy7QR4BrS2cL3gA" />
+                <param name="MEIZU_APP_ID" value="117136" />
+                <param name="MEIZU_APP_KEY" value="6ad60dc2c2664b44bbf23a089ed96b60" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200008" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>5</versionCode>
+                <versionName>5.2.2</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="32" />
+            <param name="name" value="kupai" />
+            <param name="sdk" value="kupai" />
+            <param name="desc" value="酷派" />
+            <param name="suffix" value="com.moyoi.zjtx.coolpad" />
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="CoolPad_AppID" value="5000010278" />
+                <param name="CoolPad_AppKey" value="6120d6e25a4a4d1d985d8e5baab2f655" />
+                <param name="CoolPad_PayKey" value="OEYyNEZGM0E5NDJFRDUzNDY1NEM4Qzk1QzcyQUUyNUFBM0ZEQkRFRE1UQTJOelV4T0RJeU56Z3lOelUzTXpJd01UTXJNalF6TWpNNE5EWTFNRFExTmpFMU5EUTFPVFEyT0RjNU1EQTFNekl5TnpRME1URXlOemt6" />
+                <param name="CoolPad_Orientation" desc="横竖屏(landscape|portrait)" value="landscape" />
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="200014" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>3</versionCode>
+                <versionName>3.1.6</versionName>
+            </sdk-version>
+        </channel>
+        <channel>
+            <param name="id" value="35" />
+            <param name="name" value="ysdk" />
+            <param name="sdk" value="ysdk" />
+            <param name="desc" value="应用宝" />
+            <param name="suffix" value="com.tencent.tmgp.moyoi.zjtx3" />
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="icon" value="rb" />
+            <sdk-params>
+                <param name="M_PAY_TYPE" value="1" desc="1:游戏币托管；2：道具直购" />
+                <param name="QQ_APP_ID" value="1107228546" desc="QQAppID"/>
+                <param name="WX_APP_ID" value="wxbed3a0e52f2cac9c" desc="微信AppID"/>
+                <param name="M_APP_KEY" value="zVbhrNGzN1LZRtjxL1QdDuWT2VTBXncC" desc="米大师AppKey"/>
+                <param name="OFFER_ID" value="1107228546" desc="OfferId,一般就是QQ AppId" />
+                <param name="YSDK_URL" value="https://ysdk.qq.com" desc="沙箱环境是https://ysdktest.qq.com；正式环境是https://ysdk.qq.com"/>
+                <param name="WG_FIXEDPAY" value="true" desc="是否定额支付 ： true|false"/>
+                <param name="WG_RATIO" value="10" desc="后台配置的比例，如果是1:10，那么填10" />
+                <param name="WG_COIN_ICON_NAME" value="coin_icon" desc="drawable资源目录下的文件名称，不带后缀" />
+                <param name="WG_MULTI_SERVERS" value="false" desc="是否开启了分区 ： true|false" />
+                <param name="WG_QUERY_URL" value="http://myserver.moyoi.cn:8093/pay/ysdknew/query/35" desc="u8server上处理应用宝查询订单的地址"/>
+                <param name="WG_PAY_URL" value="http://myserver.moyoi.cn:8093/pay/ysdknew/charge/35" desc="u8server上处理应用宝充值的地址"/>
+                <param name="jpush_appkey" value="" desc="极光推送的appkey"/>
+                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_CHANNEL" value="2000010" />
+            </sdk-params>
+            <sdk-version>
+                <versionCode>1</versionCode>
+                <versionName>1.5.15</versionName>
+            </sdk-version>
+        </channel>
+    </channels>
+</xml>

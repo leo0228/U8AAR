@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xml>  
+    <!-- <global-plugins>
+        <plugin name="umengpush" desc="友盟推送插件"/>
+    </global-plugins> -->
+    <channels>
+               
+        <channel>         
+            <param name="id" value="1703" />            
+            <param name="name" value="moyoihw" />            
+            <param name="sdk" value="moyoihw" />            
+            <param name="desc" value="墨游" />            
+            <param name="suffix" value="com.moyoiglobal.sv.en" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />
+            <param name="extraR" value="com.facebook.common" />      
+            <sdk-params>               
+                <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
+                <param name="cloud_channel" value="200000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>1</versionCode>         
+                <versionName>1.0.1</versionName>      
+            </sdk-version>
+        </channel>       
+    </channels>
+</xml>

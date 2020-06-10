@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <permissionConfig>
+        
+    </permissionConfig>
+
+    <applicationConfig keyword="com.anzhi.sdk.middle.manage.AgencyActivity" proxyApplication="com.u8.sdk.AnZhiProxyApplication" >
+
+       <!-- 支付界面的横竖屏显示方式可修改下面Activity的android:screenOrientation属性，其它属性切记不要修改！ -->
+        <activity
+            android:name="com.anzhi.sdk.middle.manage.AgencyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/anzhi_sdk_style"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${applicationId}"
+                    android:scheme="anzhipaysdk" />
+            </intent-filter>
+        </activity>
+        <!-- 上线发布一定要删除掉下面这句 -->
+        <!-- <meta-data
+            android:name="ANZHI_DEBUG"
+            android:value="true" /> -->
+    </applicationConfig>
+
+</manifest>

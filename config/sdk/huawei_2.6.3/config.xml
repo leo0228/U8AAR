@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    
+    <params>
+        <param name="com.huawei.hms.client.appid" required="1" showName="AppID" desc="华为游戏的appid" bWriteInManifest="1" bWriteInClient="1" />
+        <param name="com.huawei.hms.client.cpid" required="1" showName="PayID" desc="华为游戏的cpid" bWriteInManifest="1" bWriteInClient="1" />
+        <param name="com.huawei.hms.version" required="1" showName="PayID" desc="华为游戏的cpid" bWriteInManifest="1" bWriteInClient="1" />
+        <param name="HuaWei_serviceCatalog" required="1" showName="serviceCatalog" desc="华为商品类型" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="HuaWei_sdkChannel" required="1" showName="sdkChannel" desc="华为渠道信息" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="HuaWei_merchantName" required="1" showName="sdkChannel" desc="开发者注册的公司名称" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="pushURL" required="1" showName="pushURL" desc="传递pushId的网址" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="HuaWei_PrivateKey" required="1" showName="sdkChannel" desc="支付秘钥" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="HuaWei_PublicKey" required="1" showName="sdkChannel" desc="支付公钥" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
+    </params>
+    
+    <operations>
+        <operation step="1" type="mergeManifest" from="SDKManifest.xml" to="AndroidManifest.xml" />
+        <operation step="2" type="copyRes" from="assets" to="assets" />
+        <operation step="3" type="copyRes" from="libs" to="lib" />
+        <operation step="4" type="copyRes" from="res" to="res" />
+    </operations>
+    
+    <plugins>
+        <plugin name="com.u8.sdk.HuaWeiUser" type="1" desc="用户登录接口"/>
+        <plugin name="com.u8.sdk.HuaWeiPay" type="2" desc="用户支付接口"/>
+    </plugins>
+    
+    <version>
+        <name>华为</name>
+        <versionCode>1</versionCode>
+        <versionName>2.6.1.302</versionName>
+    </version>    
+    
+</config>

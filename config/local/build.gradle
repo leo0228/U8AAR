@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+repositories {
+    google()
+    jcenter()
+}
+
+dependencies { 
+}
+
+task copyToLibs(type: Copy) {
+    from configurations.runtime
+    into 'libs'
+}

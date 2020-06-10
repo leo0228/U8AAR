@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    
+    <params>
+        <param name="AnZhi_AppKey" required="1" showName="APP_ID" desc="安智" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AnZhi_Secret" required="1" showName="APP_KEY" desc="安智" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="AnZhi_GameName" required="1" showName="游戏名称" desc="安智" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AnZhi_Orientation" required="1" showName="横屏或者竖屏(landscape|portrait)" desc="安智" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ANZHIUSERCENTE_VERSIONS" required="1" showName="版本号" desc="安智" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="ANZHI_DEBUG" required="1" showName="是否为dubug模式" desc="安智" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="anzhi" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="anzhi" bWriteInManifest="0" bWriteInClient="1" />
+    </params>
+    
+    <operations>
+        <operation step="1" type="mergeManifest" from="SDKManifest.xml" to="AndroidManifest.xml" />
+        <operation step="2" type="copyRes" from="assets" to="assets" />
+        <operation step="3" type="copyRes" from="libs" to="lib" />
+        <operation step="4" type="copyRes" from="res" to="res" />
+    </operations>
+    
+    <plugins>
+        <plugin name="com.u8.sdk.AnZhiUser" type="1" desc="用户登录接口"/>
+        <plugin name="com.u8.sdk.AnZhiPay" type="2" desc="用户支付接口"/>
+    </plugins>
+    
+    <version>
+        <name>安智</name>
+        <versionCode>5</versionCode>
+        <versionName>5.2.0</versionName>
+    </version>  
+</config>

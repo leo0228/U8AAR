@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <permissionConfig>
+        
+    </permissionConfig>
+
+    <applicationConfig proxyApplication="com.u8.sdk.X7Application">
+        
+        <provider
+		    android:name="android.support.v4.content.FileProvider"
+		    android:authorities="gamePackageName.provider"
+		    android:exported="false"
+		    android:grantUriPermissions="true">
+	   		<meta-data
+		    	android:name="android.support.FILE_PROVIDER_PATHS"
+		    	android:resource="@xml/x7_yunxin_provider_paths" />
+		</provider>
+		<provider
+		 	android:name="com.smwl.smsdk.X7Provider"
+			android:authorities="gamePackageName.x7provider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/x7_provider_paths" />
+		</provider>
+		<provider
+		    android:name="com.netease.nimlib.ipc.NIMContentProvider"
+		    android:authorities="gamePackageName.ipc.provider"
+		    android:exported="false"
+		    android:process=":core" />
+		<provider    	
+			android:name="com.netease.nim.uikit.common.media.picker.model.GenericFileProvider"
+		    android:authorities="gamePackageName.generic.file.provider"
+		    android:exported="false"
+		    android:grantUriPermissions="true">
+		    <meta-data
+		        android:name="android.support.FILE_PROVIDER_PATHS"
+		        android:resource="@xml/yunxin_provider_paths" />
+		</provider>
+		<activity
+		    android:name="com.smwl.smsdk.activity.im.YunXinToX7ActX7SDK"      
+		    android:configChanges="orientation|screenSize|keyboardHidden|navigation|screenLayout"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		    android:screenOrientation="behind">
+		    <intent-filter>
+		        <action android:name="gamePackageName.yunXin_jumpTo_YunXinToX7Act" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</activity>
+    </applicationConfig>
+
+</manifest>

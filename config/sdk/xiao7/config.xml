@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    
+    <params>
+        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="xiao7" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="xiao7" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="appkey" required="1"  showName="小7游戏id" desc="由小7平台提供" bWriteInManifest="0" bWriteInClient="1" />   
+    </params>
+    
+    <operations>
+        <operation step="1" type="mergeManifest" from="SDKManifest.xml" to="AndroidManifest.xml" />
+        <operation step="2" type="copyRes" from="assets" to="assets" />
+        <operation step="3" type="copyRes" from="libs" to="lib" />
+        <operation step="4" type="copyRes" from="res" to="res" />
+    </operations>
+    
+    <plugins>
+        <plugin name="com.u8.sdk.X7User" type="1" desc="用户登录接口"/>
+        <plugin name="com.u8.sdk.X7Pay" type="2" desc="用户支付接口"/>
+    </plugins>
+    
+    <dependencies>
+        <dependency name="com.android.support:appcompat-v7:26.+" />
+        <dependency name="com.android.support:support-v4:26.+" />
+        <dependency name="com.android.support:design:26.+" />
+        <dependency name="com.android.support:recyclerview-v7:26.+" />
+        <dependency name="com.android.support.constraint:constraint-layout:1.1.3" />
+        <dependency name="com.google.code.gson:gson:2.8.5" />
+        <dependency name="com.github.bumptech.glide:glide:4.4.0" group="com.android.support"/>
+        <dependency name="com.github.bumptech.glide:compiler:4.4.0" />
+        <dependency name="jp.wasabeef:glide-transformations:3.0.1" group="com.github.bumptech.glide" module="glide"/>
+        <dependency name="com.github.bumptech.glide:okhttp3-integration:4.4.0" />
+        <dependency name="com.squareup.okhttp3:okhttp:3.11.0" />
+        <dependency name="org.greenrobot:eventbus:3.1.1" />
+        <dependency name="com.nostra13.universalimageloader:universal-image-loader:1.9.2" />
+    </dependencies>
+
+    <version>
+        <name>小7手游</name>
+        <versionCode>6</versionCode>
+        <versionName>6.0.1</versionName>
+    </version>    
+    
+</config>
