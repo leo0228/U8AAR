@@ -14,23 +14,23 @@
             <param name="splash_copy_to_unity" value="0" />          
             <sdk-params>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
-                <param name="TALKING_CHANNEL" value="200000" desc="墨游在talkingdata分配的渠道号"  /> 
-                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
-                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
+                <param name="TALKING_CHANNEL" value="200000" desc="墨游在talkingdata分配的渠道号"  />               
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
                 <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="JPUSH_CHANNEL" value="taptap-market" desc="极推送的渠道标识"  />
-                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
+                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
+                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
+                <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
                 <versionCode>1</versionCode>         
                 <versionName>2.0.1</versionName>      
             </sdk-version>
-        </channel> 
+        </channel>
         <channel>         
             <param name="id" value="170305" />            
             <param name="name" value="moyoitest" />            
@@ -42,16 +42,16 @@
             <sdk-params>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="200000" desc="墨游在talkingdata分配的渠道号"  /> 
-                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
-                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
                 <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="JPUSH_CHANNEL" value="taptap-market" desc="极推送的渠道标识"  />
-                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
+                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
+                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
+                <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
                 <versionCode>1</versionCode>         
@@ -69,16 +69,16 @@
             <sdk-params>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="200029" desc="墨游在talkingdata分配的渠道号"  /> 
-                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
-                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
                 <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200029" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="JPUSH_CHANNEL" value="taptap-market" desc="极推送的渠道标识"  />
-                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
+                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
+                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
+                <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
                 <versionCode>1</versionCode>         
@@ -96,16 +96,16 @@
             <sdk-params>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="200030" desc="墨游在talkingdata分配的渠道号"  /> 
-                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
-                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
                 <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200030" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="JPUSH_CHANNEL" value="haoyou-market" desc="极推送的渠道标识"  />
-                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
+                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
+                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
+                <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
                 <versionCode>1</versionCode>         
@@ -123,16 +123,16 @@
             <sdk-params>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="200031" desc="墨游在talkingdata分配的渠道号"  /> 
-                <param name="mobvista_AppId" value="101382" desc="墨游在mobvista申请的appid"  />
-                <param name="mobvista_AppKey" value="75e8bcf5579f3fc192a0a4bd02d76896" desc="墨游在mobvista申请的appkey"  />
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
                 <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200031" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="JPUSH_CHANNEL" value="yiyou-market" desc="极推送的渠道标识"  />
-                <param name="JPUSH_APPKEY" value="f0e247d25483ff5116fd0a92" desc="极推送的appkey"  />
+                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
+                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
+                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
+                <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
                 <versionCode>1</versionCode>         
@@ -188,7 +188,7 @@
             <param name="id" value="170701" />
             <param name="name" value="vivooffline2" />
             <param name="sdk" value="vivooffline2" />
-            <param name="desc" value="ViVo SDK offline2" />
+            <param name="desc" value="VivoSDK offline2" />
             <param name="suffix" value="com.moyoi.zjtx3.vivo" />
             <param name="splash" value="0" />
             <param name="icon" value="rb" />
@@ -199,6 +199,9 @@
                 <param name="com.vivo.push.api_key" value="c5324f3f-86bf-40f5-b5f1-5f3b11b0009c" />
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200001" />
+                <param name="ad_appId" value="200001" />
+                <param name="ad_posId" value="200001" />
+                <param name="isShowVivoAd" value="false" desc="是否显示VIVO广告"  />
             </sdk-params>                       
             <sdk-version>
                 <versionCode>4</versionCode>
@@ -290,6 +293,9 @@
                 <param name="UCDebugMode" value="false" desc="是否开启调试模式"/>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200012" />
+                <param name="ad_appId" value="1000004107" />
+                <param name="ad_posId" value="1000004107" />
+                <param name="isShowUCAd" value="false" />
             </sdk-params>
             <sdk-version>
                 <versionCode>9</versionCode>
@@ -405,6 +411,9 @@
                 <param desc="悬浮窗位置(left|top|right|bottom)" name="M4399_Position" value="right" />
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200005" />
+                <param name="ad_appId" value="1000004107" />
+                <param name="ad_posId" value="1000004107" />
+                <param name="isShow4399Ad" value="false" />
             </sdk-params>
             <sdk-version>
                 <versionCode>2</versionCode>
@@ -429,6 +438,9 @@
                 <param name="debug_mode" value="false" />
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200002" />
+                <param name="ad_appId" value="1000004107" />
+                <param name="ad_posId" value="1000004107" />
+                <param name="isShowOppoAd" value="false" />
             </sdk-params>           
             <sdk-version>         
                 <versionCode>2</versionCode>         
