@@ -6,8 +6,11 @@
         <param name="M4399_Orientation" required="1" showName="横屏或者竖屏(landscape|portrait)" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
         <param name="M4399_PopLogoStyle" required="1" showName="悬浮窗样式(one|two|three|four)" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
         <param name="M4399_Position" required="1" showName="悬浮窗位置(left|top|right|bottom)" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="dl" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="4399" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="ad_appId" required="1" showName="4399广告appId" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_posId" required="1" showName="4399广告位id" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="isShow4399Ad" required="1"  showName="是否显示4399广告" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>
@@ -21,6 +24,7 @@
     <plugins>
         <plugin name="com.u8.sdk.M4399User" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.M4399Pay" type="2" desc="用户支付接口"/>
+        <plugin name="com.u8.sdk.M4399Ads" type="7" desc="广告接口"/>
     </plugins>
 
     <version>

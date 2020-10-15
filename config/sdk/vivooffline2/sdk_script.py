@@ -26,6 +26,7 @@ def execute(channel, decompileDir, packageName):
 	ET.register_namespace('android', androidNS)
 	key = '{' + androidNS + '}name'
 	schemeKey = '{'+androidNS+'}scheme'
+	authorityKey = '{'+androidNS+'}authorities'
 
 	tree = ET.parse(manifestFile)
 	root = tree.getroot()
@@ -34,24 +35,23 @@ def execute(channel, decompileDir, packageName):
 	if applicationNode is None:
 		return 1
 
-	activityNodeLst = applicationNode.findall('activity')
-	if activityNodeLst is None:
+	networkKey = '{'+androidNS+'}networkSecurityConfig'
+	if networkKey not in applicationNode.attrib:
+		applicationNode.set(networkKey, "@xml/network_security_config")
+
+	providerNodeLst = applicationNode.findall('provider')
+	if providerNodeLst is None:
 		return 1
 
-	receiverNodeLst = applicationNode.findall('receiver')
-	if receiverNodeLst is None:
-		return 1
+	for proNode in providerNodeLst:
+		name = proNode.get(key)
+		if name == 'com.bytedance.sdk.openadsdk.multipro.TTMultiProvider':
+			proNode.set(authorityKey, packageName+'.TTMultiProvider')
+		if name == 'com.bytedance.sdk.openadsdk.TTFileProvider':
+			proNode.set(authorityKey, packageName+'.TTFileProvider')
+		if name == 'android.support.v4.content.FileProvider':
+			proNode.set(authorityKey, packageName+'.fileprovider')
 
-	for receiverNode in receiverNodeLst:
-		intentNodes = receiverNode.findall('intent-filter')
-		if intentNodes is not None and len(intentNodes) > 0:
-			for intentNode in intentNodes:
-				actionNodes = intentNode.findall('action')
-				if actionNodes is not None and len(actionNodes) > 0:
-					for actionNode in actionNodes:
-						actionName = actionNode.get(key)
-						if actionName == 'com.vivo.pushclient.action.RECEIVE':
-							receiverNode.set(key, 'com.u8.sdk.PushMessageReceiverImpl')
 
 	tree.write(manifestFile, 'UTF-8')
 

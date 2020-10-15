@@ -19,7 +19,6 @@
     </plugins>
 
     <version>
-        <name>腾讯Bugly插件</name>
         <versionCode>1</versionCode>
         <versionName>1.2.0.1</versionName>
     </version>    

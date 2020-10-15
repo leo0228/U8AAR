@@ -9,6 +9,9 @@
         <param name="UCDebugMode" required="1" showName="是否开启调试模式" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
         <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
        	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_appId" required="1" showName="uc广告appId" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_posId" required="1" showName="uc广告位id" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="isShowUCAd" required="1"  showName="是否显示UC广告" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>
@@ -21,6 +24,7 @@
     <plugins>
         <plugin name="com.u8.sdk.AliUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.AliPay" type="2" desc="用户支付接口"/>
+        <plugin name="com.u8.sdk.AliAds" type="7" desc="广告接口"/>
     </plugins>
     
     <version>

@@ -23,7 +23,6 @@
     </plugins>
     
     <version>
-        <name>友盟推送插件</name>
         <versionCode>1</versionCode>
         <versionName>2.6.0</versionName>
     </version>    
