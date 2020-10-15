@@ -19,7 +19,7 @@ import main
 import main_thread
 
 
-def entry(isPublic, isSelectable, threadNum, appID, channelName):
+def entry(isPublic, isSelectable, threadNum, appName, channelName):
 
 
     file_utils.printLogo()
@@ -29,9 +29,9 @@ def entry(isPublic, isSelectable, threadNum, appID, channelName):
 
     games = config_utils.getAllGames()
 
-    selectedGameID = appID
+    selectedGameName = appName
 
-    if selectedGameID is None:
+    if selectedGameName is None:
 
         print(u"################################################################")
         print(u"\t%-20s%-20s%-20s\n" % ("AppID", u"AppName", u"描述"))
@@ -43,14 +43,14 @@ def entry(isPublic, isSelectable, threadNum, appID, channelName):
                 #print(u"\t %s \t\t %s \t\t\t%s" % (ch['appID'], ch['appName'], ch['appDesc']))
 
         print("")
-        #sys.stdout.write(u"请选择一个游戏(输入appID)：") (由于windows更新导致中文乱码改成英文打包，如果中文没问题之后可以改回来)
-        sys.stdout.write(u"Please select a game(Input appID)：")
+        #sys.stdout.write(u"请选择一个游戏(输入appName)：") (由于windows更新导致中文乱码改成英文打包，如果中文没问题之后可以改回来)
+        sys.stdout.write(u"Please select a game(Input appName)：")
         sys.stdout.flush()
 
-        selectedGameID = raw_input()
-        selectedGameID = str(selectedGameID)
+        selectedGameName = raw_input()
+        selectedGameName = str(selectedGameName)
 
-    game = getGameByAppID(selectedGameID, games)
+    game = getGameByAppName(selectedGameName, games)
 
     log_utils.info("current selected game is %s(%s)", game['appName'], game['appDesc'])
 
@@ -72,4 +72,13 @@ def getGameByAppID(appID, games):
 
     return None
 
+def getGameByAppName(appName, games):
 
+    if games == None or len(games) <= 0:
+        return None
+
+    for game in games:
+        if game['appName'] == appName:
+            return game
+
+    return None

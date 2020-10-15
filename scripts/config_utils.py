@@ -192,10 +192,8 @@ def getAppID():
         return None
 
     gameNode = root.find("game")
-
     if gameNode == None:
         return None
-
 
     appID = gameNode.get('appID')
 
@@ -212,10 +210,8 @@ def getAppKey():
         return None
 
     gameNode = root.find("game")
-
     if gameNode == None:
         return None
-
 
     appID = gameNode.get('appKey')
 
@@ -458,7 +454,7 @@ def loadChannelUserConfig(appName, channel):
             p['type'] = pNode.get('type')
             channel['plugins'].append(p)
 
-    # 删除没用
+    # 无用删除
     # versionNode = configNode.find("version")
     # if versionNode != None and len(versionNode) > 0:
     #     versionCodeNode = versionNode.find("versionCode")
@@ -468,7 +464,7 @@ def loadChannelUserConfig(appName, channel):
     #         channel['sdkVersionCode'] = versionCodeNode.text
     #         channel['sdkVersionName'] = versionNameNode.text
 
-    #卢天骄
+    #卢-->判断config。xml中是否有dependencies标签，并拼接到channel中
     dependencyNodes = configNode.find("dependencies")
     if dependencyNodes != None and len(dependencyNodes) > 0:
         channel['dependencies'] = []
@@ -509,6 +505,7 @@ def writeDeveloperProperties(game, channel, targetFilePath):
     useU8Auth = None
     authUrl = None
 
+    #优先获取games/games.xml里书籍
     if "use_u8_auth" in game:
         useU8Auth = game["use_u8_auth"]
 
@@ -532,8 +529,20 @@ def writeDeveloperProperties(game, channel, targetFilePath):
     if useU8Auth == "1":
         proStr = proStr + "U8_AUTH_URL=" + authUrl + "\n"
 
-    if "u8_analytics_url" in local_config:
-        proStr = proStr + "U8_ANALYTICS_URL=" + local_config['u8_analytics_url'] + "\n"
+    # if "u8_analytics_url" in local_config:
+    #     proStr = proStr + "U8_ANALYTICS_URL=" + local_config['u8_analytics_url'] + "\n"
+
+    # if "u8_login_game_url" in local_config:
+    #     proStr = proStr + "U8_LOGIN_GAME_URL=" + local_config['u8_login_game_url'] + "\n"
+
+    # if "u8_order_url" in local_config:
+    #     proStr = proStr + "U8_ORDER_URL=" + local_config['u8_order_url'] + "\n"
+
+    # if "u8_posid_url" in local_config:
+    #     proStr = proStr + "U8_POSID_URL=" + local_config['u8_posid_url'] + "\n"
+
+    # if "sdk_update_url" in local_config:
+    #     proStr = proStr + "SDK_UPDATE_URL=" + local_config['sdk_update_url'] + "\n"
 
 
     #write third plugin info:
@@ -572,7 +581,6 @@ def writePluginConfigs(channel, targetFilePath):
             pluginNode.set('type', typeVal)
 
     # write third plugin info
-
     thirdPlugins = channel.get('third-plugins')
     if thirdPlugins != None and len(thirdPlugins) > 0:
         for cPlugin in thirdPlugins:
@@ -589,8 +597,8 @@ def writePluginConfigs(channel, targetFilePath):
 
     targetTree.write(targetFilePath, 'UTF-8')
 
-#Author:卢天骄
-#修改build.gradle
+
+#卢-->修改build.gradle
 def writeGradleDependencies(dependencies, sdkDestDir):
     gradlePath = sdkDestDir + "/build.gradle"
     gradlePath = file_utils.getFullPath(gradlePath)
@@ -633,8 +641,7 @@ def writeGradleDependencies(dependencies, sdkDestDir):
 
     executeGradlew(sdkDestDir)
 
-#Author:卢天骄
-#下载依赖包到指定目录
+#卢-->下载依赖包到指定目录
 def executeGradlew(sdkDestDir):
     libsDir = os.path.join(sdkDestDir, "libs")
     if not os.path.exists(libsDir):

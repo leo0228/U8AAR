@@ -52,6 +52,7 @@ def pack(game, channel, sourcepath, isPublic):
     decompileDir = workDir + "/decompile"
     smaliDir = decompileDir + "/smali"
 
+    #反编译APK
     ret = apk_utils.decompileApk(tempApkSource, decompileDir)
     if ret:
         return 1
@@ -75,14 +76,15 @@ def pack(game, channel, sourcepath, isPublic):
     sdkDestDir = workDir + "/sdk/" + sdkName
     file_utils.copy_files(sdkSourceDir, sdkDestDir)
 
-    if sdkName != 'hulian2':
-        #将公共库copy到临时目录
+    #将公共库复制到临时目录，除了hulian2，moyoihw渠道
+    if sdkName != 'hulian2' and sdkName != 'moyoihw':
         promptDir = 'config/local/prompt-release.aar'
         promptDestDir = sdkDestDir + '/libs/prompt-release.aar';
         file_utils.copy_files(promptDir, promptDestDir)
 
+    #处理需要Gradle自动下载的库
     if 'dependencies' in channel and channel['dependencies'] != None and len(channel['dependencies']) > 0:      
-        #将build.gradle复制到SDK临时目录
+        #将build.gradle复制到临时目录
         localSourceDir = 'config/local/build.gradle'
         file_utils.copy_files(localSourceDir, sdkDestDir + '/build.gradle')
 
@@ -181,7 +183,6 @@ def pack(game, channel, sourcepath, isPublic):
     destApkPath = file_utils.getFullOutputPath(appName, channelName)
     destApkPath = os.path.join(destApkPath, destApkName)
     ret = apk_utils.alignApk(targetApk, destApkPath)
-
     if ret:
         return 1
 

@@ -31,6 +31,7 @@ import log_utils
 import smali_utils
 
 androidNS = 'http://schemas.android.com/apk/res/android'
+aapt_version= "aapt_64"
 
 def copyLibs(game, srcDir, dstDir):
     """
@@ -141,9 +142,21 @@ def decompileApk(source, targetdir, apktool = "apktool2.jar"):
         os.makedirs(targetdir)
 
     heapSize = config_utils.getJDKHeapSize()
-    cmd = '"%s" -jar -Xms%sm -Xmx%sm "%s" -v d -b -f "%s" -o "%s"' % (file_utils.getJavaCMD(), heapSize, heapSize, apktool, apkfile, targetdir)
+
+    #卢-->添加–only-main-classes参数，针对有的母包assets下面也有dex文件而导致错误
+    cmd = '"%s" -jar -Xms%sm -Xmx%sm "%s" -v d -b -f "%s" --only-main-classes -o "%s"' % (file_utils.getJavaCMD(), heapSize, heapSize, apktool, apkfile, targetdir)
+    #cmd = '"%s" -jar -Xms%sm -Xmx%sm "%s" -v d -b -f "%s" -o "%s"' % (file_utils.getJavaCMD(), heapSize, heapSize, apktool, apkfile, targetdir)
     #cmd = '"%s" -q d -d -f "%s" "%s"' % (apktool, apkfile, targetdir)
     ret = file_utils.execFormatCmd(cmd)
+
+
+    #卢-->如果母包中已经拆分出多个smali，复制到第一个smali，并删除，以便于重新计算
+    smaliDir = targetdir + "/smali"
+    smali2Dir = targetdir + "/smali_classes2"
+    if os.path.exists(smali2Dir):
+        file_utils.copy_files(smali2Dir, smaliDir)         
+        file_utils.del_file_folder(smali2Dir)
+
     return ret
 
 
@@ -188,7 +201,6 @@ def generateKeystore(workDir, game, channel):
     dname = "CN=mqttserver.ibm.com, OU=ID, O=IBM, L=Hursley, S=Hants, C=GB"
 
     cmd = '"%s" -genkeypair -dname "%s" -alias "%s" -keyalg "RSA" -sigalg "%s" -validity 20000 -keystore "%s" -storepass "%s" -keypass "%s" ' % (keytoolPath, dname, keystore['aliaskey'],keystore['sigalg'], keystore['keystore'], keystore['password'], keystore['aliaspwd'])
-
     ret = file_utils.execFormatCmd(cmd)
 
     if ret:
@@ -237,7 +249,7 @@ def signApkInternal(apkfile, keystore, password, alias, aliaspwd, sigalg):
 
     apkfile = file_utils.getFullPath(apkfile)
     keystore = file_utils.getFullPath(keystore)
-    aapt = file_utils.getFullToolPath("aapt")
+    aapt = file_utils.getFullToolPath(aapt_version)
 
     if not os.path.exists(keystore):
         log_utils.error("the keystore file is not exists. %s", keystore)
@@ -266,10 +278,10 @@ def signApkInternal(apkfile, keystore, password, alias, aliaspwd, sigalg):
 def copyRootResFiles(apkfile, decompileDir):
 
     apkfile = file_utils.getFullPath(apkfile)
-    aapt = file_utils.getFullToolPath("aapt")
+    aapt = file_utils.getFullToolPath(aapt_version)
     decompileDir = file_utils.getFullPath(decompileDir)
 
-    igoreFiles = ['AndroidManifest.xml','apktool.yml', 'smali', 'res', 'original','lib','build','assets','unknown', "smali_classes2", "smali_classes3", "smali_classes4", "smali_classes5"]
+    igoreFiles = ['AndroidManifest.xml','apktool.yml','smali','res','original','lib','build','assets','unknown',"smali_classes2","smali_classes3","smali_classes4","smali_classes5"]
     igoreFileFullPaths = []
 
     for ifile in igoreFiles:
@@ -566,8 +578,7 @@ def copyAppRootResources(game, decompileDir):
 
     return
 
-#Author:卢天骄
-#合并Manifest,aar到SDK
+#卢-->合并Manifest,aar到SDK
 def mergeManifestAARToSDK(aarsDestDir, dstDir):
 
     """
@@ -715,8 +726,6 @@ def mergeManifest(channel, targetManifest, sdkManifest):
 
     return True
 
-#Author:卢天骄
-#复制资源
 def copyResToApk(copyFrom, copyTo):
 
     """
@@ -735,6 +744,7 @@ def copyResToApk(copyFrom, copyTo):
         log_utils.debug("copyResToApk:copyFrom---->%s;copyTo----->%s;",copyFrom,copyTo)
         return
     
+    #卢-->修改复制资源，并合并和删除重复资源
     for f in os.listdir(copyFrom):
         sourcefile = os.path.join(copyFrom, f)
         targetfile = os.path.join(copyTo, f)
@@ -764,8 +774,8 @@ def copyResToApk(copyFrom, copyTo):
         if os.path.isdir(sourcefile):      
             copyResToApk(sourcefile, targetfile)
 
-#Author:卢天骄
-#资源合并
+
+#卢-->修改资源合并逻辑
 def mergeResXml(copyFrom, copyTo):
 
     """
@@ -803,8 +813,7 @@ def mergeResXml(copyFrom, copyTo):
     toTree.write(copyTo, 'UTF-8')
     return True
 
-#Author:卢天骄
-#删除来源SDK中values.xml（SDK，res/values/values.xml）和母包资源中（APK，res/values/attrs.xml）的重复值
+#卢-->删除来源SDK中values.xml（SDK，res/values/values.xml）和母包资源中（APK，res/values/attrs.xml）的重复值
 def deleteSameRes(sourcefile, copyTo, filename):
 
     sourceName = os.path.basename(sourcefile)
@@ -827,7 +836,8 @@ def deleteSameRes(sourcefile, copyTo, filename):
             for declareNode in list(child.iter('declare-styleable')):
                 declareName = declareNode.get('name')
                 if(declareName == 'ActionBar' or declareName == 'Toolbar' or declareName == 'ActionMode' 
-                    or declareName == 'Spinner' or declareName == 'LinearLayoutCompat'):
+                    or declareName == 'Spinner' or declareName == 'LinearLayoutCompat' 
+                    or declareName == 'AlignTextView' or declareName == 'TextSeekBar'):
                     fromRoot.remove(declareNode)
                     continue
                 for attrNode in list(declareNode.iter('attr')):
@@ -1227,7 +1237,7 @@ def doGenerateR(decompileDir, resPath, manifestPath, genPath, targetDexPath, new
         log_utils.debug("%s not exists ", resPath)
         return 0
 
-    aaptPath = file_utils.getFullToolPath("aapt")
+    aaptPath = file_utils.getFullToolPath(aapt_version)
 
     androidPath = file_utils.getFullToolPath("android.jar")
     cmd = '"%s" p -f -m -J "%s" -S "%s" -I "%s" -M "%s"' % (aaptPath, genPath, resPath, androidPath, manifestPath)
@@ -1870,7 +1880,6 @@ def splitDex(workDir, decompileDir):
         smaliPath = file_utils.getFullPath(decompileDir + "/smali")
         ret = dex2smali(targetPath + '/classes.dex', smaliPath)        
     
-
     allFiles = []
     allFiles = file_utils.list_files(decompileDir, allFiles, [])    
 
@@ -1882,7 +1891,7 @@ def splitDex(workDir, decompileDir):
 
     allRefs = []
 
-    #保证U8Application等类在第一个classex.dex文件中
+    #保证U8SDK等类在第一个classex.dex文件中
     for f in allFiles:
         f = f.replace("\\", "/")
         if "/com/u8/sdk" in f or "/android/support/multidex" in f:
@@ -1904,16 +1913,17 @@ def splitDex(workDir, decompileDir):
             currFucNum = thisFucNum
             currDexIndex = currDexIndex + 1
             newDexPath = os.path.join(decompileDir, "smali_classes"+str(currDexIndex))
-            os.makedirs(newDexPath)
+            os.makedirs(newDexPath)           
+            
         else:
             currFucNum = currFucNum + thisFucNum
 
-        if currDexIndex > 1:
+        if currDexIndex > 1:        
             targetPath = f[0:len(decompileDir)] + "/smali_classes"+str(currDexIndex) + f[len(smaliPath):]
             file_utils.copy_file(f, targetPath)
             file_utils.del_file_folder(f)
 
-
+       
     log_utils.info("the total func num:"+str(totalFucNum))
     log_utils.info("split dex success. the classes.dex num:"+str(currDexIndex))
 
