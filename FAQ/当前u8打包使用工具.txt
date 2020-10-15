@@ -2,8 +2,8 @@
 
 2) android-support-multidex.jar 为1.0.3
 
-3) tool/win/aapt.exe，aapt2.exe，aidl.exe，zipalign.exe，android.jar（28）
+3) tool/win/aidl.exe，zipalign.exe，android.jar（Android 28）
+    aapt_64，aapt2_64 （apktool2.jar/prebuilt/windows)
     tool/win/lib/de.jar，shrinkedAndroid.jar，全部使用28.0.3版本
 
-4）tool/win/apktool2.jar 为 2.4.1
-https://ibotpeaches.github.io/Apktool/
+4）tool/win/apktool2.jar 为 2.4.1 （https://ibotpeaches.github.io/Apktool/）
