@@ -167,8 +167,8 @@
       
         <channel>
             <param name="id" value="10005" />
-            <param name="name" value="vivooffline2" />
-            <param name="sdk" value="vivooffline2" />
+            <param name="name" value="vivooffline2_ad" />
+            <param name="sdk" value="vivooffline2_ad" />
             <param name="desc" value="ViVoSDK offline2" />
             <param name="suffix" value="com.moyoi.zjtx3.vivo" />
             <param name="splash" value="0" />
@@ -182,7 +182,7 @@
                 <param name="TALKING_CHANNEL" value="200001" />
                 <param name="ad_appId" value="200001" />
                 <param name="ad_posId" value="200001" />
-                <param name="isShowVivoAd" value="true" desc="是否显示VIVO广告"  />
+                <param name="isShowVivoAd" value="true" />
             </sdk-params>                       
             <sdk-version>
                 <versionCode>4</versionCode>
@@ -192,8 +192,8 @@
           
         <channel>
             <param name="id" value="10003" />
-            <param name="name" value="uc" />
-            <param name="sdk" value="uc" />
+            <param name="name" value="uc_ad" />
+            <param name="sdk" value="uc_ad" />
             <param name="desc" value="UC（九游）" />
             <param name="suffix" value="com.ftt.hual2.global.aligames" />
             <param name="splash" value="0" />
@@ -220,8 +220,8 @@
        
         <channel>
             <param name="id" value="10008" />
-            <param name="name" value="m4399" />
-            <param name="sdk" value="m4399" />
+            <param name="name" value="m4399_ad" />
+            <param name="sdk" value="m4399_ad" />
             <param name="desc" value="4399" />
             <param name="suffix" value="com.moyoi.zjtx.m4399" />
             <param name="splash" value="11" />
@@ -246,8 +246,8 @@
     
         <channel>         
             <param name="id" value="19" />            
-            <param name="name" value="oppo" />            
-            <param name="sdk" value="oppo" />            
+            <param name="name" value="oppo_ad" />            
+            <param name="sdk" value="oppo_ad" />            
             <param name="desc" value="Oppo" />            
             <param name="suffix" value="oppo.golbal.nearme.gamecenter" />            
             <param name="splash" value="0" />           

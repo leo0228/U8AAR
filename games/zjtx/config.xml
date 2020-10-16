@@ -199,9 +199,7 @@
                 <param name="com.vivo.push.api_key" value="c5324f3f-86bf-40f5-b5f1-5f3b11b0009c" />
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200001" />
-                <param name="ad_appId" value="200001" />
-                <param name="ad_posId" value="200001" />
-                <param name="isShowVivoAd" value="false" desc="是否显示VIVO广告"  />
+                <param name="isShowVivoAd" value="false" />
             </sdk-params>                       
             <sdk-version>
                 <versionCode>4</versionCode>
@@ -293,8 +291,6 @@
                 <param name="UCDebugMode" value="false" desc="是否开启调试模式"/>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200012" />
-                <param name="ad_appId" value="1000004107" />
-                <param name="ad_posId" value="1000004107" />
                 <param name="isShowUCAd" value="false" />
             </sdk-params>
             <sdk-version>
@@ -411,8 +407,6 @@
                 <param desc="悬浮窗位置(left|top|right|bottom)" name="M4399_Position" value="right" />
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200005" />
-                <param name="ad_appId" value="1000004107" />
-                <param name="ad_posId" value="1000004107" />
                 <param name="isShow4399Ad" value="false" />
             </sdk-params>
             <sdk-version>
@@ -438,8 +432,6 @@
                 <param name="debug_mode" value="false" />
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200002" />
-                <param name="ad_appId" value="1000004107" />
-                <param name="ad_posId" value="1000004107" />
                 <param name="isShowOppoAd" value="false" />
             </sdk-params>           
             <sdk-version>         
