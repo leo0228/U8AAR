@@ -13,7 +13,7 @@
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />          
             <sdk-params>
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="500000" desc="墨游在talkingdata分配的渠道号"  /> 
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
@@ -40,7 +40,7 @@
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />          
             <sdk-params>
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="500000" desc="墨游在talkingdata分配的渠道号"  /> 
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
@@ -67,7 +67,7 @@
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />          
             <sdk-params>
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="500029" desc="墨游在talkingdata分配的渠道号"  /> 
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
@@ -94,7 +94,7 @@
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />          
             <sdk-params>
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="500030" desc="墨游在talkingdata分配的渠道号"  /> 
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
@@ -121,7 +121,7 @@
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />          
             <sdk-params>
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" desc="墨游在talkingdata申请的appid" />
                 <param name="TALKING_CHANNEL" value="500031" desc="墨游在talkingdata分配的渠道号"  /> 
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="wx_show" value="true" desc="墨游是否显示微信登录"  />
@@ -156,7 +156,7 @@
                 <param name="PA_GAME_ID" value="1606" desc="渠道自身游戏id" />
                 <param name="gameName" value="战箭天下" desc="游戏名称" />
                 <param name="callBackUrl" value="http://myserver.moyoi.cn:8093/pay/papa/payCallback/1704" desc="充值回调地址" />
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200024" />
             </sdk-params>
             <sdk-version>
@@ -178,7 +178,7 @@
                 <param name="AppID" value="bdb35c6fab1d0eaf716910420f1ca151" />
                 <param name="com.vivo.push.app_id" value="10374" />
                 <param name="com.vivo.push.api_key" value="c5324f3f-86bf-40f5-b5f1-5f3b11b0009c" />
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200001" />
                 <param name="ad_appId" value="200001" />
                 <param name="ad_posId" value="200001" />
@@ -206,7 +206,7 @@
                 <param name="UCApiKey" value="684b4fcbf63535541b3bc4ae4a6f36de"/>
                 <param name="ali_screen_orientation" value="landscape" />
                 <param name="UCDebugMode" value="false"/>
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200012" />
                 <param name="ad_appId" value="200012"/>
                 <param name="ad_posId" value="1000004107" />
@@ -232,7 +232,7 @@
                 <param desc="横屏或者竖屏(landscape|portrait)" name="M4399_Orientation" value="landscape" />
                 <param desc="悬浮窗样式(one|two|three|four)" name="M4399_PopLogoStyle" value="one" />
                 <param desc="悬浮窗位置(left|top|right|bottom)" name="M4399_Position" value="right" />
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200005" />
                 <param name="ad_appId" value="1000004107" />
                 <param name="ad_posId" value="1000004107" />
@@ -260,7 +260,7 @@
                 <param name="is_offline_game" value="false" />
                 <param name="PayNotifyUrl" value="http://myserver.moyoi.cn:8093/pay/oppo/payCallback/19" />
                 <param name="debug_mode" value="false" />
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200002" />
                 <param name="ad_appId" value="1000004107" />
                 <param name="ad_posId" value="1000004107" />
