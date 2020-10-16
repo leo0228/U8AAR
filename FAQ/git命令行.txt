@@ -1,0 +1,11 @@
+如果本地有修改，先上传在下拉更新
+1.  git add . (本目录全部文件) 
+git add xxx.xxx (指定文件)
+
+2.  git commit -m "上传的日志名" 
+
+3.  git push origin master
+
+
+下拉更新
+git pull
