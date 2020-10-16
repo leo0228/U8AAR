@@ -36,23 +36,6 @@ def execute(channel, decompileDir, packageName):
 	if networkKey not in applicationNode.attrib:
 		applicationNode.set(networkKey, "@xml/network_security_config")
 	
-	proNodeLst = applicationNode.findall('provider')
-
-	for proNode in proNodeLst:
-		name = proNode.get(key)
-		if name == 'com.opos.mobad.provider.MobAdGlobalProvider':
-			proNode.set(authorKey, packageName+'.MobAdGlobalProvider')	
-		if name == 'com.bytedance.sdk.openadsdk.multipro.TTMultiProvider':
-			proNode.set(authorKey, packageName+'.TTMultiProvider')	
-		if name == 'com.bytedance.sdk.openadsdk.TTFileProvider':
-			proNode.set(authorKey, packageName+'.TTFileProvider')	
-		if name == 'android.support.v4.content.FileProvider':
-			proNode.set(authorKey, packageName+'.fileprovider')		
-		if name == 'com.heytap.msp.mobad.api.MobFileProvider':
-			proNode.set(authorKey, packageName+'.MobFileProvider')
-		if name == 'com.nearme.instant.router.ui.UpdateFileProvider':
-			proNode.set(authorKey, packageName+'.router.upgrade.file')		
-
 	tree.write(manifestFile, 'UTF-8')
 
 	return 0

@@ -10,8 +10,6 @@
         <param name="debug_mode" required="1"  showName="debug_mode" desc="oppo" bWriteInManifest="1" bWriteInClient="0" />
         <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="oppo" bWriteInManifest="0" bWriteInClient="1" />
        	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="oppo" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ad_appId" required="1" showName="oppo广告appId" desc="oppo" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ad_posId" required="1" showName="oppo广告位id" desc="oppo" bWriteInManifest="0" bWriteInClient="1" />
         <param name="isShowOppoAd" required="1"  showName="是否显示oppo广告" desc="oppo" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
@@ -25,15 +23,9 @@
     <plugins>
         <plugin name="com.u8.sdk.OppoUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.OppoPay" type="2" desc="用户支付接口"/>
-        <plugin name="com.u8.sdk.OppoAds" type="7" desc="广告接口"/>
     </plugins>
     
-    <dependencies>
-        <dependency name="com.android.support:appcompat-v7:26.+" />
-        <dependency name="com.squareup.wire:wire-runtime:2.2.0" />
-        <dependency name="pl.droidsonroids.gif:android-gif-drawable:1.2.18" />
-    </dependencies>
-
+   
     <version>
         <name>oppo</name>
         <versionCode>1</versionCode>

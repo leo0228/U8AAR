@@ -47,7 +47,6 @@ def startJpush(channel, decompileDir, packageName):
 			providerNode.set(authKey, packageName+".operate.FileProvider")
 
 	
-			
 	tree.write(manifestFile, 'UTF-8')
 	return 0
 	

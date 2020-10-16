@@ -35,24 +35,6 @@ def execute(channel, decompileDir, packageName):
 	if applicationNode is None:
 		return 1
 
-	networkKey = '{'+androidNS+'}networkSecurityConfig'
-	if networkKey not in applicationNode.attrib:
-		applicationNode.set(networkKey, "@xml/network_security_config")
-
-	providerNodeLst = applicationNode.findall('provider')
-	if providerNodeLst is None:
-		return 1
-
-	for proNode in providerNodeLst:
-		name = proNode.get(key)
-		if name == 'com.bytedance.sdk.openadsdk.multipro.TTMultiProvider':
-			proNode.set(authorityKey, packageName+'.TTMultiProvider')
-		if name == 'com.bytedance.sdk.openadsdk.TTFileProvider':
-			proNode.set(authorityKey, packageName+'.TTFileProvider')
-		if name == 'android.support.v4.content.FileProvider':
-			proNode.set(authorityKey, packageName+'.fileprovider')
-
-
 	tree.write(manifestFile, 'UTF-8')
 
 	return 0

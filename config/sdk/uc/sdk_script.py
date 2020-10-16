@@ -67,15 +67,7 @@ def execute(channel, decompileDir, packageName):
 		name = providerNode.get(key)
 		if name == 'cn.gundam.sdk.shell.content.FileProvider':
 			providerNode.set(authKey, packageName+'.gamesdk.fileprovider')
-		if name == 'com.mintegral.msdk.base.utils.MTGFileProvider':
-			providerNode.set(authKey, packageName+'.mtgFileProvider')
-		if name == 'com.uniplay.adsdk.UniPlayFileProvider':
-			providerNode.set(authKey, packageName+'.joomob.fileprovider')
-		if name == 'com.bytedance.sdk.openadsdk.TTFileProvider':
-			providerNode.set(authKey, packageName+'.TTFileProvider')
-		if name == 'com.bytedance.sdk.openadsdk.multipro.TTMultiProvider':
-			providerNode.set(authKey, packageName+'.TTMultiProvider')
-
+		
 	tree.write(manifestFile, 'UTF-8')
 
 	return 0

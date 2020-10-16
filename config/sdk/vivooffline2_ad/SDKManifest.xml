@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <permissionConfig>
+        
+    </permissionConfig>
+    
+    <applicationConfig proxyApplication="com.u8.sdk.VivoProxyApplication">
+
+        <!-- SDK webview 页面声明 -->
+        <activity
+            android:name="com.vivo.mobilead.web.VivoADSDKWebView"
+            android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <!-- SDK webview 页面声明-->
+
+        <!--如果接入了激励视频，这个必须配置，否则应用会崩溃 -->
+        <activity
+            android:name="com.vivo.mobilead.video.RewardVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape" />
+        <!--新版本增加的配置，必接 -->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities="${applicationId}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/gdt_file_path" />
+        </provider>
+
+        <!--用于判断 sdk 版本，android:value 指为 sdk 版本号-->
+        <meta-data
+            android:name="vivo_ad_version_code"
+            android:value="4100" />
+    </applicationConfig>
+    
+</manifest>
