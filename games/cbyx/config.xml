@@ -144,7 +144,7 @@
             <param name="name" value="wufan" />
             <param name="sdk" value="wufan" />
             <param name="desc" value="悟饭(啪啪游戏)" />
-            <param name="suffix" value="com.moyoi.zjtx.papa" />
+            <param name="suffix" value="com.moyoiad.goc.papa" />
             <param name="splash" value="11" />
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />
@@ -170,7 +170,7 @@
             <param name="name" value="vivooffline2_ad" />
             <param name="sdk" value="vivooffline2_ad" />
             <param name="desc" value="ViVoSDK offline2" />
-            <param name="suffix" value="com.moyoi.zjtx3.vivo" />
+            <param name="suffix" value="com.moyoiad.goc.vivo" />
             <param name="splash" value="0" />
             <param name="icon" value="rb" />
             <param name="splash_copy_to_unity" value="0" />
@@ -195,7 +195,7 @@
             <param name="name" value="uc_ad" />
             <param name="sdk" value="uc_ad" />
             <param name="desc" value="UC（九游）" />
-            <param name="suffix" value="com.ftt.hual2.global.aligames" />
+            <param name="suffix" value="com.moyoiad.goc.aligames" />
             <param name="splash" value="0" />
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />
@@ -223,12 +223,12 @@
             <param name="name" value="m4399_ad" />
             <param name="sdk" value="m4399_ad" />
             <param name="desc" value="4399" />
-            <param name="suffix" value="com.moyoi.zjtx.m4399" />
+            <param name="suffix" value="com.moyoiad.goc.m4399" />
             <param name="splash" value="11" />
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />
             <sdk-params>
-                <param name="M4399_AppKey" value="117918" />
+                <param name="M4399_AppKey" value="128423" />
                 <param desc="横屏或者竖屏(landscape|portrait)" name="M4399_Orientation" value="landscape" />
                 <param desc="悬浮窗样式(one|two|three|four)" name="M4399_PopLogoStyle" value="one" />
                 <param desc="悬浮窗位置(left|top|right|bottom)" name="M4399_Position" value="right" />
@@ -249,7 +249,7 @@
             <param name="name" value="oppo_ad" />            
             <param name="sdk" value="oppo_ad" />            
             <param name="desc" value="Oppo" />            
-            <param name="suffix" value="oppo.golbal.nearme.gamecenter" />            
+            <param name="suffix" value="oppo.moyoiad.goc" />            
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />       
