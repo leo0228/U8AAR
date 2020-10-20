@@ -136,10 +136,12 @@ def copyAARJarToLibs(aarsDestDir, sdkDestDir, aarName):
         os.makedirs(destResDir)
 
     for f in os.listdir(aarsDestDir):
+        #分割最后一个“.” 
+        name = aarName.rsplit(".", 1)[0]
+        destLibsName = os.path.join(destLibsDir, name + ".jar")
+
         if f.endswith(".jar"):    
-            #分割最后一个“.”  
-            name = aarName.rsplit(".", 1)[0]
-            copy_file(os.path.join(aarsDestDir, f), os.path.join(destLibsDir, name + ".jar"))
+            copy_file(os.path.join(aarsDestDir, f), destLibsName)
                             
         if "assets" == f:           
             copy_files(os.path.join(aarsDestDir, f), destAsstesDir)
@@ -153,9 +155,19 @@ def copyAARJarToLibs(aarsDestDir, sdkDestDir, aarName):
                         os.makedirs(jniDestDir)
                     copy_files(os.path.join(aarJniDestDir, jniF), jniDestDir)
 
-        if "libs" == f:                   
-            copy_files(os.path.join(aarsDestDir, f), destLibsDir)
-
+        if "libs" == f:     
+            aarLibsDestDir = os.path.join(aarsDestDir, f)
+            #部分aar包中的classes.jar里面并没有class，而是在aar包中libs里面的classes.jar
+            for libF in os.listdir(aarLibsDestDir):
+                if libF == "classes.jar":
+                    #如果SDK libs里面已经存在先删除，在复制一次
+                    if os.path.exists(destLibsName):
+                        del_file_folder(destLibsName)
+                                 
+                    copy_file(os.path.join(aarLibsDestDir, libF), destLibsName)
+                else:
+                    copy_file(os.path.join(aarLibsDestDir, libF), os.path.join(destLibsDir, libF))
+               
         if "res" == f:
             apk_utils.copyResToApk(os.path.join(aarsDestDir, f), destResDir)
 

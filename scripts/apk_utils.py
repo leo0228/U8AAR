@@ -639,21 +639,13 @@ def mergeManifestAARToSDK(aarsDestDir, dstDir):
                     if -1 == attrIndex:
                         targetRoot.find('permissionConfig').append(permissionChild)
    
-    appNode = aarRoot.find('application')
-    appConfigNode = targetRoot.find('applicationConfig')
-
-    if appNode != None:           
-        for child in list(appNode):  
-            appConfigNode.append(child)
-            #删除重复meta-data属性
-            for metaChild in list(child.iter('meta-data')):
-                key = '{' + androidNS + '}name'
-                val = metaChild.get(key)
-                if val != None and len(val) > 0:
-                    attrIndex = targetContent.find(val)
-                    if -1 != attrIndex:
-                        appConfigNode.remove(metaChild)
-                                     
+    aarAppNode = aarRoot.find('application')
+    sdkAppConfigNode = targetRoot.find('applicationConfig')
+       
+    if aarAppNode != None:
+        for aarChild in list(aarAppNode):  
+            sdkAppConfigNode.append(aarChild)
+                               
     targetTree.write(manifestTo, 'UTF-8')
 
     return True
@@ -691,9 +683,9 @@ def mergeManifest(channel, targetManifest, sdkManifest):
                 if -1 == attrIndex:
                     targetRoot.append(child)
 
-    appNode = targetRoot.find('application')
     appConfigNode = sdkRoot.find('applicationConfig')
-
+    appNode = targetRoot.find('application')
+    
     if appConfigNode != None:
         proxyApplicationName = appConfigNode.get('proxyApplication')
         if proxyApplicationName != None and len(proxyApplicationName) > 0:
@@ -711,17 +703,7 @@ def mergeManifest(channel, targetManifest, sdkManifest):
 
         for child in list(appConfigNode): 
             appNode.append(child)
-            #删除重复meta-data属性
-            for metaChild in list(child.iter('meta-data')):
-                key = '{' + androidNS + '}name'
-                val = metaChild.get(key)
-                if val != None and len(val) > 0:
-                    attrIndex = targetContent.find(val)
-                    if -1 == attrIndex:
-                        continue
-                    else:
-                        appNode.remove(metaChild)          
-
+                     
     targetTree.write(targetManifest, 'UTF-8')
 
     return True
@@ -769,7 +751,11 @@ def copyResToApk(copyFrom, copyTo):
 
             if mergeResXml(sourcefile, targetfile):
                 continue
-            file_utils.copy_file(sourcefile, targetfile)
+            destfilestream = open(targetfile, 'wb')
+            sourcefilestream = open(sourcefile, 'rb')
+            destfilestream.write(sourcefilestream.read())
+            destfilestream.close()
+            sourcefilestream.close()
 
         if os.path.isdir(sourcefile):      
             copyResToApk(sourcefile, targetfile)
@@ -801,15 +787,29 @@ def mergeResXml(copyFrom, copyTo):
     toTree = ET.parse(copyTo)
     toRoot = toTree.getroot()                   
 
-    for node in list(fromRoot):
-        val = node.get('name')                               
-        if val != None and len(val) > 0:      
-            valMatched = '"'+val+'"'
+    for fromNode in list(fromRoot):
+        val = fromNode.get('name')
+        if val != None and len(val) > 0:
+            #如果出现name和parent字段一样也会删除，加上name=
+            #<style name="Theme.AppCompat.Light">
+            #<style name="m4399ad.Dialog.NoTitleBar" parent="Theme.AppCompat.Light">
+            valMatched = 'name="'+val+'"'
             attrIndex = targetContent.find(valMatched)
-            #不存在就合并
             if -1 == attrIndex:
-                toRoot.append(node)
-        
+                toRoot.append(fromNode)
+            else:
+                log_utils.warning("The node %s is already exists in %s", val, copyTo)
+
+    #删除valus.xml中的无法编译的字段
+    for toNode in list(toRoot):
+        for declareNode in list(toNode.iter('declare-styleable')):
+            declareName = declareNode.get('name')
+            if(declareName == 'ActionBar' or declareName == 'Toolbar' or declareName == 'ActionMode' 
+                or declareName == 'Spinner' or declareName == 'LinearLayoutCompat' 
+                or declareName == 'AlignTextView' or declareName == 'TextSeekBar'):
+                toRoot.remove(declareNode)
+                continue
+   
     toTree.write(copyTo, 'UTF-8')
     return True
 
@@ -833,19 +833,15 @@ def deleteSameRes(sourcefile, copyTo, filename):
    
     if(filename == 'attrs.xml'):
         for child in list(fromRoot):
-            for declareNode in list(child.iter('declare-styleable')):
-                declareName = declareNode.get('name')
-                if(declareName == 'ActionBar' or declareName == 'Toolbar' or declareName == 'ActionMode' 
-                    or declareName == 'Spinner' or declareName == 'LinearLayoutCompat' 
-                    or declareName == 'AlignTextView' or declareName == 'TextSeekBar'):
-                    fromRoot.remove(declareNode)
-                    continue
+            for declareNode in list(child.iter('declare-styleable')):               
                 for attrNode in list(declareNode.iter('attr')):
                     attrName = attrNode.get('name')
                     if attrName != None and len(attrName) > 0: 
                         attrMatched = '"'+attrName+'"'
                         attrIndex = targetContent.find(attrMatched)   
-                        if -1 != attrIndex:
+                        if -1 == attrIndex:
+                            continue
+                        else:
                             declareNode.remove(attrNode)                       
 
     else:      
@@ -867,7 +863,9 @@ def deleteSameRes(sourcefile, copyTo, filename):
             if name != None and len(name) > 0: 
                 val = '"'+name+'"'
                 index = targetContent.find(val)   
-                if -1 != index:
+                if -1 == index:
+                    continue
+                else:
                     fromRoot.remove(child)               
 
     fromTree.write(sourcefile, 'UTF-8')
