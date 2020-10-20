@@ -7,9 +7,6 @@
     
     <applicationConfig proxyApplication="com.u8.sdk.VivoProxyApplication">
 
-        
     </applicationConfig>
-    
-    
-    
+   
 </manifest>

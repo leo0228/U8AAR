@@ -16,7 +16,6 @@
         <operation step="2" type="copyRes" from="assets" to="assets" />
         <operation step="3" type="copyRes" from="libs" to="lib" />
         <operation step="4" type="copyRes" from="res" to="res" />
-        <operation step="5" type="copyRes" from="root" to=""/>
     </operations>
     
     <plugins>

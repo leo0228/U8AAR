@@ -18,7 +18,6 @@
         <operation step="2" type="copyRes" from="assets" to="assets" />
         <operation step="3" type="copyRes" from="libs" to="lib" />
         <operation step="4" type="copyRes" from="res" to="res" />
-        <operation step="5" type="copyRes" from="root" to=""/>
     </operations>
     
     <plugins>
@@ -26,6 +25,14 @@
         <plugin name="com.u8.sdk.M4399Pay" type="2" desc="用户支付接口"/>
         <plugin name="com.u8.sdk.M4399Ads" type="7" desc="广告接口"/>
     </plugins>
+
+    <dependencies>
+        <dependency name="com.squareup.picasso:picasso:2.5.2" />
+        <dependency name="com.android.support:support-annotations:26.0.2" />
+        <dependency name="com.android.support:appcompat-v7:26.0.2" />
+        <dependency name="com.android.support:recyclerview-v7:26.0.2" />
+        <dependency name="com.android.support:support-v4:26.0.2" />
+    </dependencies>
 
     <version>
         <name>4399</name>

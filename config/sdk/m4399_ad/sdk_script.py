@@ -37,6 +37,10 @@ def startJpush(channel, decompileDir, packageName):
 	if applicationNode is None:
 		return 1
 	
+	networkKey = '{'+androidNS+'}networkSecurityConfig'
+	if networkKey not in applicationNode.attrib:
+		applicationNode.set(networkKey, "@xml/m4399_network_policy")
+		
 	providerNodeLst = applicationNode.findall('provider')
 	if providerNodeLst is None:
 		return 1
@@ -45,9 +49,9 @@ def startJpush(channel, decompileDir, packageName):
 		name = providerNode.get(key)
 		if name == 'cn.m4399.operate.OpeFileProvider':
 			providerNode.set(authKey, packageName+".operate.FileProvider")
+		if name == 'com.mintegral.msdk.base.utils.MTGFileProvider':
+			providerNode.set(authKey, packageName+".mtgFileProvider")
 
-	
-			
 	tree.write(manifestFile, 'UTF-8')
 	return 0
 	

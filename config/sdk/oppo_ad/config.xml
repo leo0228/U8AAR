@@ -29,7 +29,7 @@
     </plugins>
     
     <dependencies>
-        <dependency name="com.android.support:appcompat-v7:26.+" />
+        <dependency name="com.android.support:appcompat-v7:26.0.2" />
         <dependency name="com.squareup.wire:wire-runtime:2.2.0" />
         <dependency name="pl.droidsonroids.gif:android-gif-drawable:1.2.18" />
     </dependencies>

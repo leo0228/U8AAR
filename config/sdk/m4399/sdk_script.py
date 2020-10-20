@@ -33,10 +33,9 @@ def startJpush(channel, decompileDir, packageName):
 	root = tree.getroot()
 
 	applicationNode = root.find('application')
-	
 	if applicationNode is None:
 		return 1
-	
+		
 	providerNodeLst = applicationNode.findall('provider')
 	if providerNodeLst is None:
 		return 1

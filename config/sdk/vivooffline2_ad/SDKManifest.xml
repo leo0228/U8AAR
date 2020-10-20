@@ -6,11 +6,10 @@
     </permissionConfig>
     
     <applicationConfig proxyApplication="com.u8.sdk.VivoProxyApplication">
-
         <!-- SDK webview 页面声明 -->
         <activity
             android:name="com.vivo.mobilead.web.VivoADSDKWebView"
-            android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
         <!-- SDK webview 页面声明-->
 
         <!--如果接入了激励视频，这个必须配置，否则应用会崩溃 -->
