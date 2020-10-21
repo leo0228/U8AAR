@@ -45,17 +45,6 @@ def execute(channel, decompileDir, packageName):
 		elif name == '.wxapi.WXPayEntryActivity':
 			activityNode.set(key, packageName+'.wxapi.WXPayEntryActivity')
 			
-	providerNodeLst = applicationNode.findall('provider')
-	if providerNodeLst is None:
-		return 1
-
-	for proNode in providerNodeLst:
-		name = proNode.get(key)
-		if name == 'com.bytedance.sdk.openadsdk.TTFileProvider':
-			proNode.set(authorityKey, packageName+'.TTFileProvider')
-		if name == 'com.bytedance.sdk.openadsdk.multipro.TTMultiProvider':
-			proNode.set(authorityKey, packageName+'.TTMultiProvider')
-	
 	tree.write(manifestFile, 'UTF-8')
 	return 0
 	

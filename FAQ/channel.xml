@@ -7,7 +7,7 @@
     <channel name="虫虫" id="chongchong" />
     <channel name="当乐" id="downjoy" />
     <channel name="果盘" id="guopan" />
-    <channel name="好游快爆" id="haoyou" />
+    <channel name="好游快爆" id="moyoi" />
     <channel name="华为" id="huawei" />
     <channel name="互联2" id="hulian2" />
     <channel name="酷派" id="kupai" />
@@ -20,13 +20,13 @@
     <channel name="oppo" id="oppo" />
     <channel name="奇虎360" id="qihoo360" />
     <channel name="三星" id="sanxing" />
-    <channel name="taptap" id="taptap" />
+    <channel name="taptap" id="moyoi" />
     <channel name="uc(九游)" id="uc" />
     <channel name="vivo2" id="vivooffline2" />
     <channel name="悟饭" id="wufan" />
     <channel name="小7" id="xiao7" />
     <channel name="小米" id="xiaomi" />
-    <channel name="一游说" id="yiyou" />
+    <channel name="一游说" id="moyoi" />
     <channel name="应用宝" id="ysdk" />
     <channel name="应用汇" id="yyh" />
   </game>
@@ -34,11 +34,11 @@
     <channel name="墨游" id="moyoihw" />
   </game>
   <game name="城堡英雄" key="cbyx" id="4">
-    <channel name="墨游" id="moyoi" />
+    <channel name="墨游" id="moyoi_ad" />
     <channel name="墨游测试" id="moyoitest" />
-    <channel name="好游快爆" id="haoyou" />
-    <channel name="一游说" id="yiyou" />
-    <channel name="taptap" id="taptap" />
+    <channel name="好游快爆" id="moyoi_ad" />
+    <channel name="一游说" id="moyoi_ad" />
+    <channel name="taptap" id="moyoi_ad" />
     <channel name="4399" id="m4399_ad" />
     <channel name="uc(九游)" id="uc_ad" />
     <channel name="vivo2" id="vivooffline2_ad" />

@@ -21,9 +21,6 @@
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
-                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
-                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
                 <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
@@ -48,9 +45,6 @@
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
-                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
-                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
                 <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
@@ -60,8 +54,8 @@
         </channel>   
         <channel>         
             <param name="id" value="170302" />            
-            <param name="name" value="taptap" />            
-            <param name="sdk" value="taptap" />            
+            <param name="name" value="moyoi" />            
+            <param name="sdk" value="moyoi" />            
             <param name="desc" value="墨游 taptap版本" />            
             <param name="suffix" value="com.moyoi.zjtx" />            
             <param name="splash" value="0" />           
@@ -75,9 +69,6 @@
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200029" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
-                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
-                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
                 <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
@@ -87,8 +78,8 @@
         </channel>
         <channel>         
             <param name="id" value="170303" />            
-            <param name="name" value="haoyou" />            
-            <param name="sdk" value="haoyou" />            
+            <param name="name" value="moyoi" />            
+            <param name="sdk" value="moyoi" />            
             <param name="desc" value="墨游 好游快爆版本" />            
             <param name="suffix" value="com.moyoi.zjtx" />            
             <param name="splash" value="0" />           
@@ -102,9 +93,6 @@
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200030" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
-                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
-                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
                 <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
@@ -114,8 +102,8 @@
         </channel>
         <channel>         
             <param name="id" value="170304" />            
-            <param name="name" value="yiyou" />            
-            <param name="sdk" value="yiyou" />            
+            <param name="name" value="moyoi" />            
+            <param name="sdk" value="moyoi" />            
             <param name="desc" value="墨游 一游说版本" />            
             <param name="suffix" value="com.moyoi.zjtx" />            
             <param name="splash" value="0" />           
@@ -129,9 +117,6 @@
                 <param name="qq_show" value="true"  desc="墨游是否显示qq登录" />
                 <param name="sdk_Appid" value="1" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="200031" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
-                <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
-                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
-                <param name="ttAd_appName" value="城堡英雄" desc="应用名"  />
                 <param name="isShowTTAd" value="false" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         

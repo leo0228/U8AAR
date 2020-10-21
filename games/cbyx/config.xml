@@ -6,8 +6,8 @@
     <channels>
         <channel>         
             <param name="id" value="1703" />            
-            <param name="name" value="moyoi" />            
-            <param name="sdk" value="moyoi" />            
+            <param name="name" value="moyoi_ad" />            
+            <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
             <param name="splash" value="0" />           
@@ -60,8 +60,8 @@
         </channel>   
         <channel>         
             <param name="id" value="10007" />            
-            <param name="name" value="taptap" />            
-            <param name="sdk" value="taptap" />            
+            <param name="name" value="moyoi_ad" />            
+            <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 taptap版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
             <param name="splash" value="0" />           
@@ -87,8 +87,8 @@
         </channel>
         <channel>         
             <param name="id" value="10010" />            
-            <param name="name" value="haoyou" />            
-            <param name="sdk" value="haoyou" />            
+            <param name="name" value="moyoi_ad" />  xml          
+            <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 好游快爆版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
             <param name="splash" value="0" />           
@@ -114,8 +114,8 @@
         </channel>
         <channel>         
             <param name="id" value="30016" />            
-            <param name="name" value="yiyou" />            
-            <param name="sdk" value="yiyou" />            
+            <param name="name" value="moyoi_ad" />            
+            <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 一游说版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
             <param name="splash" value="0" />           
@@ -234,8 +234,8 @@
                 <param desc="悬浮窗位置(left|top|right|bottom)" name="M4399_Position" value="right" />
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200005" />
-                <param name="ad_appId" value="1000004107" />
-                <param name="ad_posId" value="1000004107" />
+                <param name="ad_appId" value="3234" />
+                <param name="ad_posId" value="13517" />
                 <param name="isShow4399Ad" value="true" />
             </sdk-params>
             <sdk-version>
