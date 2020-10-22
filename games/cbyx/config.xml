@@ -87,7 +87,7 @@
         </channel>
         <channel>         
             <param name="id" value="10010" />            
-            <param name="name" value="moyoi_ad" />        
+            <param name="name" value="moyoi_ad" />  xml          
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 好游快爆版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
