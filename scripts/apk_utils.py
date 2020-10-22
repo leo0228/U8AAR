@@ -797,8 +797,8 @@ def mergeResXml(copyFrom, copyTo):
             attrIndex = targetContent.find(valMatched)
             if -1 == attrIndex:
                 toRoot.append(fromNode)
-            else:
-                log_utils.warning("The node %s is already exists in %s", val, copyTo)
+            # else:
+            #     log_utils.warning("The node %s is already exists in %s", val, copyTo)
 
     #删除valus.xml中的无法编译的字段
     for toNode in list(toRoot):
@@ -1427,12 +1427,12 @@ def checkValueResources(decompileDir):
     xxhdpiPath = file_utils.getFullPath(resDir + '/drawable-xxhdpi')
     xxxhdpiPath = file_utils.getFullPath(resDir + '/drawable-xxxhdpi')
 
-    removeDuplicateDrawableRes(ldpiPath, ldpiPath+"-v4")
-    removeDuplicateDrawableRes(mdpiPath, mdpiPath+"-v4")
-    removeDuplicateDrawableRes(hdpiPath, hdpiPath+"-v4")
-    removeDuplicateDrawableRes(xhdpiPath, xhdpiPath+"-v4")
-    removeDuplicateDrawableRes(xxhdpiPath, xxhdpiPath+"-v4")
-    removeDuplicateDrawableRes(xxxhdpiPath, xxxhdpiPath+"-v4")
+    removeDuplicateDrawableRes(ldpiPath+"-v4", ldpiPath)
+    removeDuplicateDrawableRes(mdpiPath+"-v4", mdpiPath)
+    removeDuplicateDrawableRes(hdpiPath+"-v4", hdpiPath)
+    removeDuplicateDrawableRes(xhdpiPath+"-v4", xhdpiPath)
+    removeDuplicateDrawableRes(xxhdpiPath+"-v4", xxhdpiPath)
+    removeDuplicateDrawableRes(xxxhdpiPath+"-v4", xxxhdpiPath)
 
     return 0
 
@@ -1570,12 +1570,12 @@ def checkValueResourcesDeplecated(decompileDir):
     xxhdpiPath = file_utils.getFullPath(decompileDir + '/res/drawable-xxhdpi')
     xxxhdpiPath = file_utils.getFullPath(decompileDir + '/res/drawable-xxxhdpi')
 
-    removeDuplicateDrawableRes(ldpiPath     , ldpiPath+"-v4")
-    removeDuplicateDrawableRes(mdpiPath     , mdpiPath+"-v4")
-    removeDuplicateDrawableRes(hdpiPath     , hdpiPath+"-v4")
-    removeDuplicateDrawableRes(xhdpiPath    , xhdpiPath+"-v4")
-    removeDuplicateDrawableRes(xxhdpiPath   , xxhdpiPath+"-v4")
-    removeDuplicateDrawableRes(xxxhdpiPath  , xxxhdpiPath+"-v4")
+    removeDuplicateDrawableRes(ldpiPath+"-v4", ldpiPath)
+    removeDuplicateDrawableRes(mdpiPath+"-v4", mdpiPath)
+    removeDuplicateDrawableRes(hdpiPath+"-v4", hdpiPath)
+    removeDuplicateDrawableRes(xhdpiPath+"-v4", xhdpiPath)
+    removeDuplicateDrawableRes(xxhdpiPath+"-v4", xxhdpiPath)
+    removeDuplicateDrawableRes(xxxhdpiPath+"-v4", xxxhdpiPath)
 
     return 0
 
@@ -1658,7 +1658,9 @@ def appendChannelIconMark(game, channel, decompileDir):
         else:
             markIcon = Image.open(markPath)
             rlImg = image_utils.appendIconMark(rlImg, markIcon, (0, 0))
-
+            if rlImg:
+                log_utils.info("icon appendIconMark successfully")
+            
     ldpiSize = (36, 36)
     mdpiSize = (48, 48)
     hdpiSize = (72, 72)
@@ -1680,24 +1682,21 @@ def appendChannelIconMark(game, channel, decompileDir):
     xxhdpiPath = file_utils.getFullPath(decompileDir + '/res/'+iconPath+'-xxhdpi')
     xxxhdpiPath = file_utils.getFullPath(decompileDir + '/res/'+iconPath+'-xxxhdpi')
 
+    # drawable-hdpi 或者 mipmap-hdpi 不存在就创建
     if not os.path.exists(ldpiPath):
         os.makedirs(ldpiPath)
-
     if not os.path.exists(mdpiPath):
         os.makedirs(mdpiPath)
-
     if not os.path.exists(hdpiPath):
         os.makedirs(hdpiPath)
-
     if not os.path.exists(xhdpiPath):
         os.makedirs(xhdpiPath)
-
     if not os.path.exists(xxhdpiPath):
         os.makedirs(xxhdpiPath)
-
     if not os.path.exists(xxxhdpiPath):
         os.makedirs(xxxhdpiPath)
-#############################################
+
+    #如果drawable-hdpi-v4 或者 mipmap-hdpi-v4中存在icon图标先删除
     ldPngFile = ldpiPath+"-v4"+'/'+gameIconName
     if os.path.exists(ldPngFile):
         os.remove(ldPngFile)
@@ -1716,10 +1715,8 @@ def appendChannelIconMark(game, channel, decompileDir):
     xxxhPngFile = xxxhdpiPath+"-v4"+'/'+gameIconName
     if os.path.exists(xxxhPngFile):
         os.remove(xxxhPngFile)
-#############################################################
-#   gameIconName = getAppIconName(decompileDir) + '.png'
 
-	
+    #把生成后的带角标的icon保存在drawable-hdpi-v4 或者 mipmap-hdpi-v4中
     #ldpiIcon.save(os.path.join(ldpiPath, gameIconName), 'PNG')
     if os.path.exists(ldpiPath+"-v4"):
         ldpiIcon.save(os.path.join(ldpiPath+"-v4", gameIconName), 'PNG')
@@ -1732,15 +1729,13 @@ def appendChannelIconMark(game, channel, decompileDir):
     #xhdpiIcon.save(os.path.join(xhdpiPath, gameIconName), 'PNG')
     if os.path.exists(xhdpiPath+"-v4"):
         xhdpiIcon.save(os.path.join(xhdpiPath+"-v4", gameIconName), 'PNG')  
-
     #xxhdpiIcon.save(os.path.join(xxhdpiPath, gameIconName), 'PNG')
     if os.path.exists(xxhdpiPath+"-v4"):
         xxhdpiIcon.save(os.path.join(xxhdpiPath+"-v4", gameIconName), 'PNG')  
-
     #xxxhdpiIcon.save(os.path.join(xxxhdpiPath, gameIconName), 'PNG')
     if os.path.exists(xxxhdpiPath+"-v4"):
         xxxhdpiIcon.save(os.path.join(xxxhdpiPath+"-v4", gameIconName), 'PNG')  
-
+    log_utils.info("icon save successfully")
 
     return 0
 

@@ -87,7 +87,7 @@
         </channel>
         <channel>         
             <param name="id" value="10010" />            
-            <param name="name" value="moyoi_ad" />  xml          
+            <param name="name" value="moyoi_ad" />        
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 好游快爆版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
@@ -175,7 +175,7 @@
             <param name="icon" value="rb" />
             <param name="splash_copy_to_unity" value="0" />
             <sdk-params>
-                <param name="AppID" value="bdb35c6fab1d0eaf716910420f1ca151" />
+                <param name="AppID" value="104511041" />
                 <param name="com.vivo.push.app_id" value="10374" />
                 <param name="com.vivo.push.api_key" value="c5324f3f-86bf-40f5-b5f1-5f3b11b0009c" />
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
@@ -228,7 +228,7 @@
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />
             <sdk-params>
-                <param name="M4399_AppKey" value="128423" />
+                <param name="M4399_AppKey" value="128586" />
                 <param desc="横屏或者竖屏(landscape|portrait)" name="M4399_Orientation" value="landscape" />
                 <param desc="悬浮窗样式(one|two|three|four)" name="M4399_PopLogoStyle" value="one" />
                 <param desc="悬浮窗位置(left|top|right|bottom)" name="M4399_Position" value="right" />

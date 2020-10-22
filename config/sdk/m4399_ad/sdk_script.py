@@ -49,8 +49,16 @@ def startJpush(channel, decompileDir, packageName):
 		name = providerNode.get(key)
 		if name == 'cn.m4399.operate.OpeFileProvider':
 			providerNode.set(authKey, packageName+".operate.FileProvider")
+		if name == 'cn.m4399.ad.api.AdFileProvider':
+			providerNode.set(authKey, packageName+".FileProvider")
+		if name == 'android.support.v4.content.FileProvider':
+			providerNode.set(authKey, packageName+".fileprovider")
 		if name == 'com.mintegral.msdk.base.utils.MTGFileProvider':
 			providerNode.set(authKey, packageName+".mtgFileProvider")
+		if name == 'com.bytedance.sdk.openadsdk.TTFileProvider':
+			providerNode.set(authKey, packageName+".TTFileProvider")
+		if name == 'com.bytedance.sdk.openadsdk.multipro.TTMultiProvider':
+			providerNode.set(authKey, packageName+".TTMultiProvider")
 
 	tree.write(manifestFile, 'UTF-8')
 	return 0

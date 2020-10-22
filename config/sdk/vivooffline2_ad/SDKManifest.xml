@@ -47,7 +47,7 @@
         <!--用于判断 sdk 版本，android:value 指为 sdk 版本号-->
         <meta-data
             android:name="vivo_ad_version_code"
-            android:value="4100" />
+            android:value="4200" />
     </applicationConfig>
     
 </manifest>

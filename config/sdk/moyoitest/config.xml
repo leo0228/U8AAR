@@ -10,8 +10,6 @@
         <param name="qq_show" required="1"  showName="显示QQ登录" desc="是否显示墨游QQ登录" bWriteInManifest="1" bWriteInClient="0" />
         <param name="sdk_Appid" required="1"  showName="平台申请的appid" desc="墨游sdk为每一个游戏设置为appid" bWriteInManifest="0" bWriteInClient="1" />
         <param name="cloud_channel" required="1"  showName="联运的渠道号" desc="墨游与广告商合作的渠道号" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ttAd_appId" required="1"  showName="穿山甲的应用id" desc="穿山甲广告申请的appid" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ttAd_appName" required="1"  showName="穿山甲的应用名" desc="穿山甲广告应用名" bWriteInManifest="0" bWriteInClient="1" />
         <param name="isShowTTAd" required="1"  showName="是否显示穿山甲广告" desc="是否显示穿山甲广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
@@ -25,7 +23,6 @@
     <plugins>
         <plugin name="com.u8.sdk.MoyoiUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.MoyoiPay" type="2" desc="用户支付接口"/>
-        <plugin name="com.u8.sdk.MoyoiAds" type="7" desc="广告接口"/>
     </plugins>
     
     <version>
