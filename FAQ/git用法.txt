@@ -1,0 +1,72 @@
+/** 
+将GitHub仓库中的项目更新到本地 
+
+在你想要下载的文件夹中打开 git bash 
+git clone 远程仓库名 
+*/
+
+/** 
+上传本地项目到GitHub仓库
+
+在本地项目目录中 git bash 
+touch README.md //新建说明文件
+1.git init 将本目录作为本地仓库 
+2.git add ("."本目录全部，"上传文件名") 
+3.git commit -m "上传的日志名" 
+4.git remote add origin 远程仓库名
+如果出现 fatal: remote origin already exists. 
+4.git remote rm origin 
+5.git remote add origin 远程仓库名 
+6.git push origin master
+
+上传本地文件到远程仓库完成！！！
+*/
+
+/**
+在github网站上直接新建repository
+Repository name
+Public
+勾选  Initialize this repository with a README
+Add .gitignore:Android
+Add a license:Apache License 2.0
+*/
+
+/*
+更新上传代码
+git add .
+git commit -m "update test" //检测文件改动并附加提交注释
+git push origin master //提交修改到项目主线
+*/
+
+/*
+git diff                //查看更改的内容
+git checkout       //撤销修改
+git status            //查看操作状态
+git reset  HEAD   //取消提交
+git log                 // 查看历史提交记录  
+git log -1            //只看最后一次提交的记录
+
+ls -al                   //查看目录内容
+
+将本地修改同步到远程版本库
+git push origin master
+将远程版本库的修改同步到本地
+git fetch origin master
+查看远程版本库修改的内容
+git diff origin/master
+在调用merge将origin/master分支修改的合并到主分支上
+git merge origin/master
+从远程版本库获取最新代码并合并到本地
+git pull origin master
+*/
+
+分支：
+查看分支  git branch  ，只有一个*master
+创建分支  git branch version1.0   会出现version1.0
+切换分支  git checkout version1.0  会出现*version1.0
+合并主线和分支 
+git checkout master
+git merge version1.0
+删除分支
+git branch -D version1.0
+
