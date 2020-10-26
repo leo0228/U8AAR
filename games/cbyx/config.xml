@@ -249,7 +249,7 @@
             <param name="name" value="oppo_ad" />            
             <param name="sdk" value="oppo_ad" />            
             <param name="desc" value="Oppo" />            
-            <param name="suffix" value="oppo.moyoiad.goc" />            
+            <param name="suffix" value="com.moyoiad.goc.nearme.gamecenter" />            
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />       
