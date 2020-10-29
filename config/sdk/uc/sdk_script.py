@@ -58,11 +58,14 @@ def execute(channel, decompileDir, packageName):
 		if name == 'cn.uc.gamesdk.activity.PullupActivity':
 			activityNode.set(taskAffinity, packageName+".diff")
 			intentNodes = activityNode.findall('intent-filter')
-			if intentNodes is not None and len(intentNodes) > 0:
-				for intentNode in intentNodes:
-					dataNode1 = SubElement(intentNode, 'data')
-					dataNode1.set(schemeKey, 'ng'+ucGameID)
-
+			for intentNode in intentNodes:
+				dataNode = intentNode.find('data')
+				if dataNode is not None:
+					intentNode.remove(dataNode)
+				dataNode = SubElement(intentNode, 'data')
+				dataNode.set(schemeKey, 'ng'+ucGameID)
+					
+					
 	for providerNode in providerNodeLst:
 		name = providerNode.get(key)
 		if name == 'cn.gundam.sdk.shell.content.FileProvider':

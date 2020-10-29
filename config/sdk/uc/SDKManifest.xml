@@ -3,13 +3,10 @@
     
     <permissionConfig>
 
-    	
-		
     </permissionConfig>
     
-    <applicationConfig proxyApplication="com.u8.sdk.AliProxyApplication" >
+    <applicationConfig proxyApplication="com.u8.sdk.UCApplication" >
         
-       
     </applicationConfig>
     
 </manifest>

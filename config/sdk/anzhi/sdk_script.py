@@ -22,7 +22,8 @@ def execute(channel, decompileDir, packageName):
 	manifestFile = file_utils.getFullPath(manifestFile)
 	ET.register_namespace('android', androidNS)
 	key = '{' + androidNS + '}name'
-	schemeKey = '{'+androidNS+'}scheme'
+	host = '{'+androidNS+'}host'
+	author = '{'+androidNS+'}authorities'
 
 	tree = ET.parse(manifestFile)
 	root = tree.getroot()
@@ -39,19 +40,18 @@ def execute(channel, decompileDir, packageName):
 		name = activityNode.get(key)
 		if name == 'com.anzhi.sdk.middle.manage.AgencyActivity':
 			intentNodes = activityNode.findall('intent-filter')
-			if intentNodes is not None and len(intentNodes) > 0:
-				for intentNode in intentNodes:
-					dataNodes = intentNode.findall('data')
-					if dataNodes is not None and len(dataNodes) > 0:
-						for dataNode in dataNodes:
-							dataNode.set('{'+androidNS+'}host', packageName)
+			for intentNode in intentNodes:
+				dataNodes = intentNode.findall('data')
+				if dataNodes is not None and len(dataNodes) > 0:
+					for dataNode in dataNodes:
+						dataNode.set(host, packageName)
 					
 	proNodeLst = applicationNode.findall('provider')
 
 	for proNode in proNodeLst:
 		name = proNode.get(key)
 		if name == 'com.anzhi.sdk.middle.manage.AnzhiFileProvider':
-			proNode.set('{'+androidNS+'}authorities', packageName+'.anzhi_file_provider')				
+			proNode.set(author, packageName+'.anzhi_file_provider')				
 
 	tree.write(manifestFile, 'UTF-8')
 

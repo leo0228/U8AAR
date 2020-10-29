@@ -5,7 +5,7 @@
 
     </permissionConfig>
     
-    <applicationConfig proxyApplication="com.u8.sdk.AliProxyApplication" >
+    <applicationConfig proxyApplication="com.u8.sdk.UCApplication" >
         
         <provider
             android:name="android.support.v4.content.FileProvider"
