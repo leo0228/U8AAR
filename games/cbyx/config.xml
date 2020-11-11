@@ -5,7 +5,7 @@
     </global-plugins> -->
     <channels>
         <channel>         
-            <param name="id" value="10000" />            
+            <param name="id" value="410100" />            
             <param name="name" value="moyoi_ad" />            
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游" />            
@@ -32,7 +32,7 @@
             </sdk-version>
         </channel>
         <channel>         
-            <param name="id" value="170305" />            
+            <param name="id" value="440100" />            
             <param name="name" value="moyoitest" />            
             <param name="sdk" value="moyoitest" />            
             <param name="desc" value="墨游测试" />            
@@ -59,7 +59,7 @@
             </sdk-version>
         </channel>   
         <channel>         
-            <param name="id" value="10007" />            
+            <param name="id" value="410101" />            
             <param name="name" value="moyoi_ad" />            
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 taptap版本" />            
@@ -86,7 +86,7 @@
             </sdk-version>
         </channel>
         <channel>         
-            <param name="id" value="10010" />            
+            <param name="id" value="410102" />            
             <param name="name" value="moyoi_ad" />        
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 好游快爆版本" />            
@@ -113,7 +113,7 @@
             </sdk-version>
         </channel>
         <channel>         
-            <param name="id" value="30016" />            
+            <param name="id" value="430103" />            
             <param name="name" value="moyoi_ad" />            
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 一游说版本" />            
@@ -140,7 +140,7 @@
             </sdk-version>
         </channel>    
         <channel>
-            <param name="id" value="10009" />
+            <param name="id" value="410007" />
             <param name="name" value="wufan" />
             <param name="sdk" value="wufan" />
             <param name="desc" value="悟饭(啪啪游戏)" />
@@ -166,7 +166,7 @@
         </channel>
       
         <channel>
-            <param name="id" value="10005" />
+            <param name="id" value="410005" />
             <param name="name" value="vivooffline2_ad" />
             <param name="sdk" value="vivooffline2_ad" />
             <param name="desc" value="ViVoSDK offline2" />
@@ -191,7 +191,7 @@
         </channel>
           
         <channel>
-            <param name="id" value="10003" />
+            <param name="id" value="410003" />
             <param name="name" value="uc_ad" />
             <param name="sdk" value="uc_ad" />
             <param name="desc" value="UC（九游）" />
@@ -217,7 +217,7 @@
         </channel>
        
         <channel>
-            <param name="id" value="10008" />
+            <param name="id" value="410008" />
             <param name="name" value="m4399_ad" />
             <param name="sdk" value="m4399_ad" />
             <param name="desc" value="4399" />
@@ -243,7 +243,7 @@
         </channel>
     
         <channel>         
-            <param name="id" value="19" />            
+            <param name="id" value="410004" />            
             <param name="name" value="oppo_ad" />            
             <param name="sdk" value="oppo_ad" />            
             <param name="desc" value="Oppo" />            
