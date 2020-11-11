@@ -64,7 +64,7 @@
 			<param name="minSdkVersion" value="19" desc="最小支持的Android SDK版本，minSdkVersion,targetSdkVersion,maxSdkVersion 三个同时配置，或者同时不配置"/>
 			<param name="targetSdkVersion" value="28" desc="默认使用的Android SDK版本，minSdkVersion,targetSdkVersion,maxSdkVersion 三个同时配置，或者同时不配置"/>
 			<!-- <param name="maxSdkVersion" value="26" desc="最大支持的Android SDK版本，minSdkVersion,targetSdkVersion,maxSdkVersion 三个同时配置，或者同时不配置"/> -->
-			<param name="outputApkName" value="{appName}_{channelName}_{versionCode}_{time}.apk" desc="最终apk包名格式：{bundleID}:包名,{versionName}:版本名称,{versionCode}:版本号,{time}:时间戳(yyyyMMddmmss),{channelID}:渠道号,{channelName}:渠道名,{appName}:游戏名,{appID}:appID"/>
+			<param name="outputApkName" value="{appName}_{channelID}_{versionCode}_{time}.apk" desc="最终apk包名格式：{bundleID}:包名,{versionName}:版本名称,{versionCode}:版本号,{time}:时间戳(yyyyMMddmmss),{channelID}:渠道号,{channelName}:渠道名,{appName}:游戏名,{appID}:appID"/>
 
 			<log>
 				<param name="ulog.enable" value="true" desc="是否进行日志打印"/>

@@ -54,7 +54,7 @@
         </channel>   
         <channel>         
             <param name="id" value="170302" />            
-            <param name="name" value="moyoi" />            
+            <param name="name" value="taptap" />            
             <param name="sdk" value="moyoi" />            
             <param name="desc" value="墨游 taptap版本" />            
             <param name="suffix" value="com.moyoi.zjtx" />            
@@ -78,7 +78,7 @@
         </channel>
         <channel>         
             <param name="id" value="170303" />            
-            <param name="name" value="moyoi" />            
+            <param name="name" value="haoyou" />            
             <param name="sdk" value="moyoi" />            
             <param name="desc" value="墨游 好游快爆版本" />            
             <param name="suffix" value="com.moyoi.zjtx" />            
@@ -102,7 +102,7 @@
         </channel>
         <channel>         
             <param name="id" value="170304" />            
-            <param name="name" value="moyoi" />            
+            <param name="name" value="yiyoushuo" />            
             <param name="sdk" value="moyoi" />            
             <param name="desc" value="墨游 一游说版本" />            
             <param name="suffix" value="com.moyoi.zjtx" />            

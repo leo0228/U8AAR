@@ -6,7 +6,7 @@
     <channels>
         <channel>         
             <param name="id" value="410100" />            
-            <param name="name" value="moyoi_ad" />            
+            <param name="name" value="moyoi" />            
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
@@ -60,7 +60,7 @@
         </channel>   
         <channel>         
             <param name="id" value="410101" />            
-            <param name="name" value="moyoi_ad" />            
+            <param name="name" value="taptap" />            
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 taptap版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
@@ -87,7 +87,7 @@
         </channel>
         <channel>         
             <param name="id" value="410102" />            
-            <param name="name" value="moyoi_ad" />        
+            <param name="name" value="haoyou" />        
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 好游快爆版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
@@ -114,7 +114,7 @@
         </channel>
         <channel>         
             <param name="id" value="430103" />            
-            <param name="name" value="moyoi_ad" />            
+            <param name="name" value="yiyoushuo" />            
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游 一游说版本" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
@@ -167,7 +167,7 @@
       
         <channel>
             <param name="id" value="410005" />
-            <param name="name" value="vivooffline2_ad" />
+            <param name="name" value="vivooffline2" />
             <param name="sdk" value="vivooffline2_ad" />
             <param name="desc" value="ViVoSDK offline2" />
             <param name="suffix" value="com.moyoiad.goc.vivo" />
@@ -192,7 +192,7 @@
           
         <channel>
             <param name="id" value="410003" />
-            <param name="name" value="uc_ad" />
+            <param name="name" value="uc" />
             <param name="sdk" value="uc_ad" />
             <param name="desc" value="UC（九游）" />
             <param name="suffix" value="com.moyoiad.goc.aligames" />
@@ -218,7 +218,7 @@
        
         <channel>
             <param name="id" value="410008" />
-            <param name="name" value="m4399_ad" />
+            <param name="name" value="m4399" />
             <param name="sdk" value="m4399_ad" />
             <param name="desc" value="4399" />
             <param name="suffix" value="com.moyoiad.goc.m4399" />
@@ -244,7 +244,7 @@
     
         <channel>         
             <param name="id" value="410004" />            
-            <param name="name" value="oppo_ad" />            
+            <param name="name" value="oppo" />            
             <param name="sdk" value="oppo_ad" />            
             <param name="desc" value="Oppo" />            
             <param name="suffix" value="com.moyoiad.goc.nearme.gamecenter" />            
