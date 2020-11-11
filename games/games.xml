@@ -1,7 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <xml>
 	<games>
-
 		<game>
 			<param name="appName" value="zjtx" />
 			<param name="appID" value="3" />
@@ -55,7 +54,7 @@
 		<game>
 			<param name="appName" value="cbyx" />
 			<param name="appID" value="4" />
-			<param name="appKey" value="3743cc6fcdaac17a81732eb10edb6734" />
+			<param name="appKey" value="2de97b5fac0df1801732b25932053aaf" />
 			<param name="appDesc" value="城堡英雄" />
 			<param name="orientation" value="landscape" desc="游戏是横屏还是竖屏(landscape|portrait),不配置默认是横屏" />
 			<param name="use_u8_auth" value="1" desc="是否用U8SDK默认的登录认证" />

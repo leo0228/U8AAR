@@ -3,7 +3,6 @@
     
     <params>
         <param name="UCGameId" required="1" showName="GameId" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="UCCpId" required="1" showName="cpId" desc="uc" bWriteInManifest="0" bWriteInClient="1" /> 
         <param name="UCApiKey" required="1" showName="ApiKey" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
         <param name="ali_screen_orientation" required="1" showName="横竖屏" desc="landscape|portrait" bWriteInManifest="1" bWriteInClient="1" />
         <param name="UCDebugMode" required="1" showName="是否开启调试模式" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
@@ -11,7 +10,6 @@
        	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
         <param name="ad_appId" required="1" showName="uc广告appId" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
         <param name="ad_posId" required="1" showName="uc广告位id" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="isShowUCAd" required="1"  showName="是否显示UC广告" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>
@@ -23,14 +21,13 @@
     
     <plugins>
         <plugin name="com.u8.sdk.UCUser" type="1" desc="用户登录接口"/>
-        <plugin name="com.u8.sdk.UCPay" type="2" desc="用户支付接口"/>
         <plugin name="com.u8.sdk.UCAds" type="7" desc="广告接口"/>
     </plugins>
     
     <version>
         <name>阿里(UC)</name>
-        <versionCode>1</versionCode>
-        <versionName>7.3.4.2</versionName>
+        <versionCode>9</versionCode>
+        <versionName>9.0.0.1</versionName>
     </version>    
     
 </config>

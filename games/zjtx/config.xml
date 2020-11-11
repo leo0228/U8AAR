@@ -267,16 +267,13 @@
             <param name="splash" value="0" />
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />
-            <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <sdk-params>
                 <param name="UCGameId" value="924767" desc="UCGameId"/>
-                <param name="UCCpId" value="0" desc="UCCpId"/>
                 <param name="UCApiKey" value="684b4fcbf63535541b3bc4ae4a6f36de" desc="UCApiKey"/>
                 <param name="ali_screen_orientation" value="landscape" desc="横竖屏"/>
                 <param name="UCDebugMode" value="false" desc="是否开启调试模式"/>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200012" />
-                <param name="isShowUCAd" value="false" />
             </sdk-params>
             <sdk-version>
                 <versionCode>9</versionCode>
@@ -314,7 +311,6 @@
             <param name="splash" value="0" />
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />
-            <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <sdk-params>
                 <param name="AppID" value="11452574" />
                 <param name="AppKey" value="4xvNAWvsbjvtuv8dh6IIUZ2R" />
@@ -335,7 +331,6 @@
             <param name="suffix" value="com.moyoi.zjtx1.qihoo" />
             <param name="splash" value="0" />
             <param name="icon" value="rb" />
-            <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <param name="splash_copy_to_unity" value="0" />
             <sdk-params>
                 <param desc="AppID" name="QHOPENSDK_APPID" value="204267021" />
@@ -363,7 +358,6 @@
             <param name="suffix" value="com.moyoi.zjtx.mi" />
             <param name="splash" value="0" />
             <param name="icon" value="rb" />
-            <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <param name="splash_copy_to_unity" value="0" />
             <sdk-params>
                 <param name="MiAppID" value="2882303761517846518" />
@@ -449,7 +443,6 @@
             <param name="sdk" value="huawei" />
             <param name="desc" value="华为" />
             <param name="suffix" value="com.appmarket.zjtx.huawei" />
-            <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <param name="splash" value="0" />
             <param name="splash_copy_to_unity" value="0" />
             <sdk-params>
@@ -477,7 +470,6 @@
             <param name="sdk" value="huawei" />
             <param name="desc" value="华为" />
             <param name="suffix" value="com.appmarket.zjtx.huawei" />
-            <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <param name="splash" value="0" />
             <param name="splash_copy_to_unity" value="0" />
             <sdk-params>

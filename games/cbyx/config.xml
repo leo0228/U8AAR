@@ -5,7 +5,7 @@
     </global-plugins> -->
     <channels>
         <channel>         
-            <param name="id" value="1703" />            
+            <param name="id" value="10000" />            
             <param name="name" value="moyoi_ad" />            
             <param name="sdk" value="moyoi_ad" />            
             <param name="desc" value="墨游" />            
@@ -202,7 +202,6 @@
             <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <sdk-params>
                 <param name="UCGameId" value="924767"/>
-                <param name="UCCpId" value="0"/>
                 <param name="UCApiKey" value="684b4fcbf63535541b3bc4ae4a6f36de"/>
                 <param name="ali_screen_orientation" value="landscape" />
                 <param name="UCDebugMode" value="false"/>
@@ -210,11 +209,10 @@
                 <param name="TALKING_CHANNEL" value="200012" />
                 <param name="ad_appId" value="200012"/>
                 <param name="ad_posId" value="1000004107" />
-                <param name="isShowUCAd" value="true"/>
             </sdk-params>
             <sdk-version>
                 <versionCode>9</versionCode>
-                <versionName>9.0.0.1</versionName>
+                <versionName>9.2.0.1</versionName>
             </sdk-version>
         </channel>
        
