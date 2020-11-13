@@ -201,8 +201,8 @@
             <param name="icon" value="rb" />
             <param name="gameName" value="战箭天下" desc="游戏名称"/>
             <sdk-params>
-                <param name="UCGameId" value="924767"/>
-                <param name="UCApiKey" value="684b4fcbf63535541b3bc4ae4a6f36de"/>
+                <param name="UCGameId" value="883474"/>
+                <param name="UCApiKey" value="304a05931d18f7eed1806eb5a310da5c"/>
                 <param name="ali_screen_orientation" value="landscape" />
                 <param name="UCDebugMode" value="false"/>
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
@@ -247,14 +247,14 @@
             <param name="name" value="oppo" />            
             <param name="sdk" value="oppo_ad" />            
             <param name="desc" value="Oppo" />            
-            <param name="suffix" value="com.moyoiad.goc.nearme.gamecenter" />            
+            <param name="suffix" value="com.moyoiad.goc1.nearme.gamecenter" />            
             <param name="splash" value="0" />           
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />       
             <sdk-params>                
-                <param name="app_Id" value="3662129" />
-                <param name="appSecret" value="bad57b6d270F30bf3Ae29a37b448648C" />
-                <param name="app_key" value="3aCYwl9G9ywWkWWwo804G44Wc" />        
+                <param name="app_Id" value="30410223" />
+                <param name="appSecret" value="80db2b0dd9924570b1520e35ca657bac" />
+                <param name="app_key" value="a3c31fba3a1348e3be6c7c2b3c51251f" />        
                 <param name="is_offline_game" value="false" />
                 <param name="PayNotifyUrl" value="http://myserver.moyoi.cn:8093/pay/oppo/payCallback/19" />
                 <param name="debug_mode" value="false" />
