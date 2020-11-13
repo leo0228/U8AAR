@@ -252,9 +252,9 @@
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />       
             <sdk-params>                
-                <param name="app_Id" value="30408681" />
-                <param name="appSecret" value="774af22ed39647d29b13be6c263f17ec" />
-                <param name="app_key" value="ddc3e95fc83c4602a63a40b10e81fe02" />        
+                <param name="app_Id" value="30410223" />
+                <param name="appSecret" value="80db2b0dd9924570b1520e35ca657bac" />
+                <param name="app_key" value="a3c31fba3a1348e3be6c7c2b3c51251f" />        
                 <param name="is_offline_game" value="false" />
                 <param name="PayNotifyUrl" value="http://myserver.moyoi.cn:8093/pay/oppo/payCallback/19" />
                 <param name="debug_mode" value="false" />
