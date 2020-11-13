@@ -34,7 +34,7 @@
         <channel>         
             <param name="id" value="440100" />            
             <param name="name" value="moyoitest" />            
-            <param name="sdk" value="moyoitest" />            
+            <param name="sdk" value="moyoitest_ad" />            
             <param name="desc" value="墨游测试" />            
             <param name="suffix" value="com.moyoiad.goc.cn" />            
             <param name="splash" value="0" />           

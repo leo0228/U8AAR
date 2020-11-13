@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <permissionConfig>
+        <!--穿山甲AD begin-->
+        <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+        <uses-permission android:name="android.permission.GET_TASKS"/>
+        <!-- 如果有视频相关的广告且使用textureView播放，请务必添加，否则黑屏 -->
+        <uses-permission android:name="android.permission.WAKE_LOCK" />
+        <!--穿山甲AD end-->
+    </permissionConfig>
+
+    <applicationConfig proxyApplication="com.u8.sdk.MoyoiApplication" >
+    	<provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities="${applicationId}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+    </applicationConfig>
+
+</manifest>
