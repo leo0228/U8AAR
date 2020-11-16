@@ -180,8 +180,8 @@
                 <param name="com.vivo.push.api_key" value="c5324f3f-86bf-40f5-b5f1-5f3b11b0009c" />
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200001" />
-                <param name="ad_appId" value="200001" />
-                <param name="ad_posId" value="200001" />
+                <param name="ad_appId" value="71840235302f4225892a7f8ef53bca0c" />
+                <param name="ad_posId" value="1c42927f6fde4211b5357b2789653870" />
                 <param name="isShowVivoAd" value="true" />
             </sdk-params>                       
             <sdk-version>
