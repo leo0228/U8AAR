@@ -2,13 +2,13 @@
 <config>
     
     <params>
-        <param name="Flyme_AppID" required="1" showName="AppID" desc="魅族" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="Flyme_AppKey" required="1" showName="AppKey" desc="魅族" bWriteInManifest="0" bWriteInClient="1" /> 
-        <param name="Flyme_AppSecret" required="1" showName="AppSecret" desc="魅族" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="Flyme_AppID" required="1" showName="AppID" desc="魅族后台申请的AppID" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="Flyme_AppKey" required="1" showName="AppKey" desc="魅族后台申请的AppKey" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="Flyme_AppSecret" required="1" showName="AppSecret" desc="魅族后台申请的AppSecret" bWriteInManifest="0" bWriteInClient="1" />
         <param name="MEIZU_APP_ID" required="1" showName="推送appid" desc="魅族推送需要的appid" bWriteInManifest="1" bWriteInClient="1" />
         <param name="MEIZU_APP_KEY" required="1" showName="推送appkey" desc="魅族推送需要的appkey" bWriteInManifest="1" bWriteInClient="1" />
-		<param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="meizu" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="meizu" bWriteInManifest="0" bWriteInClient="1" />
+		<param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

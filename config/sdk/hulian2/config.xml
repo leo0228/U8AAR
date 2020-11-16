@@ -2,11 +2,11 @@
 <config>
     
     <params>
-        <param name="HS_APPID" required="1"  showName="appId" desc="oppo" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="HS_CLIENTID" required="1"  showName="appSecret" desc="oppo" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="HS_CLIENTKEY" required="1"  showName="app_key" desc="oppo" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="oppo" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="oppo" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="HS_APPID" required="1"  showName="appId" desc="互联后台申请的appid" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="HS_CLIENTID" required="1"  showName="clientId" desc="互联后台申请的clientId" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="HS_CLIENTKEY" required="1"  showName="clientKey" desc="互联后台申请的clientKey" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

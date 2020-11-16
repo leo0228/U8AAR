@@ -2,11 +2,11 @@
 <config>
     
     <params>
-        <param name="AppID"  required="1" showName="AppID" desc="baidu sdk" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="AppKey"  required="1" showName="AppKey" desc="baidu sdk" bWriteInManifest="0" bWriteInClient="1" /> 
-        <param name="Domain"  required="1" showName="是否为Debug模式" desc="baidu sdk" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="baidu sdk" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="baidu sdk" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AppID"  required="1" showName="AppID" desc="百度后台申请的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AppKey"  required="1" showName="AppKey" desc="百度后台申请的appkey" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="Domain"  required="1" showName="debug" desc="Debug模式" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

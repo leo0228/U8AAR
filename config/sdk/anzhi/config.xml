@@ -2,14 +2,14 @@
 <config>
     
     <params>
-        <param name="AnZhi_AppKey" required="1" showName="APP_ID" desc="安智" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="AnZhi_Secret" required="1" showName="APP_KEY" desc="安智" bWriteInManifest="0" bWriteInClient="1" /> 
-        <param name="AnZhi_GameName" required="1" showName="游戏名称" desc="安智" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="AnZhi_Orientation" required="1" showName="横屏或者竖屏(landscape|portrait)" desc="安智" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ANZHIUSERCENTE_VERSIONS" required="1" showName="版本号" desc="安智" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="ANZHI_DEBUG" required="1" showName="是否为dubug模式" desc="安智" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="anzhi" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="anzhi" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AnZhi_AppKey" required="1" showName="APP_ID" desc="安智后台申请的Appkey" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AnZhi_Secret" required="1" showName="APP_KEY" desc="安智后台申请的Secret" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="AnZhi_GameName" required="1" showName="GameName" desc="游戏名称" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AnZhi_Orientation" required="1" showName="orientation" desc="横屏或者竖屏(landscape|portrait)" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ANZHIUSERCENTE_VERSIONS" required="1" showName="version" desc="版本号" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="ANZHI_DEBUG" required="1" showName="dubug" desc="dubug模式" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

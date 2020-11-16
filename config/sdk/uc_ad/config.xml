@@ -2,14 +2,14 @@
 <config>
     
     <params>
-        <param name="UCGameId" required="1" showName="GameId" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="UCApiKey" required="1" showName="ApiKey" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ali_screen_orientation" required="1" showName="横竖屏" desc="landscape|portrait" bWriteInManifest="1" bWriteInClient="1" />
-        <param name="UCDebugMode" required="1" showName="是否开启调试模式" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ad_appId" required="1" showName="uc广告appId" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ad_posId" required="1" showName="uc广告位id" desc="uc" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="UCGameId" required="1" showName="GameId" desc="UC申请的gameId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="UCApiKey" required="1" showName="ApiKey" desc="UC申请的apiKey" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ali_screen_orientation" required="1" showName="orientation" desc="横竖屏(landscape|portrait)" bWriteInManifest="1" bWriteInClient="1" />
+        <param name="UCDebugMode" required="1" showName="debugMode" desc="是否开启调试模式" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_appId" required="1" showName="uc广告appId" desc="uc广告appId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_posId" required="1" showName="uc广告位id" desc="uc广告位id" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

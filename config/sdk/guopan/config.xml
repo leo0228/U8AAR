@@ -4,8 +4,8 @@
     <params>
         <param name="GuoPan_AppID" required="1" showName="AppID" desc="叉叉助手(果盘)" bWriteInManifest="0" bWriteInClient="1" />
         <param name="GuoPan_AppKey" required="1" showName="AppKey" desc="叉叉助手(果盘)" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="360" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="360" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

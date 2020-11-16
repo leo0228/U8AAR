@@ -605,46 +605,29 @@ def mergeManifestAARToSDK(aarsDestDir, dstDir):
     targetContent = f.read()
     f.close()
 
-    for child in list(aarRoot):
-        # 列出所有标签名为tagName的子节点
-        for permissionChild in list(child.iter('uses-permission')):
-            # 子节点对应的values
-            key = '{' + androidNS + '}name'
-            val = permissionChild.get(key)
-            if val != None and len(val) > 0:
-                attrIndex = targetContent.find(val)
-                # values不存在添加
-                if -1 == attrIndex:
-                    targetRoot.find('permissionConfig').append(permissionChild)
 
-        if child.iter('permission') != None:
-            for permissionChild in list(child.iter('permission')):
-                # 子节点对应的values
-                key = '{' + androidNS + '}name'
-                val = permissionChild.get(key)
-                if val != None and len(val) > 0:
-                    attrIndex = targetContent.find(val)
-                    # values不存在添加
-                    if -1 == attrIndex:
-                        targetRoot.find('permissionConfig').append(permissionChild)
+    permissionConfigNode = targetRoot.find('permissionConfig')
+    for child in list(aarRoot):  
+        # 子节点对应的values，uses-feature，uses-permission，permission
+        key = '{' + androidNS + '}name'
+        val = child.get(key)
+        if val != None and len(val) > 0:
+            attrIndex = targetContent.find(val)
+            # values不存在添加
+            if -1 == attrIndex:
+                permissionConfigNode.append(child)
 
-        if child.iter('uses-feature') != None:
-            for permissionChild in list(child.iter('uses-feature')):
-                # 子节点对应的values
-                key = '{' + androidNS + '}name'
-                val = permissionChild.get(key)
-                if val != None and len(val) > 0:
-                    attrIndex = targetContent.find(val)
-                    # values不存在添加
-                    if -1 == attrIndex:
-                        targetRoot.find('permissionConfig').append(permissionChild)
-   
     aarAppNode = aarRoot.find('application')
     sdkAppConfigNode = targetRoot.find('applicationConfig')
        
     if aarAppNode != None:
-        for aarChild in list(aarAppNode):  
-            sdkAppConfigNode.append(aarChild)
+        for aarChild in list(aarAppNode):     
+            key = '{' + androidNS + '}name'
+            val = aarChild.get(key)   
+            if val != None and len(val) > 0:
+                attrIndex = targetContent.find(val)
+                if -1 == attrIndex:
+                    sdkAppConfigNode.append(aarChild)
                                
     targetTree.write(manifestTo, 'UTF-8')
 

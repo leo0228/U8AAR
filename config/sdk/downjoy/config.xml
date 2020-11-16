@@ -2,12 +2,12 @@
 <config>
     
     <params>
-        <param name="APP_ID" required="1" showName="APP_ID" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="APP_KEY" required="1" showName="APP_KEY" desc="dl" bWriteInManifest="0" bWriteInClient="1" /> 
-        <param name="MERCHANT_ID" required="1" showName="MERCHANT_ID" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="SERVER_SEQ_NUM" required="1" showName="SERVER_SEQ_NUM" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="APP_ID" required="1" showName="APP_ID" desc="当乐后台申请的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="APP_KEY" required="1" showName="APP_KEY" desc="当乐后台申请的appkey" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="MERCHANT_ID" required="1" showName="MERCHANT_ID" desc="MERCHANT_ID" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="SERVER_SEQ_NUM" required="1" showName="SERVER_SEQ_NUM" desc="SERVER_SEQ_NUM" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

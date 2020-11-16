@@ -15,8 +15,8 @@
         <param name="WG_QUERY_URL" required="1" showName="查询订单地址" desc="u8server上处理应用宝查询订单的地址" bWriteInManifest="0" bWriteInClient="1" />
         <param name="WG_PAY_URL" required="1" showName="充值通知的服务器地址" desc="u8server上处理应用宝充值的地址" bWriteInManifest="0" bWriteInClient="1" />
 		<param name="jpush_appkey" required="1" showName="jpush_appkey" desc="推送" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="应用宝" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="应用宝" bWriteInManifest="0" bWriteInClient="1" />    
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />  
     </params>
     
     <operations>

@@ -143,6 +143,7 @@
                 <param name="callBackUrl" value="http://myserver.moyoi.cn:8093/pay/papa/payCallback/1704" desc="充值回调地址" />
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
                 <param name="TALKING_CHANNEL" value="200024" />
+                <param name="isShowWufanAd" value="true" />
             </sdk-params>
             <sdk-version>
                 <versionCode>3</versionCode>
@@ -414,8 +415,8 @@
                 <param name="isShowOppoAd" value="false" />
             </sdk-params>           
             <sdk-version>         
-                <versionCode>2</versionCode>         
-                <versionName>2.0.2.306</versionName>      
+                <versionCode>2</versionCode>
+                <versionName>2.0.4.009</versionName>      
             </sdk-version>
         </channel>
         <channel>

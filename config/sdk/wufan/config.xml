@@ -4,12 +4,13 @@
     <params>
         <param name="PA_APP_KEY" required="1" showName="appkey" desc="啪啪游戏的appkey" bWriteInManifest="1" bWriteInClient="0" />
         <param name="PA_APP_PRIVATE_KEY" required="1" showName="privateKey" desc="啪啪游戏的私key" bWriteInManifest="1" bWriteInClient="0" /> 
-        <param name="PA_AD_ID" required="1" showName="悟饭渠道自身的统计id" desc="自身的统计id" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="PA_GAME_ID" required="1" showName="悟饭渠道自身的游戏id" desc="自身的游戏id" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="PA_AD_ID" required="1" showName="adId" desc="悟饭渠道自身的统计id" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="PA_GAME_ID" required="1" showName="gameId" desc="悟饭渠道自身的游戏id" bWriteInManifest="1" bWriteInClient="0" />
         <param name="gameName" required="1" showName="gameName" desc="游戏名称" bWriteInManifest="0" bWriteInClient="1" />
         <param name="callBackUrl" required="1" showName="callBackUrl" desc="游戏回调地址" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="wufan" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="wufan" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="isShowWufanAd" required="1"  showName="isShowWufanAd" desc="是否显示悟饭广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

@@ -2,8 +2,8 @@
 <config>
     
     <params>
-        <param name="TALKING_APPID" required="1"  showName="talkingdata的应用id" desc="墨游在talkingdata申请的appid" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_CHANNEL" required="1"  showName="talkingdata的分配的渠道号" desc="墨游在talkingdata分配的渠道号" bWriteInManifest="0" bWriteInClient="1" /> 
+        <param name="TALKING_APPID" required="1"  showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1"  showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" /> 
         <param name="wx_appId" required="1"  showName="微信的appid" desc="墨游为该游戏申请微信appid" bWriteInManifest="1" bWriteInClient="0" />
         <param name="wx_show" required="1"  showName="显示微信登录" desc="是否显示墨游微信登录" bWriteInManifest="1" bWriteInClient="0" />
         <param name="qq_appId" required="1"  showName="qq的appid" desc="墨游为该游戏申请qq的appid" bWriteInManifest="1" bWriteInClient="0" />      

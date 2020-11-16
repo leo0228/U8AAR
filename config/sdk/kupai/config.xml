@@ -2,12 +2,12 @@
 <config>
     
     <params>
-        <param name="CoolPad_AppID" required="1" showName="AppID" desc="酷派" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="CoolPad_AppKey" required="1" showName="AppID" desc="酷派" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="CoolPad_PayKey" required="1" showName="AppID" desc="酷派" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="CoolPad_Orientation" required="1" showName="横竖屏(landscape|portrait)" desc="酷派" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="分配给酷派的渠道appid" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="分配给酷派的渠道号" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="CoolPad_AppID" required="1" showName="AppID" desc="酷派后台申请的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="CoolPad_AppKey" required="1" showName="AppKey" desc="酷派后台申请的appkey" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="CoolPad_PayKey" required="1" showName="PayKey" desc="酷派后台申请的paykey" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="CoolPad_Orientation" required="1" showName="Orientation" desc="横竖屏(landscape|portrait)" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

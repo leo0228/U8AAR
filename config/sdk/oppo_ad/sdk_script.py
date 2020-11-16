@@ -40,6 +40,8 @@ def execute(channel, decompileDir, packageName):
 
 	for proNode in proNodeLst:
 		name = proNode.get(key)
+		if name == 'com.nearme.platform.opensdk.pay.NearMeFileProvider':
+			proNode.set(authorKey, packageName+'.fileProvider')	
 		if name == 'com.opos.mobad.provider.MobAdGlobalProvider':
 			proNode.set(authorKey, packageName+'.MobAdGlobalProvider')	
 		if name == 'com.bytedance.sdk.openadsdk.multipro.TTMultiProvider':

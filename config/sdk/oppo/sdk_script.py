@@ -36,6 +36,13 @@ def execute(channel, decompileDir, packageName):
 	if networkKey not in applicationNode.attrib:
 		applicationNode.set(networkKey, "@xml/network_security_config")
 	
+	proNodeLst = applicationNode.findall('provider')
+
+	for proNode in proNodeLst:
+		name = proNode.get(key)
+		if name == 'com.nearme.platform.opensdk.pay.NearMeFileProvider':
+			proNode.set(authorKey, packageName+'.fileProvider')	
+
 	tree.write(manifestFile, 'UTF-8')
 
 	return 0
