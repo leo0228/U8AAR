@@ -6,10 +6,45 @@
     </permissionConfig>
     
     <applicationConfig proxyApplication="com.u8.sdk.OppoProxyApplication">
-	
-		
+		 <!--必须组件配置,注意相比 323 修改的 MobAdGlobalProvider 的包名-->
+        <provider
+            android:name="com.opos.mobad.provider.MobAdGlobalProvider"
+            android:authorities="${applicationId}.MobAdGlobalProvider"
+            android:exported="false" />
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities="${applicationId}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/gdt_file_path" />
+        </provider>
+        <!--必须组件配置,注意 337 新增的 MobFileProvider-->
+
+        <!--必须组件配置,注意 337 新增的 MobFileProvider-->
+        <provider
+            android:name="com.heytap.msp.mobad.api.MobFileProvider"
+            android:authorities="${applicationId}.MobFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/mobad_provider_paths" />
+        </provider>
+        <!--必须组件配置-->
     </applicationConfig>
-    
-    
     
 </manifest>

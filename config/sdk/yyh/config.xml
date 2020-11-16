@@ -4,10 +4,10 @@
     <params>
         <param name="AppChina_AppId" required="1" showName="AppID" desc="应用汇" bWriteInManifest="0" bWriteInClient="1" /> 
         <param name="AppChina_AppKey" required="1" showName="AppKey" desc="应用汇" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="AppChina_PrivateKey" required="1" showName="AppKey" desc="应用汇" bWriteInManifest="0" bWriteInClient="1" />
-		<param name="AppChina_PublicKey"  required="1" showName="AppKey" desc="应用汇" bWriteInManifest="0" bWriteInClient="1" />		
-		<param name="AppChina_Orientation" required="1" showName="横屏竖屏设置(landscape|portrait)" desc="应用汇" bWriteInManifest="0" bWriteInClient="1" />
-		<param name="AppChina_CallbackUrl"  required="1" showName="支付回调地址" desc="应用汇支付回调地址" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AppChina_PrivateKey" required="1" showName="PrivateKey" desc="应用汇" bWriteInManifest="0" bWriteInClient="1" />
+		<param name="AppChina_PublicKey"  required="1" showName="PublicKey" desc="应用汇" bWriteInManifest="0" bWriteInClient="1" />		
+		<param name="AppChina_Orientation" required="1" showName="Orientation" desc="横屏竖屏设置" bWriteInManifest="0" bWriteInClient="1" />
+		<param name="AppChina_CallbackUrl"  required="1" showName="CallbackUrl" desc="应用汇支付回调地址" bWriteInManifest="0" bWriteInClient="1" />
 		<param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="分配给应用汇的渠道appid" bWriteInManifest="0" bWriteInClient="1" />
        	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="分配给应用汇的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>

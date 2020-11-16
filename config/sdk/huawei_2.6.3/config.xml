@@ -11,8 +11,8 @@
         <param name="pushURL" required="1" showName="pushURL" desc="传递pushId的网址" bWriteInManifest="0" bWriteInClient="1" />
         <param name="HuaWei_PrivateKey" required="1" showName="sdkChannel" desc="支付秘钥" bWriteInManifest="0" bWriteInClient="1" />
         <param name="HuaWei_PublicKey" required="1" showName="sdkChannel" desc="支付公钥" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="dl" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

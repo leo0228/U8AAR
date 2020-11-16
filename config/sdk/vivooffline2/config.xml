@@ -2,11 +2,11 @@
 <config>
     
     <params>
-        <param name="AppID" required="1"  showName="AppID" desc="vivo" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="com.vivo.push.app_id" required="1"  showName="推送的appid" desc="vivo" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="com.vivo.push.api_key" required="1"  showName="推送的apiKey" desc="vivo" bWriteInManifest="1" bWriteInClient="0" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="vivo" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="vivo" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="AppID" required="1"  showName="AppID" desc="vivos后台申请的appId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="com.vivo.push.app_id" required="1"  showName="push_appid" desc="推送的appid" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="com.vivo.push.api_key" required="1"  showName="push_apiKey" desc="推送的apiKey" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
         <param name="isShowVivoAd" required="1" showName="是否显示vido广告" desc="是否显示vido广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     

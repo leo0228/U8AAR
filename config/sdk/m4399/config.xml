@@ -2,13 +2,13 @@
 <config>
     
     <params>
-        <param name="M4399_AppKey"  required="1" showName="AppKey" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="M4399_Orientation" required="1" showName="横屏或者竖屏(landscape|portrait)" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="M4399_PopLogoStyle" required="1" showName="悬浮窗样式(one|two|three|four)" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="M4399_Position" required="1" showName="悬浮窗位置(left|top|right|bottom)" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="TALKING_APPID" required="1" showName="talkingdata的appid" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
-       	<param name="TALKING_CHANNEL" required="1" showName="talkingdata的渠道号" desc="4399" bWriteInManifest="0" bWriteInClient="1" /> 
-        <param name="isShow4399Ad" required="1"  showName="是否显示4399广告" desc="4399" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="M4399_AppKey"  required="1" showName="appKey" desc="appKey" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="M4399_Orientation" required="1" showName="orientation" desc="横屏或者竖屏(landscape|portrait)" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="M4399_PopLogoStyle" required="1" showName="popLogoStyle" desc="悬浮窗样式(one|two|three|four)" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="M4399_Position" required="1" showName="position" desc="悬浮窗位置(left|top|right|bottom)" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="isShow4399Ad" required="1"  showName="isShow4399Ad" desc="是否显示4399广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>
