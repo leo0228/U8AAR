@@ -21,11 +21,5 @@
         <plugin name="com.u8.sdk.VivoUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.VivoPay" type="2" desc="用户支付接口"/>
     </plugins>
-    
-    <version>
-        <name>vivo</name>
-        <versionCode>4</versionCode>
-        <versionName>4.2.4.0</versionName>
-    </version>    
-    
+
 </config>

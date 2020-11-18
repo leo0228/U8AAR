@@ -24,11 +24,5 @@
         <plugin name="com.u8.sdk.YYHUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.YYHPay" type="2" desc="用户支付接口"/>
     </plugins>
-    
-    <version>
-        <name>应用汇</name>
-        <versionCode>1</versionCode>
-        <versionName>7.5.1</versionName>
-    </version>    
-    
+  
 </config>

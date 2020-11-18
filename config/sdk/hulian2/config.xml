@@ -21,10 +21,5 @@
         <plugin name="com.u8.sdk.HuLianPay" type="2" desc="用户支付接口"/>
     </plugins>
     
-    <version>
-        <name>HuLian</name>
-        <versionCode>1</versionCode>
-        <versionName>7.2</versionName>
-    </version>    
-    
+  
 </config>

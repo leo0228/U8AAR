@@ -35,10 +35,4 @@
         <dependency name="com.nostra13.universalimageloader:universal-image-loader:1.9.2" />
     </dependencies>
 
-    <version>
-        <name>小7手游</name>
-        <versionCode>6</versionCode>
-        <versionName>6.0.1</versionName>
-    </version>    
-    
 </config>

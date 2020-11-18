@@ -22,11 +22,4 @@
         <plugin name="com.u8.sdk.M4399User" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.M4399Pay" type="2" desc="用户支付接口"/>
     </plugins>
-
-    <version>
-        <name>4399</name>
-        <versionCode>2</versionCode>
-        <versionName>v2.32.0.6</versionName>
-    </version>      
-    
 </config>

@@ -19,11 +19,5 @@
         <plugin name="com.u8.sdk.MiUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.MiPay" type="2" desc="用户支付接口"/>
     </plugins>
-    
-    <version>
-        <name>小米</name>
-        <versionCode>1</versionCode>
-        <versionName>2.0.2</versionName>
-    </version>     
-    
+  
 </config>

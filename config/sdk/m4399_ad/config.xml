@@ -33,11 +33,5 @@
         <dependency name="com.android.support:recyclerview-v7:26.0.2" />
         <dependency name="com.android.support:support-v4:26.0.2" />
     </dependencies>
-
-    <version>
-        <name>4399</name>
-        <versionCode>2</versionCode>
-        <versionName>v2.32.0.6</versionName>
-    </version>      
     
 </config>

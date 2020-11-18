@@ -17,11 +17,5 @@
         <plugin name="com.u8.sdk.HuaWeiUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.HuaWeiPay" type="2" desc="用户支付接口"/>
     </plugins>
-    
-    <version>
-        <name>华为</name>
-        <versionCode>4</versionCode>
-        <versionName>4.0.3.302</versionName>
-    </version>    
-    
+  
 </config>

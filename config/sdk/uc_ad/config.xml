@@ -23,11 +23,5 @@
         <plugin name="com.u8.sdk.UCUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.UCAds" type="7" desc="广告接口"/>
     </plugins>
-    
-    <version>
-        <name>阿里(UC)</name>
-        <versionCode>9</versionCode>
-        <versionName>9.0.0.1</versionName>
-    </version>    
-    
+
 </config>

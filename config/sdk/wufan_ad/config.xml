@@ -27,10 +27,5 @@
         <plugin name="com.u8.sdk.WuFanPay" type="2" desc="用户支付接口"/>
     </plugins>
     
-    <version>
-        <name>悟饭(啪啪游戏)</name>
-        <versionCode>3</versionCode>
-        <versionName>3.3.0</versionName>
-    </version>    
-    
+  
 </config>

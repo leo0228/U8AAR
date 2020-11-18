@@ -20,10 +20,4 @@
         <plugin name="com.u8.sdk.MZWPay" type="2" desc="用户支付接口"/>
     </plugins>
     
-    <version>
-        <name>拇指玩</name>
-        <versionCode>3</versionCode>
-        <versionName>3.6.1.6</versionName>
-    </version>    
-    
 </config>

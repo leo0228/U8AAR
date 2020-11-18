@@ -21,10 +21,5 @@
         <plugin name="com.u8.sdk.GuoPanPay" type="2" desc="用户支付接口"/>
     </plugins>
     
-    <version>
-        <name>叉叉助手..果盘</name>
-        <versionCode>1</versionCode>
-        <versionName>4.0.1.6</versionName>
-    </version>     
-    
+   
 </config>
