@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+.<?xml version="1.0" encoding="UTF-8"?>
 <config>
     
     <params>
@@ -6,8 +6,8 @@
         <param name="appSecret" required="1"  showName="appSecret" desc="oppo后台申请的appSecret" bWriteInManifest="0" bWriteInClient="1" />
         <param name="app_key" required="1"  showName="app_key" desc="oppo后台申请的appKey" bWriteInManifest="1" bWriteInClient="1" />
         <param name="is_offline_game" required="1"  showName="is_offline_game" desc="是否为网络游戏" bWriteInManifest="1" bWriteInClient="0" /> 
-        <param name="PayNotifyUrl" required="1"  showName="PayNotifyUrl" desc="支付回调地址" bWriteInManifest="0" bWriteInClient="1" /> 
-        <param name="debug_mode" required="1"  showName="debug_mode" desc="debug模式" bWriteInManifest="1" bWriteInClient="0" />
+        <param name="debug_mode" required="1"  showName="debug_mode" desc="debug模式" bWriteInManifest="1" bWriteInClient="1" />
+        <param name="PayNotifyUrl" required="1"  showName="PayNotifyUrl" desc="支付回调地址" bWriteInManifest="0" bWriteInClient="1" />      
         <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
        	<param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
         <param name="ad_appId" required="1" showName="oppo广告appId" desc="oppo广告appId" bWriteInManifest="0" bWriteInClient="1" />

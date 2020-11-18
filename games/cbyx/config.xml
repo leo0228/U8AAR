@@ -259,8 +259,8 @@
                 <param name="appSecret" value="80db2b0dd9924570b1520e35ca657bac" />
                 <param name="app_key" value="a3c31fba3a1348e3be6c7c2b3c51251f" />        
                 <param name="is_offline_game" value="false" />
-                <param name="PayNotifyUrl" value="http://myserver.moyoi.cn:8093/pay/oppo/payCallback/19" />
                 <param name="debug_mode" value="false" />
+                <param name="PayNotifyUrl" value="http://myserver.moyoi.cn:8093/pay/oppo/payCallback/19" />              
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200002" />
                 <param name="ad_appId" value="1000004107" />
