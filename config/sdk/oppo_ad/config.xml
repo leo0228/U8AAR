@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    
+    <params>
+        <param name="app_Id" required="1"  showName="appId" desc="oppo后台申请的AppId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="appSecret" required="1"  showName="appSecret" desc="oppo后台申请的appSecret" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="app_key" required="1"  showName="app_key" desc="oppo后台申请的appKey" bWriteInManifest="1" bWriteInClient="1" />
+        <param name="is_offline_game" required="1"  showName="is_offline_game" desc="是否为网络游戏" bWriteInManifest="1" bWriteInClient="0" /> 
+        <param name="debug_mode" required="1"  showName="debug_mode" desc="debug模式" bWriteInManifest="1" bWriteInClient="1" />
+        <param name="PayNotifyUrl" required="1"  showName="PayNotifyUrl" desc="支付回调地址" bWriteInManifest="0" bWriteInClient="1" />      
+        <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
+       	<param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_appId" required="1" showName="oppo广告appId" desc="oppo广告appId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_posId" required="1" showName="oppo广告位id" desc="oppo广告位id" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="isShowOppoAd" required="1"  showName="是否显示oppo广告" desc="是否显示oppo广告" bWriteInManifest="0" bWriteInClient="1" />
+    </params>
+    
+    <operations>
+        <operation step="1" type="mergeManifest" from="SDKManifest.xml" to="AndroidManifest.xml" />
+        <operation step="2" type="copyRes" from="assets" to="assets" />
+        <operation step="3" type="copyRes" from="libs" to="lib" />
+        <operation step="4" type="copyRes" from="res" to="res" />
+    </operations>
+    
+    <plugins>
+        <plugin name="com.u8.sdk.OppoUser" type="1" desc="用户登录接口"/>
+        <plugin name="com.u8.sdk.OppoPay" type="2" desc="用户支付接口"/>
+        <plugin name="com.u8.sdk.OppoAds" type="7" desc="广告接口"/>
+    </plugins>
+    
+    <dependencies>
+        <dependency name="com.android.support:appcompat-v7:26.0.2" />
+        <dependency name="com.squareup.wire:wire-runtime:2.2.0" />
+        <dependency name="pl.droidsonroids.gif:android-gif-drawable:1.2.18" />
+    </dependencies>
+
+    <version>
+        <name>oppo</name>
+        <versionCode>2</versionCode>
+        <versionName>2.0.4.009</versionName>
+    </version>    
+    
+</config>
