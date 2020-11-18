@@ -67,10 +67,10 @@ def execute(channel, decompileDir, packageName):
 
 	for providerNode in providerNodeLst:
 		name = providerNode.get(key)
-		if name == 'android.support.v4.content.FileProvider':
-			providerNode.set(authKey, packageName+'.fileprovider')
 		if name == 'cn.gundam.sdk.shell.content.FileProvider':
 			providerNode.set(authKey, packageName+'.gamesdk.fileprovider')
+		if name == 'android.support.v4.content.FileProvider':
+			providerNode.set(authKey, packageName+'.fileprovider')		
 		if name == 'com.mintegral.msdk.base.utils.MTGFileProvider':
 			providerNode.set(authKey, packageName+'.mtgFileProvider')
 		if name == 'com.uniplay.adsdk.UniPlayFileProvider':
