@@ -24,10 +24,4 @@
         <dependency name="com.google.android.gms:play-services-auth:17.0.0"/>
     </dependencies>
 
-    <version>
-        <name>墨游</name>
-        <versionCode>1</versionCode>
-        <versionName>2.1.1</versionName>
-    </version>    
-    
 </config>

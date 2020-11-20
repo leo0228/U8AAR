@@ -22,10 +22,5 @@
         <plugin name="com.u8.sdk.CoolPadPay" type="2" desc="用户支付接口"/>
     </plugins>
     
-    <version>
-        <name>酷派</name>
-        <versionCode>1</versionCode>
-        <versionName>3.x.x</versionName>
-    </version>     
-    
+  
 </config>

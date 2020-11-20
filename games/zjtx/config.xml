@@ -391,7 +391,7 @@
             </sdk-params>
             <sdk-version>
                 <versionCode>2</versionCode>
-                <versionName>2.32.0.12</versionName>
+                <versionName>2.34.0.12</versionName>
             </sdk-version>
         </channel>
        <channel>         

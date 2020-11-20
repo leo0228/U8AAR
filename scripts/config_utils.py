@@ -219,7 +219,7 @@ def getAppKey():
 
 
 def getAllChannels(appName, isPublic):
-
+    #读取games/游戏/config.xml里的信息
     fileName = "games/" + appName + "/config.xml"
 
     configFile = file_utils.getFullPath(fileName)
@@ -394,6 +394,7 @@ def loadThirdPluginUserConfig(appName, channel, plugin, pluginName):
     return 1
 
 def loadChannelUserConfig(appName, channel):
+    #读取config/sdk/渠道/config.xml里的信息
     configFile = file_utils.getFullPath("config/sdk/" + channel['sdk'] + "/config.xml")
 
     if not os.path.exists(configFile):
@@ -454,16 +455,6 @@ def loadChannelUserConfig(appName, channel):
             p['type'] = pNode.get('type')
             channel['plugins'].append(p)
 
-    # 无用删除
-    # versionNode = configNode.find("version")
-    # if versionNode != None and len(versionNode) > 0:
-    #     versionCodeNode = versionNode.find("versionCode")
-    #     versionNameNode = versionNode.find("versionName")
-    #     # the sdk version code is used to check version update for the sdk.
-    #     if versionCodeNode != None and versionNameNode != None:
-    #         channel['sdkVersionCode'] = versionCodeNode.text
-    #         channel['sdkVersionName'] = versionNameNode.text
-
     #卢-->判断config。xml中是否有dependencies标签，并拼接到channel中
     dependencyNodes = configNode.find("dependencies")
     if dependencyNodes != None and len(dependencyNodes) > 0:
@@ -489,8 +480,8 @@ def writeDeveloperProperties(game, channel, targetFilePath):
             if param['bWriteInClient'] == '1':
                 proStr = proStr + param['name'] + "=" + param['value'] + "\n"
 
-    if "sdkLogicVersionCode" in channel:
-        proStr = proStr + "U8_SDK_VERSION_CODE=" + channel["sdkLogicVersionCode"] + "\n"
+    if "sdkLogicVersionName" in channel:
+        proStr = proStr + "U8_SDK_VERSION_NAME=" + channel["sdkLogicVersionName"] + "\n"
 
     proStr = proStr + "U8_Channel=" + channel['id'] + "\n"
     proStr = proStr + "U8_APPID=" + game["appID"] + "\n"
@@ -505,7 +496,7 @@ def writeDeveloperProperties(game, channel, targetFilePath):
     useU8Auth = None
     authUrl = None
 
-    #优先获取games/games.xml里书籍
+    #优先获取games/games.xml里数据
     if "use_u8_auth" in game:
         useU8Auth = game["use_u8_auth"]
 

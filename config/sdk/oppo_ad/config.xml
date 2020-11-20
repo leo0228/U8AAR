@@ -33,11 +33,5 @@
         <dependency name="com.squareup.wire:wire-runtime:2.2.0" />
         <dependency name="pl.droidsonroids.gif:android-gif-drawable:1.2.18" />
     </dependencies>
-
-    <version>
-        <name>oppo</name>
-        <versionCode>2</versionCode>
-        <versionName>2.0.4.009</versionName>
-    </version>    
     
 </config>

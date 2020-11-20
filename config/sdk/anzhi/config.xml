@@ -24,9 +24,4 @@
         <plugin name="com.u8.sdk.AnZhiPay" type="2" desc="用户支付接口"/>
     </plugins>
     
-    <version>
-        <name>安智</name>
-        <versionCode>5</versionCode>
-        <versionName>5.2.0</versionName>
-    </version>  
 </config>

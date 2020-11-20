@@ -24,12 +24,5 @@
         <plugin name="com.u8.sdk.OppoUser" type="1" desc="用户登录接口"/>
         <plugin name="com.u8.sdk.OppoPay" type="2" desc="用户支付接口"/>
     </plugins>
-    
-   
-    <version>
-        <name>oppo</name>
-        <versionCode>2</versionCode>
-        <versionName>2.0.4.009</versionName>
-    </version>    
-    
+  
 </config>

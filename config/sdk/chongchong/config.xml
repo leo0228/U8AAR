@@ -20,10 +20,4 @@
         <plugin name="com.u8.sdk.LionPay" type="2" desc="用户支付接口"/>
     </plugins>
     
-    <version>
-        <name>虫虫游戏</name>
-        <versionCode>1</versionCode>
-        <versionName>1.7.7</versionName>
-    </version>     
-    
 </config>
