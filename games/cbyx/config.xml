@@ -263,8 +263,8 @@
                 <param name="PayNotifyUrl" value="http://myserver.moyoi.cn:8093/pay/oppo/payCallback/19" />              
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200002" />
-                <param name="ad_appId" value="1000004107" />
-                <param name="ad_posId" value="1000004107" />
+                <param name="ad_appId" value="30410223" />
+                <param name="ad_posId" value="260313" />
                 <param name="isShowOppoAd" value="true" />
             </sdk-params>           
             <sdk-version>         
