@@ -36,9 +36,17 @@ def execute(channel, decompileDir, packageName):
 	if networkKey not in applicationNode.attrib:
 		applicationNode.set(networkKey, "@xml/network_security_config")
 	
-	proNodeLst = applicationNode.findall('provider')
+	activityNodeList = applicationNode.findall('activity')
+	hardwareKey = '{'+androidNS+'}hardwareAccelerated'
+	for activityNode in activityNodeList:
+		name = activityNode.get(key)
+		if name == 'com.ncroquis.moyoiunityplugin.MainActivity':
+			activityNode.set(hardwareKey, "true")
+				
 
-	for proNode in proNodeLst:
+	proNodeList = applicationNode.findall('provider')
+
+	for proNode in proNodeList:
 		name = proNode.get(key)
 		if name == 'com.nearme.platform.opensdk.pay.NearMeFileProvider':
 			proNode.set(authorKey, packageName+'.fileProvider')	

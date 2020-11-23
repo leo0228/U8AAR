@@ -39,6 +39,13 @@ def execute(channel, decompileDir, packageName):
 	if networkKey not in applicationNode.attrib:
 		applicationNode.set(networkKey, "@xml/network_security_config")
 
+	activityNodeList = applicationNode.findall('activity')
+	hardwareKey = '{'+androidNS+'}hardwareAccelerated'
+	for activityNode in activityNodeList:
+		name = activityNode.get(key)
+		if name == 'com.ncroquis.moyoiunityplugin.MainActivity':
+			activityNode.set(hardwareKey, "true")
+
 	providerNodeLst = applicationNode.findall('provider')
 	if providerNodeLst is None:
 		return 1

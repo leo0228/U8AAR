@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     
     <permissionConfig>
-    	
+    	<!--SDK 可选权限配置开始；建议应用配置定位权限，可以提升应用的广告收益-->
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <!--如果应用需要精准定位的话加上该权限-->
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <!--Android Q 上如果应用需要精准定位的话加上该权限-->
+        <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+        <!--SDK 可选权限配置结束-->
     </permissionConfig>
     
     <applicationConfig proxyApplication="com.u8.sdk.OppoProxyApplication">
