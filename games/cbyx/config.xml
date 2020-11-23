@@ -210,8 +210,8 @@
                 <param name="UCDebugMode" value="false"/>
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
                 <param name="TALKING_CHANNEL" value="200012" />
-                <param name="ad_appId" value="200012"/>
-                <param name="ad_posId" value="1000004107" />
+                <param name="ad_appId" value="1000008232"/>
+                <param name="ad_posId" value="1605174211911" />
             </sdk-params>
             <sdk-version>
                 <versionCode>9</versionCode>
