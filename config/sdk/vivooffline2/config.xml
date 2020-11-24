@@ -3,6 +3,7 @@
     
     <params>
         <param name="AppID" required="1"  showName="AppID" desc="vivos后台申请的appId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="debug_mode" required="1"  showName="debug_mode" desc="debug模式" bWriteInManifest="0" bWriteInClient="1" />
         <param name="com.vivo.push.app_id" required="1"  showName="push_appid" desc="推送的appid" bWriteInManifest="1" bWriteInClient="0" />
         <param name="com.vivo.push.api_key" required="1"  showName="push_apiKey" desc="推送的apiKey" bWriteInManifest="1" bWriteInClient="0" />
         <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
