@@ -179,6 +179,7 @@
             <param name="splash_copy_to_unity" value="0" />
             <sdk-params>
                 <param name="AppID" value="104511041" />
+                <param name="debug_mode" value="false" />
                 <param name="com.vivo.push.app_id" value="10374" />
                 <param name="com.vivo.push.api_key" value="c5324f3f-86bf-40f5-b5f1-5f3b11b0009c" />
                 <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
