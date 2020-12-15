@@ -465,7 +465,9 @@ def loadChannelUserConfig(appName, channel):
             if('group' in depenNode.keys()):
                 depen['group'] = depenNode.get('group')
             if('module' in depenNode.keys()):
-                depen['module'] = depenNode.get('module')           
+                depen['module'] = depenNode.get('module')
+            if('processor' in depenNode.keys()):
+                depen['processor'] = depenNode.get('processor')             
             channel['dependencies'].append(depen)
             
     return 1
@@ -607,6 +609,10 @@ def writeGradleDependencies(dependencies, sdkDestDir):
             if 'dependencies' in line:
                 newLines.append("    compile ('" + name + "')\n")
 
+                if('processor' in depenNode.keys()):
+                    processor = depenNode['processor']
+                    newLines.append("    annotationProcessor ('" + processor + "')\n")
+
                 if('group' in depenNode.keys() and 'module' not in depenNode.keys()):
                     group = depenNode['group']
                     if(group != None and len(group) > 0):
@@ -622,7 +628,7 @@ def writeGradleDependencies(dependencies, sdkDestDir):
                     module = depenNode['module']
                     if(module != None and len(module) > 0):
                         newLines.append("    {\n        exclude module:'"+ module +"'\n    }\n")
-            
+   
     content = ''
     for line in newLines:
         content = content + line

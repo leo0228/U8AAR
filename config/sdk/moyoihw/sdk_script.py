@@ -65,4 +65,4 @@ def execute(channel, decompileDir, packageName):
 	tree.write(manifestFile, 'UTF-8')
 
 	return 0
-
+	

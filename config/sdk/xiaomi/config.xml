@@ -6,6 +6,8 @@
         <param name="MiAppKey" required="1" showName="AppKey" desc="小米" bWriteInManifest="0" bWriteInClient="1" /> 
         <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
         <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />  
+        <param name="debug_mode" required="1"  showName="debug_mode" desc="debug模式" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="isShowXiaoMiAd" required="1"  showName="是否显示小米广告" desc="是否显示小米广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>

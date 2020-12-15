@@ -716,7 +716,7 @@ def copyResToApk(copyFrom, copyTo):
 
         if(f == 'abc_action_menu_layout.xml' or f == 'abc_screen_toolbar.xml'):
             file_utils.del_file_folder(sourcefile)   
-            continue       
+            continue
 
         if os.path.isfile(sourcefile):
             if not os.path.exists(copyTo):
