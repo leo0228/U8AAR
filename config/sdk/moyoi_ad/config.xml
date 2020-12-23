@@ -11,7 +11,6 @@
         <param name="cloud_channel" required="1"  showName="联运的渠道号" desc="墨游与广告商合作的渠道号" bWriteInManifest="0" bWriteInClient="1" />
         <param name="ttAd_appId" required="1"  showName="穿山甲的应用id" desc="穿山甲广告申请的appid" bWriteInManifest="0" bWriteInClient="1" />
         <param name="ttAd_posId" required="1" showName="穿山甲广告位id" desc="穿山甲广告位id" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ttAd_appName" required="1"  showName="穿山甲的应用名" desc="穿山甲广告应用名" bWriteInManifest="0" bWriteInClient="1" />
         <param name="isShowTTAd" required="1"  showName="是否显示穿山甲广告" desc="是否显示穿山甲广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
