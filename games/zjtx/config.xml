@@ -436,32 +436,6 @@
                 <versionName>3.6.1.6</versionName>
             </sdk-version>
         </channel>
-        <!-- <channel>
-            <param name="id" value="24" />
-            <param name="name" value="huawei" />
-            <param name="sdk" value="huawei" />
-            <param name="desc" value="华为" />
-            <param name="suffix" value="com.appmarket.zjtx.huawei" />
-            <param name="splash" value="0" />
-            <param name="splash_copy_to_unity" value="0" />
-            <sdk-params>
-                <param name="com.huawei.hms.client.appid" value="100241993" />
-                <param name="com.huawei.hms.client.cpid" value="890086000102118442" />
-                <param name="com.huawei.hms.version" value="2.6.3" />
-                <param desc="华为商品类型" name="HuaWei_serviceCatalog" value="X6" />
-                <param desc="华为渠道信息" name="HuaWei_sdkChannel" value="3" />
-                <param desc="游戏公司名称" name="HuaWei_merchantName" value="上海墨游信息科技有限公司" />
-                <param desc="pushID传的网址" name="pushURL" value="http://118.184.169.88:8093/user/transPushID" />
-                <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
-                <param name="TALKING_CHANNEL" value="200003" /> 
-                <param name="HuaWei_PrivateKey" value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHcK8MY8KitYSj7HVp4g0teL296zQIhUYCOwGpww8XjqBJV49LGNrUiCUy0tKhkbDvatc69gZbtpASGw7OpeEfyga7Ni7VpHeIVSUMN/k/RVULO4kR92e7N9Ynvgy1NL6FH90UqzvSwqcf0gdU0xiWLX7lK3MFMjJdcQFoTSmXUkcne96wEl1WHSiN3amqVfmenvFrlU7sfCK6e7/B/0wWo12w5fxYUdT8Y8710K11HwN55hagMuSraZu8FM4OfFu1ccXjtxa13wcbbCjvMRgvNrAggolZqyC0i+k914/TzUG0icHjCVDCCOMZwTAcmy0WVR+5hKk0ovtVmpqQEc4bAgMBAAECggEAG+zVkHOLdi2FA/rWOdwn94eiHFc0Mu6OQz5bLkJHTlzEaWCJiidRxKkczu/2rslv2ntoOt47PQOOn/+1OWQVOyvreLJ5KPrdWHPWOyQUkd0LBQacsQJQ6PBEMSO1iHh5Jg9fF5zI70AdbHbZBfHaIx+oVpLt3lANU0jBEgdJMoxYJY8JX+MGyf82uFhymZo8ssJDa+sMuGb2p8qaFycPulFCxIdI+8MLXKr1Z1N1F1IVkyn6vhGuacTcBeovLwkQTW6rntT2F6LmEIAV+wBTu4fanayilhn2rxZzpgj8ICo70jYHFtYPAOWX1VMLsc+E5MKzP+3WgruUGkBMTCAxOQKBgQD4dezY41o8hMt8s7WZ69SN3kmcxBwoVMQAjjGdo4IKyLyCVxAHPNmwTNtCLt0xwYDK5f1KgJjwl1ivGtK4WtJrcZFyfuD6DkOM3TpTPaBCKy5R1NV9k0XuEVS2kUH/c8HP2Z4ut3mC147xdWIH73aXrWNM1DFY62iSqsJ8g199lwKBgQDNffYNITEq3De788V2dA9duALz3LeT3+GY7oQ9DoJFT59aLjFYiLBJ9xneKnUTYRA7r6SZWRZH3JaZGcookF27E/eU8JkCKbkhyUxocXUMQM5FiRTYvRJF1HE22GKBpBPaCCy8Y21+lcClBK2wWYqAs7G9/fdSdvpoDvCYrT6MHQKBgBFGueJW5LZikXepU05RnKUEuN+ir0aKplpXiNGqReeUD6+MeDvYmlZs8a4HbjAAgYEaPuOIT5ojG/KJDe/tuMXpzrBEbEZW6ZGI7H5PQa54LC9aekHSFMG6CMbtEMa/eNGIEzyyW0uiy3i0rc1ZdEiVsNrtwkSpkcro/r8Dr4cfAoGBAJxoos7Nk9n2sqlp28PUhRmlhQHO3yA8CT/ZVGgQ0hElkLoYbNDhgaVa4qKamHA+shdsEpHyICZkfXBdE+WaNO2/PfRsyVm/Hj3cNT9OFHRWI2sD8w0hpHXoRKAlRZ09oSqUjFB8MYxnObGhBP80uFpL7B8b3pMzIlfv/yuGuhP1AoGBAMuvYRI7I2vEQCTDjO52jtcsnndwfJ7kQdns3jWUngEyzolqniEihgoY5VSMgGjXQmPevimvmdnBiCmPmtgiJOLIz1ecmhL3sVnceTXAD0pjTQIh4jID+IggZrvCXmCKkESLH13sW5uXvE09ufOrdUSeSn6L13YjJbtYANVwjX9N" />
-                <param name="HuaWei_PublicKey" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx3CvDGPCorWEo+x1aeINLXi9ves0CIVGAjsBqcMPF46gSVePSxja1IglMtLSoZGw72rXOvYGW7aQEhsOzqXhH8oGuzYu1aR3iFUlDDf5P0VVCzuJEfdnuzfWJ74MtTS+hR/dFKs70sKnH9IHVNMYli1+5StzBTIyXXEBaE0pl1JHJ3vesBJdVh0ojd2pqlX5np7xa5VO7Hwiunu/wf9MFqNdsOX8WFHU/GPO9dCtdR8DeeYWoDLkq2mbvBTODnxbtXHF47cWtd8HG2wo7zEYLzawIIKJWasgtIvpPdeP081BtInB4wlQwgjjGcEwHJstFlUfuYSpNKL7VZqakBHOGwIDAQAB" />
-            </sdk-params>
-            <sdk-version>
-                <versionCode>2</versionCode>
-                <versionName>2.6.3.301</versionName>
-            </sdk-version>
-        </channel> -->
 
         <channel>
             <param name="id" value="24" />
@@ -476,8 +450,8 @@
                 <param name="TALKING_CHANNEL" value="200003" />  
             </sdk-params>
             <sdk-version>
-                <versionCode>4</versionCode>
-                <versionName>4.0.3.302</versionName>
+                <versionCode>5</versionCode>
+                <versionName>5.0.5.300</versionName>
             </sdk-version>
         </channel>
 
