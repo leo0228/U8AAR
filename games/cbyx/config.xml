@@ -287,5 +287,25 @@
                 <versionName>2.0.4.009</versionName>   
             </sdk-version>
         </channel>
+
+        <channel>
+            <param name="id" value="410006" />
+            <param name="name" value="huawei" />
+            <param name="sdk" value="huawei_ad" />
+            <param name="desc" value="华为" />
+            <param name="suffix" value="com.moyoiad.goc.huawei" />
+            <param name="splash" value="0" />
+            <param name="splash_copy_to_unity" value="0" />
+            <sdk-params>
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" />
+                <param name="TALKING_CHANNEL" value="200003" />  
+                <param name="ad_appId" value="103451653" />
+                <param name="ad_posId" value="e7hm5vx799" />  
+            </sdk-params>
+            <sdk-version>
+                <versionCode>5</versionCode>
+                <versionName>5.0.5.300</versionName>
+            </sdk-version>
+        </channel>
     </channels>
 </xml>

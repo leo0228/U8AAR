@@ -6,7 +6,7 @@
 	     
     </permissionConfig>
     
-    <applicationConfig keyword="com.huawei.hms.activity.BridgeActivity" proxyApplication="com.u8.sdk.HuaWeiApplication">        
+    <applicationConfig proxyApplication="com.u8.sdk.HuaWeiApplication">        
         
 
 		  

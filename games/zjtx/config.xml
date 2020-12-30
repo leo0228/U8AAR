@@ -473,7 +473,7 @@
             <param name="splash_copy_to_unity" value="0" />
             <sdk-params>
                 <param name="TALKING_APPID" value="F6A1FAA1BEA44E1EBBC147B670EB9A0B" />
-                <param name="TALKING_CHANNEL" value="200003" />          
+                <param name="TALKING_CHANNEL" value="200003" />  
             </sdk-params>
             <sdk-version>
                 <versionCode>4</versionCode>

@@ -47,18 +47,13 @@ def modifyManifest(channel, decompileDir, packageName):
 		name = providerNode.get(key)
 		if name == 'com.huawei.hms.update.provider.UpdateProvider':
 			providerNode.set(authorityKey, packageName+".hms.update.provider")
-		
 		if name == 'com.huawei.hms.jos.games.archive.ArchiveRemoteAccessProvider':
 			providerNode.set(authorityKey, packageName+".hmssdk.jos.archive")
-
 		if name == 'com.huawei.agconnect.core.provider.AGConnectInitializeProvider':
 			providerNode.set(authorityKey, packageName+".AGCInitializeProvider")
-			
-	receiverNodeLst = applicationNode.findall('receiver')
-	if receiverNodeLst is None:
-		return 1
+		if name == 'com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider':
+			providerNode.set(authorityKey, packageName+".updateSdk.fileProvider")
 
-			
 	tree.write(manifestFile, 'UTF-8')
 
 	return 0

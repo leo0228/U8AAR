@@ -31,6 +31,7 @@ def modifyManifest(channel, decompileDir, packageName):
 	key = '{' + androidNS + '}name'
 	authorityKey = '{'+androidNS+'}authorities'
 	metaValue = '{'+androidNS+'}value'
+	hostKey = '{'+androidNS+'}host'
 	
 	tree = ET.parse(manifestFile)
 	root = tree.getroot()
@@ -39,37 +40,29 @@ def modifyManifest(channel, decompileDir, packageName):
 	if applicationNode is None:
 		return
 
-	perNode = SubElement(applicationNode, 'uses-permission')
-	perNode.set(key, packageName+'.permission.PROCESS_PUSH_MSG')
-	
-	perNode = SubElement(applicationNode, 'permission')
-	perNode.set(key, packageName+'.permission.PROCESS_PUSH_MSG')
-	perNode.set('{' + androidNS + '}protectionLevel', 'signatureOrSystem')
-	
-	appid = ""
-	cpid = ""
+	networkKey = '{'+androidNS+'}networkSecurityConfig'
+	if networkKey not in applicationNode.attrib:
+		applicationNode.set(networkKey, "@xml/network_security_config")
 
-	if 'params' in channel:
-		params = channel['params']
-		for param in params:
-			if param['name'] == 'com.huawei.hms.client.appid':
-				appid = param['value']
-			elif param['name'] == 'com.huawei.hms.client.cpid':
-				cpid = param['value']
+	trafficKey = '{'+androidNS+'}usesCleartextTraffic'
+	if trafficKey not in applicationNode.attrib:
+		applicationNode.set(trafficKey, "true")
 
-	metaNodeLst = applicationNode.findall('meta-data')
-	if metaNodeLst is None:
+	activityNodeLst = applicationNode.findall('activity')
+	if activityNodeLst is None:
 		return 1
-		
-	for metaNode in metaNodeLst:
-		name = metaNode.get(key)
-		if name == 'com.huawei.hms.client.appid':
-			metaNode.set(metaValue, "appid="+appid)
-			
-		if name == 'com.huawei.hms.client.cpid':
-			metaNode.set(metaValue, "cpid="+cpid)
-	
-	
+
+	for activityNode in activityNodeLst:
+		name = activityNode.get(key)
+		if name == 'com.huawei.openalliance.ad.activity.PPSLauncherActivity':
+			intentNodes = activityNode.findall('intent-filter')
+			if intentNodes is not None and len(intentNodes) > 0:
+				for intentNode in intentNodes:
+					dataNodes = intentNode.findall('data')
+					if dataNodes is not None and len(dataNodes) > 0:
+						for dataNode in dataNodes:
+							dataNode.set(hostKey, packageName)
+
 	providerNodeLst = applicationNode.findall('provider')
 	if providerNodeLst is None:
 		return 1
@@ -78,22 +71,12 @@ def modifyManifest(channel, decompileDir, packageName):
 		name = providerNode.get(key)
 		if name == 'com.huawei.hms.update.provider.UpdateProvider':
 			providerNode.set(authorityKey, packageName+".hms.update.provider")
-			
+		if name == 'com.huawei.hms.jos.games.archive.ArchiveRemoteAccessProvider':
+			providerNode.set(authorityKey, packageName+".hmssdk.jos.archive")
+		if name == 'com.huawei.agconnect.core.provider.AGConnectInitializeProvider':
+			providerNode.set(authorityKey, packageName+".AGCInitializeProvider")
 		if name == 'com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider':
 			providerNode.set(authorityKey, packageName+".updateSdk.fileProvider")
-			break
-			
-	receiverNodeLst = applicationNode.findall('receiver')
-	if receiverNodeLst is None:
-		return 1
-
-	for receiverNode in receiverNodeLst:
-		name = receiverNode.get(key)
-		if name == 'HuaweiPushRevicer1':
-			receiverNode.set(key, 'com.u8.sdk.HuaweiPushRevicer')
-		elif name == 'HuaweiPushRevicer2':
-			receiverNode.set(key, 'com.u8.sdk.HuaweiPushRevicer')
-			receiverNode.set('{' + androidNS + '}permission', packageName+'.permission.PROCESS_PUSH_MSG')
 			
 	tree.write(manifestFile, 'UTF-8')
 

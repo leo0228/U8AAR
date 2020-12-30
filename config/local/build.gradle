@@ -3,6 +3,7 @@ apply plugin: 'java'
 repositories {
     google()
     jcenter()
+    maven { url 'https://developer.huawei.com/repo/' }
 }
 
 dependencies { 

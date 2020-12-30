@@ -4,6 +4,8 @@
     <params>
         <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
         <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_appId" required="1" showName="ad_appId" desc="广告appId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_posId" required="1" showName="ad_posId" desc="广告位id" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>
@@ -15,13 +17,12 @@
     
     <plugins>
         <plugin name="com.u8.sdk.HuaWeiUser" type="1" desc="用户登录接口"/>
-        <plugin name="com.u8.sdk.HuaWeiPay" type="2" desc="用户支付接口"/>
+        <plugin name="com.u8.sdk.HuaWeiAds" type="7" desc="广告接口"/>
     </plugins>
-  
+ 
     <dependencies>
         <dependency name="com.huawei.hms:base:5.0.5.300" />
         <dependency name="com.huawei.hms:hwid:5.1.0.301" />
-        <dependency name="com.huawei.hms:iap:5.1.0.300" />
         <dependency name="com.huawei.hms:game:5.0.4.302" />
     </dependencies>
 </config>

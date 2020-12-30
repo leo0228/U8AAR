@@ -23,6 +23,7 @@ def execute(channel, decompileDir, packageName):
 	ET.register_namespace('android', androidNS)
 	key = '{'+androidNS+'}name'
 	schemeKey = '{'+androidNS+'}scheme'
+	authKey = '{'+androidNS+'}authorities'
 	
 	tree = ET.parse(manifestFile)
 	root = tree.getroot()
@@ -67,13 +68,13 @@ def execute(channel, decompileDir, packageName):
 	for providerNode in providerNodeLst:
 		name = providerNode.get(key)
 		if name == 'com.qihoo360.replugin.component.process.ProcessPitProviderPersist':
-			providerNode.set('{'+androidNS+'}authorities', packageName+'.loader.p.main')
+			providerNode.set(authKey, packageName+'.loader.p.main')
 		elif name == 'com.qihoo360.replugin.component.provider.PluginPitProviderPersist':
-			providerNode.set('{'+androidNS+'}authorities', packageName+".Plugin.NP.PSP")	
+			providerNode.set(authKey, packageName+".Plugin.NP.PSP")	
 		elif name == 'com.qihoo360.mobilesafe.svcmanager.ServiceProvider':
-			providerNode.set('{'+androidNS+'}authorities', packageName+".svcmanager")	
+			providerNode.set(authKey, packageName+".svcmanager")	
 		elif name == 'android.support.v4.content.FileProvider':
-			providerNode.set('{'+androidNS+'}authorities', packageName+".android7.fileprovider")
+			providerNode.set(authKey, packageName+".android7.fileprovider")
 
 	tree.write(manifestFile, 'UTF-8')
 	

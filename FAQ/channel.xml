@@ -44,5 +44,7 @@
     <channel name="vivo2" id="vivooffline2" />
     <channel name="oppo" id="oppo" />
     <channel name="悟饭" id="wufan" />
+    <channel name="小米" id="xiaomi" />
+    <channel name="华为" id="huawei" />
   </game>
 </games>
