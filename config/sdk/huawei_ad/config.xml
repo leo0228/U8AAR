@@ -4,6 +4,7 @@
     <params>
         <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
         <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="debug_mode" required="1"  showName="debug_mode" desc="debug模式" bWriteInManifest="1" bWriteInClient="1" />
         <param name="ad_appId" required="1" showName="ad_appId" desc="广告appId" bWriteInManifest="0" bWriteInClient="1" />
         <param name="ad_posId" required="1" showName="ad_posId" desc="广告位id" bWriteInManifest="0" bWriteInClient="1" />
     </params>

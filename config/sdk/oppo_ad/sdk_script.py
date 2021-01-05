@@ -35,6 +35,7 @@ def execute(channel, decompileDir, packageName):
 	networkKey = '{'+androidNS+'}networkSecurityConfig'
 	if networkKey not in applicationNode.attrib:
 		applicationNode.set(networkKey, "@xml/network_security_config")
+
 	
 	activityNodeList = applicationNode.findall('activity')
 	hardwareKey = '{'+androidNS+'}hardwareAccelerated'

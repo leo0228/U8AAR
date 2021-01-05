@@ -30,9 +30,6 @@ def execute(channel, decompileDir, packageName):
 	if applicationNode is None:
 		return 1
 
-	networkKey = '{'+androidNS+'}networkSecurityConfig'
-	if networkKey not in applicationNode.attrib:
-		applicationNode.set(networkKey, "@xml/network_security_config")
 
 	providerNodeLst = applicationNode.findall('provider')
 	if providerNodeLst is None:
