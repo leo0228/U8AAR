@@ -12,13 +12,26 @@
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         <!-- SDK webview 页面声明-->
 
-        <!--如果接入了激励视频，这个必须配置，否则应用会崩溃 -->
+        <!--以下为SDK配置，按照需求接入-->
+        <!--旧版激励视频接口，有接入旧版激励视频的则需要配置-->
         <activity
             android:name="com.vivo.mobilead.video.RewardVideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true"
-            android:screenOrientation="landscape" />
-        <!--新版本增加的配置，必接 -->
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+            
+        <!--插屏视频接口，有接入插屏视频的则需要配置-->
+        <activity
+            android:name="com.vivo.mobilead.unified.interstitial.InterstitialVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true" />
+
+        <!--新版激励视频接口，有接入新版激励视频的则需要配置-->
+        <activity
+            android:name="com.vivo.mobilead.unified.reward.RewardVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true" />
+
+        <!--以下必接-->
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
             android:authorities="${applicationId}.TTMultiProvider"
@@ -44,10 +57,7 @@
                 android:resource="@xml/gdt_file_path" />
         </provider>
 
-        <!--用于判断 sdk 版本，android:value 指为 sdk 版本号-->
-        <meta-data
-            android:name="vivo_ad_version_code"
-            android:value="4200" />
+        <meta-data android:name="vivo_ad_version_code" android:value="4424"/>
     </applicationConfig>
     
 </manifest>

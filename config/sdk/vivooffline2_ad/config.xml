@@ -8,8 +8,10 @@
         <param name="com.vivo.push.api_key" required="1"  showName="push_apiKey" desc="推送的apiKey" bWriteInManifest="1" bWriteInClient="0" />
         <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
         <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ad_appId" required="1" showName="vido广告appId" desc="vivo广告appId" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="ad_posId" required="1" showName="vido广告位id" desc="vido广告位id" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_appId" required="1" showName="ad_appId" desc="vivo广告appId" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_video_posId" required="1" showName="ad_video_posId" desc="激励广告位id" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_interstitial_posId" required="1" showName="ad_interstitial_posId" desc="插屏广告位id" bWriteInManifest="0" bWriteInClient="1" />
+        <param name="ad_native_posId" required="1" showName="ad_native_posId" desc="原生广告位id" bWriteInManifest="0" bWriteInClient="1" />
         <param name="isShowVivoAd" required="1" showName="是否显示vido广告" desc="是否显示vido广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     

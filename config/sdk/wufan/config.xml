@@ -10,7 +10,6 @@
         <param name="callBackUrl" required="1" showName="callBackUrl" desc="游戏回调地址" bWriteInManifest="0" bWriteInClient="1" />
         <param name="TALKING_APPID" required="1" showName="talkingdataAppid" desc="talkingdata的appid" bWriteInManifest="0" bWriteInClient="1" />
         <param name="TALKING_CHANNEL" required="1" showName="talkingdataChannel" desc="talkingdata的渠道号" bWriteInManifest="0" bWriteInClient="1" />
-        <param name="isShowWufanAd" required="1"  showName="isShowWufanAd" desc="是否显示悟饭广告" bWriteInManifest="0" bWriteInClient="1" />
     </params>
     
     <operations>
