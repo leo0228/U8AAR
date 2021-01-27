@@ -10,31 +10,29 @@
         android:background="@android:color/white"
         android:padding="10dp">
 
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/prompt_agree"/>
+
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_toLeftOf="@+id/iv_image"
-            android:ellipsize="start"
-            android:layout_alignParentLeft="true"
-            android:maxLines="2"
+            android:layout_alignBottom="@+id/iv_image"
+            android:maxLines="1"
             android:textColor="#333333"
-            android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/iv_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:scaleType="centerCrop" />
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:text="原生广告小图展示"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/iv_image"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/iv_image"
             android:gravity="left|center_vertical"
             android:orientation="horizontal">
 
@@ -52,7 +50,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                android:text="广告"/>
         </LinearLayout>
     </RelativeLayout>
 </com.vivo.mobilead.unified.base.view.VivoNativeAdContainer>

@@ -18,6 +18,7 @@
                 <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
                 <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
                 <param name="isShowLoginPage" value="false" desc="是否显示墨游登录页面"  />
+                <!-- <param name="isShowLoginPage" value="true" desc="是否显示墨游登录页面"  /> -->
                 <param name="sdk_Appid" value="2" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="500000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
                 <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
@@ -96,7 +97,7 @@
                 <param name="sdk_Appid" value="2" desc="墨游sdk为每一个游戏设置为appid" />
                 <param name="cloud_channel" value="500030" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
                 <param name="ttAd_appId" value="5107009" desc="墨游在穿山甲广告申请的appid"  />
-                <param name="ttAd_posId" value="945494365" desc="穿山甲广告位id"  />
+                <param name="ttAd_posId" value="945773995" desc="穿山甲广告位id"  />
                 <param name="isShowTTAd" value="true" desc="是否显示穿山甲广告"  />
             </sdk-params>           
             <sdk-version>         
@@ -186,7 +187,8 @@
             <param name="name" value="uc" />
             <param name="sdk" value="uc_ad" />
             <param name="desc" value="UC（九游）" />
-            <param name="suffix" value="com.moyoiad.goc.aligames" />
+            <param name="suffix" value="com.moyoiad.goc.wdj" />
+            <!-- <param name="suffix" value="com.moyoiad.goc.aligames" /> -->
             <param name="splash" value="0" />
             <param name="splash_copy_to_unity" value="0" />
             <param name="icon" value="rb" />
