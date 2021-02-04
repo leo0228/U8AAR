@@ -31,6 +31,31 @@
             </sdk-version>
         </channel>
         <channel>         
+            <param name="id" value="440001" />            
+            <param name="name" value="topon" />            
+            <param name="sdk" value="topon" />            
+            <param name="desc" value="墨游 猎豹版本" />            
+            <param name="suffix" value="com.moyoiad.goc.cn" />            
+            <param name="splash" value="0" />           
+            <param name="splash_copy_to_unity" value="0" />          
+            <sdk-params>
+                <param name="TALKING_APPID" value="17828D57126C4B02A300416807070190" desc="墨游在talkingdata申请的appid" />
+                <param name="TALKING_CHANNEL" value="500000" desc="墨游在talkingdata分配的渠道号"  /> 
+                <param name="wx_appId" value="wx66c8ee81415cb02e" desc="墨游为该游戏申请微信appid"  />
+                <param name="qq_appId" value="1106705155" desc="墨游为该游戏申请qq的appid"  />
+                <param name="isShowLoginPage" value="false" desc="是否显示墨游登录页面"  />
+                <param name="sdk_Appid" value="2" desc="墨游sdk为每一个游戏设置为appid" />
+                <param name="cloud_channel" value="500000" desc="墨游与广告商合作的渠道号，最好和talkingdata保持一致方便统一管理"  />
+                <param name="toponAd_appId" value="a601b9c8b793b2" desc="墨游在topon广告申请的appid"  />
+                <param name="toponAd_appKey" value="9ef0cff2d438f618287c7adebaaecf63" desc="墨游在topon广告申请的appkey"  />
+                <param name="ad_video_posId" value="b601b9ca04f735" desc="广告位id"  />
+            </sdk-params>           
+            <sdk-version>         
+                <versionCode>1</versionCode>         
+                <versionName>2.0.1</versionName>      
+            </sdk-version>
+        </channel>
+        <channel>         
             <param name="id" value="440100" />            
             <param name="name" value="moyoitest" />            
             <param name="sdk" value="moyoitest_ad" />            
