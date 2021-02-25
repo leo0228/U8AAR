@@ -20,16 +20,15 @@
     </plugins>
     
     <dependencies>
-        <dependency name="com.android.support:appcompat-v7:26.+" />
-        <dependency name="com.android.support:support-v4:26.+" />
-        <dependency name="com.android.support:design:26.+" />
-        <dependency name="com.android.support:recyclerview-v7:26.+" />
+        <dependency name="com.android.support:appcompat-v7:26.0.2"/>
+        <dependency name="com.android.support:support-v4:26.0.2" />
+        <dependency name="com.android.support:design:26.0.2"/>
+        <dependency name="com.android.support:recyclerview-v7:26.0.2"/>
         <dependency name="com.android.support.constraint:constraint-layout:1.1.3" />
         <dependency name="com.google.code.gson:gson:2.8.5" />
-        <dependency name="com.github.bumptech.glide:glide:4.4.0" group="com.android.support"/>
-        <dependency name="com.github.bumptech.glide:compiler:4.4.0" />
+        <dependency name="com.github.bumptech.glide:glide:4.4.0" group="com.android.support" processor="com.github.bumptech.glide:compiler:4.4.0"/>
         <dependency name="jp.wasabeef:glide-transformations:3.0.1" group="com.github.bumptech.glide" module="glide"/>
-        <dependency name="com.github.bumptech.glide:okhttp3-integration:4.4.0" />
+        <dependency name="com.github.bumptech.glide:okhttp3-integration:4.4.0" group="com.android.support"/>
         <dependency name="com.squareup.okhttp3:okhttp:3.11.0" />
         <dependency name="org.greenrobot:eventbus:3.1.1" />
         <dependency name="com.nostra13.universalimageloader:universal-image-loader:1.9.2" />

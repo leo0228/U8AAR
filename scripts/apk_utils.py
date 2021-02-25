@@ -281,7 +281,7 @@ def copyRootResFiles(apkfile, decompileDir):
     aapt = file_utils.getFullToolPath(aapt_version)
     decompileDir = file_utils.getFullPath(decompileDir)
 
-    igoreFiles = ['AndroidManifest.xml','apktool.yml','smali','res','original','lib','build','assets','unknown',"smali_classes2","smali_classes3","smali_classes4","smali_classes5"]
+    igoreFiles = ['AndroidManifest.xml','apktool.yml','smali','res','original','lib','build','assets','META-INF','unknown',"smali_classes2","smali_classes3","smali_classes4","smali_classes5"]
     igoreFileFullPaths = []
 
     for ifile in igoreFiles:
@@ -482,7 +482,6 @@ def copyResource(game, channel, packageName, sdkDir, decompileDir , operations, 
                     return 1
 
             elif child['type'] == 'copyRes':
-
                 if child['from'] == None or child['to'] == None:
                     log_utils.error("the sdk config file error. 'copyRes' need 'from' and 'to'.sdk name:%s", name)
                     return 1
@@ -492,10 +491,10 @@ def copyResource(game, channel, packageName, sdkDir, decompileDir , operations, 
 
                 if child['to'] == 'lib':
                     copyLibs(game, copyFrom, copyTo)
-                    log_utils.debug("copyFrom---->%s;copyTo----->%s;",copyFrom,copyTo)
                 else:
                     copyResToApk(copyFrom, copyTo)
-                    log_utils.debug("copyFrom---->%s;copyTo----->%s;",copyFrom,copyTo)
+
+                log_utils.info("copyFrom-->%s;copyTo-->%s;",copyFrom,copyTo)
 
             elif child['type'] == 'script' and pluginInfo != None:
                 #now only third-plugin support script
@@ -517,7 +516,7 @@ def copyChannelResources(game, channel, decompileDir):
     resPath = "games/" + game['appName'] + "/channels/" + channel['id']
     resPath = file_utils.getFullPath(resPath)
     if not os.path.exists(resPath):
-        log_utils.warning("the channel %s special res path is not exists. %s", channel['id'], resPath)
+        log_utils.error("the channel %s special res path is not exists. %s", channel['id'], resPath)
         return 0
 
     targetResPath = file_utils.getFullPath(decompileDir)
@@ -546,7 +545,7 @@ def copyAppResources(game, decompileDir):
     resPath = "games/" + game['appName'] + "/res"
     resPath = file_utils.getFullPath(resPath)
     if not os.path.exists(resPath):
-        log_utils.warning("the game %s has no extra res folder", game['appName'])
+        log_utils.error("the game %s has no extra res folder", game['appName'])
         return
 
     assetsPath = os.path.join(resPath, 'assets')
@@ -570,7 +569,7 @@ def copyAppRootResources(game, decompileDir):
     resPath = file_utils.getFullPath(resPath)
 
     if not os.path.exists(resPath):
-        log_utils.info("the game %s has no root folder", game['appName'])
+        log_utils.error("the game %s has no root folder", game['appName'])
         return
 
     targetResPath = file_utils.getFullPath(decompileDir)
@@ -706,7 +705,7 @@ def copyResToApk(copyFrom, copyTo):
 
     if os.path.isfile(copyFrom) and not mergeResXml(copyFrom, copyTo):
         file_utils.copy_file(copyFrom, copyTo)
-        log_utils.debug("copyResToApk:copyFrom---->%s;copyTo----->%s;",copyFrom,copyTo)
+        log_utils.error("copyResToApk:copyFrom-->%s;copyTo-->%s;",copyFrom,copyTo)
         return
     
     #卢-->修改复制资源，并合并和删除重复资源
@@ -829,7 +828,7 @@ def deleteSameRes(sourcefile, copyTo, filename):
 
     else:      
         for child in list(fromRoot):
-            #现在只有墨游海外需要for--continue这段代码，打包其他SDK，全选注销，Ctrl+/
+            #使用到com.android.support:appcompat-v7都要删除
             for itemNode in list(child.iter('item')):
                 itemName = itemNode.get('name')
                 if(itemName == 'buttonGravity' or itemName == 'subtitleTextStyle' or itemName == 'subtitleTextAppearance' 
@@ -1033,7 +1032,7 @@ def handleThirdPlugins(workDir, decompileDir, game, channel, packageName):
     plugins = channel.get('third-plugins')
 
     if plugins == None or len(plugins) <= 0:
-        log_utils.info("the channel %s has no supported plugins.", channel['name'])
+        log_utils.error("the channel %s has no supported plugins.", channel['name'])
         return 0
 
     #copy all resources to temp folder.
@@ -1131,10 +1130,10 @@ def copyExtraR(decompileDir, channel, newPackageName):
     """
 
     if "extraR" not in channel:
-        log_utils.debug("the sdk %s has no extraR config. don't need to generate extra R.java", channel['sdk'])
+        log_utils.error("the sdk %s has no extraR config. don't need to generate extra R.java", channel['sdk'])
         return 0
 
-    log_utils.debug("sdk %s need to generate extra R.java. package names:%s", channel['sdk'], channel['extraR'])        
+    log_utils.info("sdk %s need to generate extra R.java. package names:%s", channel['sdk'], channel['extraR'])        
 
     newPackageNames = channel['extraR'].split(",")
 
@@ -1215,7 +1214,7 @@ def doGenerateR(decompileDir, resPath, manifestPath, genPath, targetDexPath, new
     """
 
     if not os.path.exists(resPath):
-        log_utils.debug("%s not exists ", resPath)
+        log_utils.error("%s not exists ", resPath)
         return 0
 
     aaptPath = file_utils.getFullToolPath(aapt_version)
@@ -1374,14 +1373,13 @@ def doGamePostScript(game, channel, decompileDir, packageName):
     scriptDir = file_utils.getFullPath("games/"+game['appName']+"/scripts")
 
     if not os.path.exists(scriptDir):
-        log_utils.info("the game post script is not exists. if you have some specail logic, you can do it in games/[yourgame]/scripts/post_script.py")
+        log_utils.error("the game post script is not exists. if you have some specail logic, you can do it in games/[yourgame]/scripts/post_script.py")
         return 0
-
 
     sdkScript = os.path.join(scriptDir, "post_script.py")
 
     if not os.path.exists(sdkScript):
-        log_utils.info("the game post script is not exists. if you have some specail logic, you can do it in games/[yourgame]/scripts/post_script.py")
+        log_utils.error("the game post script is not exists. if you have some specail logic, you can do it in games/[yourgame]/scripts/post_script.py")
         return 0
 
     sys.path.append(scriptDir)
@@ -1608,7 +1606,7 @@ def appendChannelIconMark(game, channel, decompileDir):
     useMark = True
 
     if 'icon' not in channel:
-        log_utils.warning("the channel %s of game %s do not config icon in config.xml,no icon mark.", channel['name'], game['appName'])
+        log_utils.error("the channel %s of game %s do not config icon in config.xml,no icon mark.", channel['name'], game['appName'])
 
         useMark = False
         #这里直接返回，如果不设置icon配置，不再自动处理缩放图标。
@@ -1724,7 +1722,7 @@ def appendChannelIconMark(game, channel, decompileDir):
 
 
 def checkCpuSupport(game, decompileDir):
-    print("now to check cpu support...")
+    log_utils.info("now to check cpu support...")
 
     isfilter = ("cpuSupport" in game) and len(game["cpuSupport"]) > 0
 
@@ -1763,7 +1761,7 @@ def modifyGameName(channel, decompileDir):
 
     log_utils.info("now to modify game name ....")
     if 'gameName' not in channel:
-        log_utils.info("now no game name modify")
+        log_utils.error("now no game name modify")
         return
 
     manifestFile = decompileDir + "/AndroidManifest.xml"
@@ -1799,14 +1797,13 @@ def checkApkForU8SDK(workDir, decompileDir):
 
     name = applicationNode.get(key)
     if not name or name != "com.u8.sdk.U8Application":
-        log_utils.error("the android:name in application element must be 'com.u8.sdk.U8Application'. now change it to com.u8.sdk.U8Application, but maybe something will be wrong .")
+        log_utils.warning("the android:name in application element must be 'com.u8.sdk.U8Application'. now change it to com.u8.sdk.U8Application, but maybe something will be wrong .")
         applicationNode.set(key, 'com.u8.sdk.U8Application')
         tree.write(manifestFile, 'UTF-8')
 
-    
     smaliName = file_utils.getFullPath(decompileDir + "/smali/com/u8/sdk/U8SDK.smali")
     if not os.path.exists(smaliName):
-        log_utils.error("the u8sdk2.jar is not packaged to the u8.apk. now merge it. but maybe something will be wrong .")
+        log_utils.warning("the u8sdk2.jar is not packaged to the u8.apk. now merge it. but maybe something will be wrong .")
 
         u8sdkJarPath = file_utils.getFullPath('config/local/u8sdk2.jar')
         if not os.path.exists(u8sdkJarPath):
@@ -1910,7 +1907,7 @@ def writeLogConfig(game, decompileDir):
     """
 
     if 'log' not in game:
-        log_utils.warning("the log config is not in games.xml of game: %s" ,game['appName'])
+        log_utils.error("the log config is not in games.xml of game: %s" ,game['appName'])
         return
 
     manifestFile = decompileDir + "/AndroidManifest.xml"
@@ -1958,7 +1955,7 @@ def getCompressRegx(game):
     result = list()
     compressFilePath = file_utils.getFullPath("games/"+game['appName']+"/compress.txt")
     if not os.path.exists(compressFilePath):
-        log_utils.debug("no need handle special compress. the compress.txt file is not exists:%s", compressFilePath)
+        log_utils.error("no need handle special compress. the compress.txt file is not exists:%s", compressFilePath)
         return result
 
     f = open(compressFilePath, 'r')
@@ -2047,7 +2044,6 @@ def modifyYml(game, packageName, decompileDir):
             matchs = [c for c in compressRegx if c == currLine]
             if len(matchs) <= 0:
                 newLines.append(line)
-
         else:
             handlingCompress = False
             newLines.append(line)
@@ -2078,7 +2074,6 @@ def getOutputApkName(game, channel, packageName, decompileDir):
         apkName = channelName + '-' + time.strftime('%Y%m%d%H')
         if 'signApk' in channel and channel['signApk'] == '0':  
             apkName = apkName + '_unsigned'
-
         return apkName + '.apk'
 
     formatStr = game['outputApkName']
@@ -2112,7 +2107,6 @@ def getVersionCode(game, decompileDir):
     """
 
     if "versionCode" in game:
-
         return game['versionCode']
 
     ymlPath = file_utils.getFullPath(decompileDir+"/apktool.yml")
@@ -2137,7 +2131,6 @@ def getVersionName(game, decompileDir):
     """
 
     if "versionName" in game:
-
         return game['versionName']
 
     ymlPath = file_utils.getFullPath(decompileDir+"/apktool.yml")

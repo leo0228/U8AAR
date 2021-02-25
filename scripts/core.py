@@ -76,10 +76,10 @@ def pack(game, channel, sourcepath, isPublic):
     sdkDestDir = workDir + "/sdk/" + sdkName
     file_utils.copy_files(sdkSourceDir, sdkDestDir)
 
-    #将公共库复制到临时目录，除了hulian2，moyoihw渠道
+    #将公共库复制到临时目录，除了moyoihw渠道
     if sdkName != 'moyoihw':
-        promptDir = 'config/local/prompt-release.aar'
-        promptDestDir = sdkDestDir + '/libs/prompt-release.aar';
+        promptDir = 'config/local/common-release.aar'
+        promptDestDir = sdkDestDir + '/libs/common-release.aar';
         file_utils.copy_files(promptDir, promptDestDir)
 
     

@@ -602,32 +602,35 @@ def writeGradleDependencies(dependencies, sdkDestDir):
 
     newLines = []
     for line in lines:
-        newLines.append(line)                                          
-            
-        for depenNode in dependencies:
-            name = depenNode['name']          
+        newLines.append(line)                                         
+        for depenNode in dependencies:   
             if 'dependencies' in line:
-                newLines.append("    compile ('" + name + "')\n")
 
+                if('name' in depenNode.keys()):
+                    name = depenNode['name']
+                    newLines.append("    compile ('" + name + "')\n")
+
+                    if('group' in depenNode.keys() and 'module' not in depenNode.keys()):
+                        group = depenNode['group']
+                        if(group != None and len(group) > 0):
+                            newLines.append("    {\n        exclude group:'" + group + "'\n    }\n")
+
+                    if('group' in depenNode.keys() and 'module' in depenNode.keys()):
+                        group = depenNode['group']
+                        module = depenNode['module']
+                        if((group != None and len(group) > 0) and (module != None and len(module) > 0)):
+                            newLines.append("    {\n        exclude group:'" + group + "', module:'"+ module +"'\n    }\n")
+
+                    if('group' not in depenNode.keys() and 'module' in depenNode.keys()):
+                        module = depenNode['module']
+                        if(module != None and len(module) > 0):
+                            newLines.append("    {\n        exclude module:'"+ module +"'\n    }\n")
+                    
                 if('processor' in depenNode.keys()):
                     processor = depenNode['processor']
                     newLines.append("    annotationProcessor ('" + processor + "')\n")
 
-                if('group' in depenNode.keys() and 'module' not in depenNode.keys()):
-                    group = depenNode['group']
-                    if(group != None and len(group) > 0):
-                        newLines.append("    {\n        exclude group:'" + group + "'\n    }\n")
-
-                if('group' in depenNode.keys() and 'module' in depenNode.keys()):
-                    group = depenNode['group']
-                    module = depenNode['module']
-                    if((group != None and len(group) > 0) and (module != None and len(module) > 0)):
-                        newLines.append("    {\n        exclude group:'" + group + "', module:'"+ module +"'\n    }\n")
-
-                if('group' not in depenNode.keys() and 'module' in depenNode.keys()):
-                    module = depenNode['module']
-                    if(module != None and len(module) > 0):
-                        newLines.append("    {\n        exclude module:'"+ module +"'\n    }\n")
+                
    
     content = ''
     for line in newLines:

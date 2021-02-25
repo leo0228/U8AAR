@@ -26,11 +26,11 @@
     </plugins>
 
     <dependencies>
-        <dependency name="com.squareup.picasso:picasso:2.5.2" />
-        <dependency name="com.android.support:support-annotations:26.0.2" />
-        <dependency name="com.android.support:appcompat-v7:26.0.2" />
-        <dependency name="com.android.support:recyclerview-v7:26.0.2" />
-        <dependency name="com.android.support:support-v4:26.0.2" />
+        <dependency name="com.squareup.picasso:picasso:2.5.2"/>
+        <dependency name="com.android.support:appcompat-v7:26.0.2" group="com.android.support"/>
+        <dependency name="com.android.support:recyclerview-v7:26.0.2" group="com.android.support"/>
+        <!--<dependency name="com.android.support:support-v4:26.0.2" />
+        <dependency name="com.android.support:support-annotations:26.0.2"/>-->
     </dependencies>
     
 </config>

@@ -26,6 +26,6 @@
   
     <dependencies>
         <dependency name="com.google.code.gson:gson:2.8.5" />
-        <dependency name="com.github.bumptech.glide:glide:4.9.0" processor="com.github.bumptech.glide:compiler:4.9.0"/>
+        <dependency name="com.github.bumptech.glide:glide:4.9.0" group="com.android.support" processor="com.github.bumptech.glide:compiler:4.9.0"/>
     </dependencies>
 </config>
