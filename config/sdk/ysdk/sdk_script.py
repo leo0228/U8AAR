@@ -74,31 +74,54 @@ def modifyManifest(channel, decompileDir, packageName):
 	tree = ET.parse(manifest)
 	root = tree.getroot()
 
-	name = '{' + androidNS + '}name'
+	key = '{' + androidNS + '}name'
 	scheme = '{'+androidNS+'}scheme'
 	taskAffinity = '{' + androidNS + '}taskAffinity'
 	authorities = '{'+androidNS+'}authorities'
+	value = '{' + androidNS + '}value'
 
 	appNode = root.find('application')
 	if appNode is None:
 		return 1
 
-	providerNodeLst = appNode.findall('provider')
-	if providerNodeLst is None:
+	providerNodeList = appNode.findall('provider')
+	if providerNodeList is None:
 		return 1
 
-	for providerNode in providerNodeLst:
-		providerName = providerNode.get(name)
+	for providerNode in providerNodeList:
+		providerName = providerNode.get(key)
 		if providerName == 'com.tencent.ysdk.framework.web.YYBInstallFileProvider':
-			providerNode.set(authorities, 'com.tencent.tmgp.'+packageName+'.installfileprovider')
+			providerNode.set(authorities, packageName+'.installfileprovider')
+			
+		elif providerName == 'com.tencent.ysdk.framework.YSDKInitProvider':
+			providerNode.set(authorities, packageName+'.ysdk.ysdkinitprovider')
+
+	activityAliasNodeList = appNode.findall('activity-alias')
+	if activityAliasNodeList is None:
+		return 1
+
+	for activityAliasNode in activityAliasNodeList:
+		name = activityAliasNode.get(key)
+		if name == 'com.u8.sdk.wxapi.WXEntryActivity':
+			activityAliasNode.set(key, packageName + '.wxapi.WXEntryActivity')
 			break
 
-	activityNodeLst = appNode.findall('activity')
-	if activityNodeLst is None:
+	metaNodeList = appNode.findall('meta-data')
+	if metaNodeList is None:
 		return 1
 
-	for activityNode in activityNodeLst:
-		activityName = activityNode.get(name)
+	for metaNode in metaNodeList:
+		name = metaNode.get(key)
+		if name == 'MAIN_ACTIVITY':
+			metaNode.set(value, packageName + '.MainActivity')
+			break
+
+	activityNodeList = appNode.findall('activity')
+	if activityNodeList is None:
+		return 1
+
+	for activityNode in activityNodeList:
+		activityName = activityNode.get(key)
 		if activityName == 'com.tencent.tauth.AuthActivity':
 			intentFilters = activityNode.findall('intent-filter')
 			if intentFilters != None and len(intentFilters) > 0:
@@ -109,8 +132,7 @@ def modifyManifest(channel, decompileDir, packageName):
 							dataNode.set(scheme, 'tencent'+child['value'])
 							break
 						
-		elif activityName == 'com.u8.sdk.wxapi.WXEntryActivity':
-			activityNode.set(name, packageName + '.wxapi.WXEntryActivity')
+		elif activityName == 'com.tencent.ysdk.module.user.impl.wx.YSDKWXEntryActivity':
 			activityNode.set(taskAffinity, packageName + '.diff')
 			intentFilters = activityNode.findall('intent-filter')
 			if intentFilters != None and len(intentFilters) > 0:
