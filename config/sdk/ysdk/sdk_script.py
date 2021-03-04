@@ -144,7 +144,7 @@ def modifyManifest(channel, decompileDir, packageName):
 							dataNode.set(scheme, child['value'])
 							break
 
-		if activityName == 'com.tencent.ysdk.module.user.impl.freelogin.FreeLoginInfoActivity':
+		elif activityName == 'com.tencent.ysdk.module.user.impl.freelogin.FreeLoginInfoActivity':
 			intentFilters = activityNode.findall('intent-filter')
 			if intentFilters != None and len(intentFilters) > 0:
 				for intentNode in intentFilters:	
