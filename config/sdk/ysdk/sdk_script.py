@@ -90,10 +90,7 @@ def modifyManifest(channel, decompileDir, packageName):
 
 	for providerNode in providerNodeList:
 		providerName = providerNode.get(key)
-		if providerName == 'com.tencent.ysdk.framework.web.YYBInstallFileProvider':
-			providerNode.set(authorities, packageName+'.installfileprovider')
-			
-		elif providerName == 'com.tencent.ysdk.framework.YSDKInitProvider':
+		if providerName == 'com.tencent.ysdk.framework.YSDKInitProvider':
 			providerNode.set(authorities, packageName+'.ysdk.ysdkinitprovider')
 
 	activityAliasNodeList = appNode.findall('activity-alias')
@@ -126,6 +123,8 @@ def modifyManifest(channel, decompileDir, packageName):
 			intentFilters = activityNode.findall('intent-filter')
 			if intentFilters != None and len(intentFilters) > 0:
 				for intentNode in intentFilters:		
+					dataNode = intentNode.find('data')
+					intentNode.remove(dataNode)
 					dataNode = SubElement(intentNode, 'data')
 					for child in channel['params']:
 						if child['name'] == 'QQ_APP_ID':
@@ -137,10 +136,24 @@ def modifyManifest(channel, decompileDir, packageName):
 			intentFilters = activityNode.findall('intent-filter')
 			if intentFilters != None and len(intentFilters) > 0:
 				for intentNode in intentFilters:
+					dataNode = intentNode.find('data')
+					intentNode.remove(dataNode)
 					dataNode = SubElement(intentNode, 'data')
 					for child in channel['params']:
 						if child['name'] == 'WX_APP_ID':
 							dataNode.set(scheme, child['value'])
+							break
+
+		if activityName == 'com.tencent.ysdk.module.user.impl.freelogin.FreeLoginInfoActivity':
+			intentFilters = activityNode.findall('intent-filter')
+			if intentFilters != None and len(intentFilters) > 0:
+				for intentNode in intentFilters:	
+					dataNode = intentNode.find('data')
+					intentNode.remove(dataNode)	
+					dataNode = SubElement(intentNode, 'data')
+					for child in channel['params']:
+						if child['name'] == 'QQ_APP_ID':
+							dataNode.set(scheme, 'tencentysdk'+child['value'])
 							break
 
 	tree.write(manifest, 'UTF-8')
@@ -211,7 +224,6 @@ def modifyActivityForSingleTop(channel, decompileDir, packageName):
 		for activityNode in activityNodes:
 			activityName = activityNode.get(keyName)
 			if activityName == 'com.tencent.midas.proxyactivity.APMidasPayProxyActivity':
-
 				if screenOrientation and len(screenOrientation) > 0:
 					activityNode.set(screenKey, screenOrientation)
 				else:
