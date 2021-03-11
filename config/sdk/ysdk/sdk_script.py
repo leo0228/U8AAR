@@ -110,7 +110,7 @@ def modifyManifest(channel, decompileDir, packageName):
 	for metaNode in metaNodeList:
 		name = metaNode.get(key)
 		if name == 'MAIN_ACTIVITY':
-			metaNode.set(value, packageName + '.MainActivity')
+			metaNode.set(value, 'com.ftt.hwal2.gl.cn.chinamain.ChinaMainActivity')
 			break
 
 	activityNodeList = appNode.findall('activity')

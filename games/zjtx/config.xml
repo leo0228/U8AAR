@@ -615,7 +615,7 @@
             </sdk-params>
             <sdk-version>
                 <versionCode>1</versionCode>
-                <versionName>1.5.15</versionName>
+                <versionName>1.7.6</versionName>
             </sdk-version>
         </channel>
     </channels>

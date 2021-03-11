@@ -10,7 +10,7 @@
 			<param name="use_u8_auth" value="1" desc="是否用U8SDK默认的登录认证" />
 			<param name="u8_auth_url" value="http://myserver.moyoi.cn:8093/user/getToken" desc="如果配置登录认证地址，就会覆盖local.properties中配置的登录认证地址"/>
 		 	<param name="versionCode" value="24" desc="游戏包的版本号,对应AndroidManifest.xml中的versionCode"/>
-			<param name="versionName" value="1.0.37" desc="游戏包中的版本名称,对应AndroidManifest.xml中的versionName"/>
+			<param name="versionName" value="1.0.36" desc="游戏包中的版本名称,对应AndroidManifest.xml中的versionName"/>
 			<param name="minSdkVersion" value="19" desc="最小支持的Android SDK版本，minSdkVersion,targetSdkVersion,maxSdkVersion 三个同时配置，或者同时不配置"/>
 			<param name="targetSdkVersion" value="26" desc="默认使用的Android SDK版本，minSdkVersion,targetSdkVersion,maxSdkVersion 三个同时配置，或者同时不配置"/>
 			<!-- <param name="maxSdkVersion" value="26" desc="最大支持的Android SDK版本，minSdkVersion,targetSdkVersion,maxSdkVersion 三个同时配置，或者同时不配置"/> -->
