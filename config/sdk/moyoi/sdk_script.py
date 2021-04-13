@@ -39,10 +39,10 @@ def execute(channel, decompileDir, packageName):
 
 	for activityNode in activityNodeLst:
 		name = activityNode.get(key)
-		if name == '.wxapi.WXEntryActivity':
+		if name == 'com.nj9you.sdk.wxapi.WXEntryActivity':
 			activityNode.set(key, packageName+'.wxapi.WXEntryActivity')
 			
-		elif name == '.wxapi.WXPayEntryActivity':
+		elif name == 'com.nj9you.sdk.wxapi.WXPayEntryActivity':
 			activityNode.set(key, packageName+'.wxapi.WXPayEntryActivity')
 			
 	tree.write(manifestFile, 'UTF-8')
