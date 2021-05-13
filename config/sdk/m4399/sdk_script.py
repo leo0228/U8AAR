@@ -35,6 +35,10 @@ def startJpush(channel, decompileDir, packageName):
 	applicationNode = root.find('application')
 	if applicationNode is None:
 		return 1
+
+	networkKey = '{'+androidNS+'}networkSecurityConfig'
+	if networkKey not in applicationNode.attrib:
+		applicationNode.set(networkKey, "@xml/m4399_network_policy")
 		
 	providerNodeLst = applicationNode.findall('provider')
 	if providerNodeLst is None:
