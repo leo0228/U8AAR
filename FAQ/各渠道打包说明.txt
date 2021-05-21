@@ -1,5 +1,8 @@
 百度：
 targetSdkVersion = 26
+dk_dialog_errornotice.xml 
+android:layout_toLeftOf="@id/bd_notice_toptitle"--->
+android:layout_toLeftOf="@+id/bd_notice_toptitle"
 
 小七：
 一、修改：smsdk_6.0.1_20191231.aar

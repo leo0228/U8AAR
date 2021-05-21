@@ -81,17 +81,17 @@ def pack(game, channel, sourcepath, isPublic):
         promptDir = 'config/local/common-release.aar'
         promptDestDir = sdkDestDir + '/libs/common-release.aar';
         file_utils.copy_files(promptDir, promptDestDir)
+ 
+    #将build.gradle复制到临时目录
+    localSourceDir = 'config/local/build.gradle'
+    file_utils.copy_files(localSourceDir, sdkDestDir + '/build.gradle')
+    config_utils.executeGradlew(sdkDestDir)
 
-    
     #处理需要Gradle自动下载的库
-    if 'dependencies' in channel and channel['dependencies'] != None and len(channel['dependencies']) > 0:      
-        #将build.gradle复制到临时目录
-        localSourceDir = 'config/local/build.gradle'
-        file_utils.copy_files(localSourceDir, sdkDestDir + '/build.gradle')
-
+    if 'dependencies' in channel and channel['dependencies'] != None and len(channel['dependencies']) > 0:
         #修改build.gradle
         config_utils.writeGradleDependencies(channel['dependencies'], sdkDestDir)
-        
+       
     #将SDK中所有aar文件解压，然后将里面各个类型的资源文件合并到SDK对应目录
     file_utils.decomAAR(sdkDestDir)
 
@@ -99,7 +99,7 @@ def pack(game, channel, sourcepath, isPublic):
     if ret:
         return 1
 
-    ret = apk_utils.dexes2smali(sdkDestDir, smaliDir, "baksmali.jar")
+    ret = apk_utils.dexes2smali(sdkDestDir, smaliDir)
     if ret:
         return 1
 

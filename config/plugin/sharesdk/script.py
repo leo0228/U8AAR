@@ -176,7 +176,7 @@ def generateWXEntryActivity(channel, pluginInfo, decompileDir, packageName):
 	if ret:
 		return 1
 
-	ret = apk_utils.dex2smali(targetDexPath, decompileDir+'/smali', "baksmali.jar")
+	ret = apk_utils.dex2smali(targetDexPath, decompileDir+'/smali')
 
 	if ret:
 		return 1

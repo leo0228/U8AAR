@@ -31,12 +31,12 @@ def execute(channel, decompileDir, packageName):
 	if applicationNode is None:
 		return 1
 
-	perNode = SubElement(root, 'uses-permission')
-	perNode.set(key, 'baidu.push.permission.WRITE_PUSHINFOPROVIDER.'+packageName)
+	# perNode = SubElement(root, 'uses-permission')
+	# perNode.set(key, 'baidu.push.permission.WRITE_PUSHINFOPROVIDER.'+packageName)
 	
-	perNode = SubElement(root, 'permission')
-	perNode.set(key, 'baidu.push.permission.WRITE_PUSHINFOPROVIDER.'+packageName)
-	perNode.set('{' + androidNS + '}protectionLevel', 'normal')
+	# perNode = SubElement(root, 'permission')
+	# perNode.set(key, 'baidu.push.permission.WRITE_PUSHINFOPROVIDER.'+packageName)
+	# perNode.set('{' + androidNS + '}protectionLevel', 'normal')
 	
 	activityNodeLst = applicationNode.findall('activity')
 	if activityNodeLst is None:
@@ -82,19 +82,13 @@ def execute(channel, decompileDir, packageName):
 
 	for activityNode in activityNodeLst:
 		name = activityNode.get(key)
-		if name == 'com.duoku.platform.download.DownloadProvider':
-			activityNode.set('{'+androidNS+'}authorities', packageName)
-		elif name == 'com.tencent.mid.api.MidProvider':
+		if name == 'com.tencent.mid.api.MidProvider':
 			activityNode.set('{'+androidNS+'}authorities', packageName+".TENCENT.MID.V3")	
-		elif name == 'mobisocial.omlib.service.OmlibContentProvider':
-			activityNode.set('{'+androidNS+'}authorities', packageName+".provider")	
-		elif name == 'glrecorder.Initializer':
-			activityNode.set('{'+androidNS+'}authorities', packageName+".initializer")
 		elif name == 'com.baidu.platformsdk.BDGameFileProvider':
 			activityNode.set('{'+androidNS+'}authorities', packageName+".bdgame.fileprovider")
-		elif name == 'com.baidu.android.pushservice.PushInfoProvider':
-			activityNode.set('{'+androidNS+'}writePermission', "baidu.push.permission.WRITE_PUSHINFOPROVIDER."+packageName)
-			activityNode.set('{'+androidNS+'}authorities', packageName+".bdpush")
+		# elif name == 'com.baidu.android.pushservice.PushInfoProvider':
+		# 	activityNode.set('{'+androidNS+'}writePermission', "baidu.push.permission.WRITE_PUSHINFOPROVIDER."+packageName)
+		# 	activityNode.set('{'+androidNS+'}authorities', packageName+".bdpush")
 
 	tree.write(manifestFile, 'UTF-8')
 

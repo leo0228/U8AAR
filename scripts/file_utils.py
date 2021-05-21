@@ -23,11 +23,12 @@ curDir = os.getcwd()
 def list_files(src, resFiles, igoreFiles):
 
     if os.path.exists(src):
-
         if os.path.isfile(src) and src not in igoreFiles:
             resFiles.append(src)
-        elif os.path.isdir(src):
+        elif os.path.isdir(src):            
             for f in os.listdir(src):
+                if f == 'aars' or f == 'assets' or f == 'icon_marks' or f == 'res' or f == 'splash':
+                    continue
                 if src not in igoreFiles:
                     list_files(os.path.join(src, f), resFiles, igoreFiles)
 

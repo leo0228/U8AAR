@@ -87,7 +87,7 @@ def jar2dex(srcDir, dstDir, dextool = "baksmali.jar"):
 
     return ret
 
-def dexes2smali(dexDir, targetdir, dextool= "baksmali.jar"):
+def dexes2smali(dexDir, targetdir):
 
     """
         Transfer all dex in dexDir to smali
@@ -102,7 +102,7 @@ def dexes2smali(dexDir, targetdir, dextool= "baksmali.jar"):
         if not f.endswith(".dex"):
             continue
 
-        dex2smali(f, targetdir, dextool)
+        dex2smali(f, targetdir)
 
 
 def dex2smali(dexFile, targetdir, dextool = "baksmali.jar"):
@@ -288,9 +288,7 @@ def copyRootResFiles(apkfile, decompileDir):
         fullpath = os.path.join(decompileDir, ifile)
         igoreFileFullPaths.append(fullpath)
 
-
     addFiles = []
-
     addFiles = file_utils.list_files(decompileDir, addFiles, igoreFileFullPaths)
 
     if len(addFiles) <= 0:
@@ -1069,7 +1067,7 @@ def handleThirdPlugins(workDir, decompileDir, game, channel, packageName):
             continue
 
         pluginDexFile = os.path.join(pluginFolder, "classes.dex")
-        ret = dex2smali(pluginDexFile, smaliDir, "baksmali.jar")
+        ret = dex2smali(pluginDexFile, smaliDir)
         if ret:
             return 1
 
@@ -1244,7 +1242,7 @@ def doGenerateR(decompileDir, resPath, manifestPath, genPath, targetDexPath, new
         return 1
 
     smaliPath = os.path.join(decompileDir, "smali")
-    ret = dex2smali(targetDexPath, smaliPath, "baksmali.jar")
+    ret = dex2smali(targetDexPath, smaliPath)
 
     return ret
 
